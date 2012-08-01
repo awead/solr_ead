@@ -18,6 +18,8 @@ Gem::Specification.new do |gem|
   # Dependencies
   gem.add_dependency('blacklight')
   gem.add_dependency('om')
+  gem.add_dependency('solrizer')
   # For Development
   gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'debugger'
 end

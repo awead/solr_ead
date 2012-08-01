@@ -1,5 +1,8 @@
 #require 'om'
 #require 'rspec'
+require "ead_document"
+require "solrizer"
+require "debugger"
 
 RSpec.configure do |config|
 

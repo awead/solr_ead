@@ -1,6 +1,6 @@
 require 'om'
 
-class EadTerminology
+class EadDocument
 
   include OM::XML::Document
 
@@ -16,6 +16,9 @@ class EadTerminology
 
     # Proxies
     t.ead_collection(:proxy=>[:archdesc, :did, :unittitle])
+
+    # Components
+    t.c
 
   end
 

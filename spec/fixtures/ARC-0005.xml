@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <eadheader findaidstatus="Completed" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+    <eadheader findaidstatus="Complete" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
         <eadid>ARC-0005</eadid>
         <filedesc>
             <titlestmt>
@@ -23,7 +23,7 @@
         </filedesc>
         <profiledesc>
             <creation>This finding aid was produced using the Archivists' Toolkit
-                <date>2012-03-19T11:25-0400</date>
+                <date>2012-08-01T09:26-0400</date>
             </creation>
             <langusage>English</langusage>
             <descrules>Describing Archives: A Content Standard</descrules>
@@ -87,8 +87,7 @@
                     <event>Inducted into the Rock and Roll Hall of Fame.</event>
                 </chronitem>
             </chronlist>
-            <p>Though 
-                <title render="bold">EDDIE COCHRAN</title> was only 21 when he died, he left his mark as a rock and roll pioneer. He epitomized the sound and style of the 1950s rebel rocker and was an innovative and highly influential guitarist. He was also proficient on piano, bass, and drums. His short career, spanning only 6 years, produced many hit singles, including “Summertime Blues,” “C’mon Everybody,” “Twenty Flight Rock,” “Something Else,” and “Nervous Breakdown.” These singles inspired many major artists; the first song Paul McCartney and John Lennon ever played together was “Twenty Flight Rock.” Other artists that have covered his songs include The Who, the Sex Pistols, Jimi Hendrix, and The Clash.</p>
+            <p>Though Eddie Cochran was only 21 when he died, he left his mark as a rock and roll pioneer. He epitomized the sound and style of the 1950s rebel rocker and was an innovative and highly influential guitarist. He was also proficient on piano, bass, and drums. His short career, spanning only 6 years, produced many hit singles, including “Summertime Blues,” “C’mon Everybody,” “Twenty Flight Rock,” “Something Else,” and “Nervous Breakdown.” These singles inspired many major artists; the first song Paul McCartney and John Lennon ever played together was “Twenty Flight Rock.” Other artists that have covered his songs include The Who, the Sex Pistols, Jimi Hendrix, and The Clash.</p>
             <p>Eddie Cochran only released one album during his lifetime, which was tragically cut short when he was killed in a traffic accident. Artist Gene Vincent and songwriter Sharon Sheeley, who was Cochran’s fiancé, were also injured in the accident. With his death, Cochran achieved iconic status with many generations of rock and rollers, and his legacy and influence can still be seen and heard today.</p>
             <chronlist>
                 <head>Administrative History - Bruce C. Blake and the Eddie Cochran Historical Organization</head>
@@ -105,8 +104,7 @@
                     <event>Holds first annual Eddie Cochran Weekend in Alberta Lea, Minn.</event>
                 </chronitem>
             </chronlist>
-            <p>Bruce C. Blake founded the 
-                <title render="bold">EDDIE COCHRAN HISTORICAL ORGANIZATION</title> in 1990 in Cochran’s hometown of Alberta Lea, Minnesota. A bill collector by trade, Blake was 26 years old when he formed the organization, with the objective of honoring Eddie Cochran and promoting his music in the Alberta Lea area. Most local people were unaware that Cochran was from Alberta Lea before the formation of the organization. Cochran’s family had since moved, and Cochran usually stated he was from Oklahoma (where his parents were from) in order to improve his country music credibility. The idea for the organization’s name, ECHO, was based on the name, EKKO, an early recoding label on which Cochran appeared. The original members of the organization included local individuals, those who liked early rock and roll music, and those who believed Cochran's legacy should be a source of pride for the community. The organization achieved its goals, creating a strong memory of Cochran in his hometown and preserving his legacy for future generation. The organization disbanded in the late 1990s.</p>
+            <p>Bruce C. Blake founded the Eddie Cochran Historical Organization (ECHO) in 1990 in Cochran’s hometown of Alberta Lea, Minnesota. A bill collector by trade, Blake was 26 years old when he formed the organization, with the objective of honoring Eddie Cochran and promoting his music in the Alberta Lea area. Most local people were unaware that Cochran was from Alberta Lea before the formation of the organization. Cochran’s family had since moved, and Cochran usually stated he was from Oklahoma (where his parents were from) in order to improve his country music credibility. The idea for the organization’s name, ECHO, was based on the name, EKKO, an early recoding label on which Cochran appeared. The original members of the organization included local individuals, those who liked early rock and roll music, and those who believed Cochran's legacy should be a source of pride for the community. The organization achieved its goals, creating a strong memory of Cochran in his hometown and preserving his legacy for future generation. The organization disbanded in the late 1990s.</p>
             <list numeration="lowerroman" type="ordered">
                 <head>Sources</head>
                 <item>Bream, Jon. “Hometown, Home State Finally Pay Tribute to Eddie Cochran.” 
@@ -160,12 +158,12 @@
             <subject source="lcsh">Rockabilly musicians</subject>
             <genreform source="lcsh">Sheet music</genreform>
             <subject source="lcsh">Traffic fatalities</subject>
-            <genreform source="aat">VHS (TM)</genreform>
+            <genreform source="pbcore">VHS</genreform>
             <genreform source="lcsh">Video tapes</genreform>
             <genreform source="lcsh">Videocassettes</genreform>
         </controlaccess>
         <dsc>
-            <c01 id="ref10" level="series">
+            <c id="ref10" level="series">
                 <did>
                     <unittitle>Series I: Administrative Files</unittitle>
                     <unitdate>1957-1993, undated</unitdate>
@@ -174,151 +172,151 @@
                     <head>Scope and Contents</head>
                     <p>Series I: Administrative Files contains correspondence, newsletters, membership information, and business cards dealing with the administration of the Eddie Cochran Historical Organization and the original Eddie Cochran Fan Club. This series is arranged by type of material and then chronologically.</p>
                 </scopecontent>
-                <c02 id="ref42" level="file">
+                <c id="ref42" level="file">
                     <did>
                         <unittitle>Original correspondence between fan club president and a member</unittitle>
                         <container id="cid49001" type="Box" label="Text">1</container>
                         <container parent="cid49001" type="Folder">1</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref43" level="file">
+                </c>
+                <c id="ref43" level="file">
                     <did>
                         <unittitle>Various correspondences from Tony Freer looking for information about Cochran</unittitle>
                         <container id="cid49002" type="Box" label="Text">1</container>
                         <container parent="cid49002" type="Folder">2</container>
                         <unitdate>1980-1991</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref44" level="file">
+                </c>
+                <c id="ref44" level="file">
                     <did>
                         <unittitle>Fan letters written to Cochran, copies and originals (14 letters)</unittitle>
                         <container id="cid49003" type="Box" label="Text">1</container>
                         <container parent="cid49003" type="Folder">3</container>
                         <unitdate>1957</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref45" level="file">
+                </c>
+                <c id="ref45" level="file">
                     <did>
                         <unittitle>Original fan club lists of members</unittitle>
                         <container id="cid49004" type="Box" label="Text">1</container>
                         <container parent="cid49004" type="Folder">4</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref46" level="file">
+                </c>
+                <c id="ref46" level="file">
                     <did>
                         <unittitle>Fan club stationary and envelopes (3 copies of each)</unittitle>
                         <container id="cid49005" type="Box" label="Text">1</container>
                         <container parent="cid49005" type="Folder">5</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref47" level="file">
+                </c>
+                <c id="ref47" level="file">
                     <did>
                         <unittitle>Original sheets “To Start a Fan Club” from Cochran fan club</unittitle>
                         <container id="cid49006" type="Box" label="Text">1</container>
                         <container parent="cid49006" type="Folder">6</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref48" level="file">
+                </c>
+                <c id="ref48" level="file">
                     <did>
                         <unittitle>Original page from DIG magazine with article “How to form a Fan Club”</unittitle>
                         <container id="cid49007" type="Box" label="Text">1</container>
                         <container parent="cid49007" type="Folder">7</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref49" level="file">
+                </c>
+                <c id="ref49" level="file">
                     <did>
                         <unittitle>Half-sheets sent out to those wishing to start a fan club (3 copies)</unittitle>
                         <container id="cid49008" type="Box" label="Text">1</container>
                         <container parent="cid49008" type="Folder">8</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref50" level="file">
+                </c>
+                <c id="ref50" level="file">
                     <did>
                         <unittitle>Original questionnaire from fan club</unittitle>
                         <container id="cid49009" type="Box" label="Text">1</container>
                         <container parent="cid49009" type="Folder">9</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref51" level="file">
+                </c>
+                <c id="ref51" level="file">
                     <did>
                         <unittitle>List of Eddie Cochran’s favorite things</unittitle>
                         <container id="cid49010" type="Box" label="Text">1</container>
                         <container parent="cid49010" type="Folder">10</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref52" level="file">
+                </c>
+                <c id="ref52" level="file">
                     <did>
                         <unittitle>Original “Price List” of materials from fan club</unittitle>
                         <container id="cid49011" type="Box" label="Text">1</container>
                         <container parent="cid49011" type="Folder">11</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref53" level="file">
+                </c>
+                <c id="ref53" level="file">
                     <did>
-                        <unittitle>Memorial sheets (3 copies)</unittitle>
+                        <unittitle>Memorial sheets (4 copies)</unittitle>
                         <container id="cid49012" type="Box" label="Text">1</container>
                         <container parent="cid49012" type="Folder">12</container>
                         <unitdate>1992</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref54" level="file">
+                </c>
+                <c id="ref54" level="file">
                     <did>
                         <unittitle>Memorial sheets (3 copies)</unittitle>
                         <container id="cid49013" type="Box" label="Text">1</container>
                         <container parent="cid49013" type="Folder">13</container>
                         <unitdate>1993</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref55" level="file">
+                </c>
+                <c id="ref55" level="file">
                     <did>
                         <unittitle>Membership flyers (8 copies)</unittitle>
                         <container id="cid49014" type="Box" label="Text">1</container>
                         <container parent="cid49014" type="Folder">14</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref56" level="file">
+                </c>
+                <c id="ref56" level="file">
                     <did>
                         <unittitle>Fan club membership cards in pink, green, yellow, blue, and white (3 copies of each)</unittitle>
                         <container id="cid49015" type="Box" label="Text">1</container>
                         <container parent="cid49015" type="Folder">15</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref57" level="file">
+                </c>
+                <c id="ref57" level="file">
                     <did>
                         <unittitle>Original Eddie Cochran business cards with Liberty Records (2 cards)</unittitle>
                         <container id="cid49016" type="Box" label="Text">1</container>
                         <container parent="cid49016" type="Folder">16</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref58" level="file">
+                </c>
+                <c id="ref58" level="file">
                     <did>
                         <unittitle>Original “Melodie Boys” business card (2 cards)</unittitle>
                         <container id="cid49017" type="Box" label="Text">1</container>
                         <container parent="cid49017" type="Folder">17</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref59" level="file">
+                </c>
+                <c id="ref59" level="file">
                     <did>
                         <unittitle>Sgt. Jan S. Olson business cards (7 copies)</unittitle>
                         <container id="cid49018" type="Box" label="Text">1</container>
                         <container parent="cid49018" type="Folder">18</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref60" level="file">
+                </c>
+                <c id="ref60" level="file">
                     <did>
                         <unittitle>Original copies of the 
                             <title render="italic">Eddie Cochran Fan Club Newsletter</title>, volume two</unittitle>
@@ -326,8 +324,8 @@
                         <container parent="cid49019" type="Folder">19</container>
                         <unitdate>1963 October</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref61" level="file">
+                </c>
+                <c id="ref61" level="file">
                     <did>
                         <unittitle>
                             <title render="italic">Rock de Lux</title></unittitle>
@@ -335,8 +333,8 @@
                         <container parent="cid49020" type="Folder">20</container>
                         <unitdate>1985, 1989</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref62" level="file">
+                </c>
+                <c id="ref62" level="file">
                     <did>
                         <unittitle>
                             <title render="italic">RVTA</title> 66, number 22</unittitle>
@@ -347,8 +345,8 @@
                         <container parent="cid49021" type="Folder">21</container>
                         <unitdate>1987 October</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref63" level="file">
+                </c>
+                <c id="ref63" level="file">
                     <did>
                         <unittitle/>
                         <langmaterial>
@@ -358,8 +356,8 @@
                         <container parent="cid49022" type="Folder">22</container>
                         <unitdate>1991 October</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref64" level="file">
+                </c>
+                <c id="ref64" level="file">
                     <did>
                         <unittitle>
                             <title render="italic">Outlaw Rockin’</title> newsletters, volumes 5, 11, 14-22</unittitle>
@@ -367,8 +365,8 @@
                         <container parent="cid49023" type="Folder">23</container>
                         <unitdate>1990-1993</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref65" level="file">
+                </c>
+                <c id="ref65" level="file">
                     <did>
                         <unittitle>Gene Vincent and Eddie Cochran International Fan Club magazine, 
                             <title render="italic">GIT IT</title>, issues 1 through 8</unittitle>
@@ -376,8 +374,8 @@
                         <container parent="cid49024" type="Folder">24</container>
                         <unitdate>1991</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref66" level="file">
+                </c>
+                <c id="ref66" level="file">
                     <did>
                         <unittitle>
                             <title render="italic">Cochran Connection Newsletter</title>, volume 1, issue 2 (3 copies)</unittitle>
@@ -385,8 +383,8 @@
                         <container parent="cid49025" type="Folder">25</container>
                         <unitdate>1992</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref67" level="file">
+                </c>
+                <c id="ref67" level="file">
                     <did>
                         <unittitle>
                             <title render="italic">Cochran Connection Newsletter</title>, volume 1, issue 3 (3 copies)</unittitle>
@@ -394,8 +392,8 @@
                         <container parent="cid49026" type="Folder">26</container>
                         <unitdate>1992</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref68" level="file">
+                </c>
+                <c id="ref68" level="file">
                     <did>
                         <unittitle>
                             <title render="italic">Cochran Connection Newsletter, volume 2, issue 1</title> (3 copies)</unittitle>
@@ -403,8 +401,8 @@
                         <container parent="cid49027" type="Folder">27</container>
                         <unitdate>1993</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref69" level="file">
+                </c>
+                <c id="ref69" level="file">
                     <did>
                         <unittitle>
                             <title render="italic">Summertime Blues</title>, volumes 1 - 8 (Spanish fan club newsletter)</unittitle>
@@ -412,48 +410,48 @@
                         <container parent="cid49028" type="Folder">28</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref70" level="file">
+                </c>
+                <c id="ref70" level="file">
                     <did>
                         <unittitle>Papers from the Eddie Cochran Memorial Society</unittitle>
                         <container id="cid49029" type="Box" label="Text">1</container>
                         <container parent="cid49029" type="Folder">29</container>
                         <unitdate>1966-1973</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref71" level="file">
+                </c>
+                <c id="ref71" level="file">
                     <did>
                         <unittitle>Clippings from the Eddie Cochran Memorial Fund</unittitle>
                         <container id="cid49030" type="Box" label="Text">1</container>
                         <container parent="cid49030" type="Folder">30</container>
                         <unitdate>1968-1991</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref72" level="file">
+                </c>
+                <c id="ref72" level="file">
                     <did>
                         <unittitle>Cochran poster from Hydra Records</unittitle>
                         <container id="cid49031" type="Box" label="Text">1</container>
                         <container parent="cid49031" type="Folder">31</container>
                         <unitdate>1988</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref73" level="file">
+                </c>
+                <c id="ref73" level="file">
                     <did>
                         <unittitle>Color photocopy of watercolor of Cochran done by a French fan</unittitle>
                         <container id="cid49032" type="Box" label="Text">1</container>
                         <container parent="cid49032" type="Folder">32</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref74" level="file">
+                </c>
+                <c id="ref74" level="file">
                     <did>
                         <unittitle>Cochran article printed on photographic paper</unittitle>
                         <container id="cid49033" type="Box" label="Text">1</container>
                         <container parent="cid49033" type="Folder">33</container>
                         <unitdate>1960</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref75" level="file">
+                </c>
+                <c id="ref75" level="file">
                     <did>
                         <unittitle>
                             <title render="italic">The Girl Can’t Help It</title> promotional picture</unittitle>
@@ -461,8 +459,8 @@
                         <container parent="cid49034" type="Folder">34</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref76" level="file">
+                </c>
+                <c id="ref76" level="file">
                     <did>
                         <unittitle>Eddie Cochran discography</unittitle>
                         <langmaterial>
@@ -472,24 +470,24 @@
                         <container parent="cid49035" type="Folder">35</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref77" level="file">
+                </c>
+                <c id="ref77" level="file">
                     <did>
                         <unittitle>Eddie Cochran biography</unittitle>
                         <container id="cid49036" type="Box" label="Text">1</container>
                         <container parent="cid49036" type="Folder">36</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref78" level="file">
+                </c>
+                <c id="ref78" level="file">
                     <did>
                         <unittitle>Interview transcript, Dick D’Agostin and the Swingers (2 copies)</unittitle>
                         <container id="cid49037" type="Box" label="Text">1</container>
                         <container parent="cid49037" type="Folder">37</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref79" level="file">
+                </c>
+                <c id="ref79" level="file">
                     <did>
                         <unittitle>
                             <title render="italic">Be-Bop-A-Lula</title> production information</unittitle>
@@ -497,16 +495,16 @@
                         <container parent="cid49038" type="Folder">38</container>
                         <unitdate>1988</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref80" level="file">
+                </c>
+                <c id="ref80" level="file">
                     <did>
                         <unittitle>Maps and information about area where Cochran died</unittitle>
                         <container id="cid49039" type="Box" label="Text">1</container>
                         <container parent="cid49039" type="Folder">39</container>
                         <unitdate>undated</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref81" level="file">
+                </c>
+                <c id="ref81" level="file">
                     <did>
                         <unittitle>Original calendar from 
                             <title render="italic">New Musical Express</title></unittitle>
@@ -514,25 +512,25 @@
                         <container parent="cid49040" type="Folder">40</container>
                         <unitdate>1961</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref82" level="file">
+                </c>
+                <c id="ref82" level="file">
                     <did>
                         <unittitle>“Boy Meets Girl” original song sheet</unittitle>
                         <container id="cid49041" type="Box" label="Text">1</container>
                         <container parent="cid49041" type="Folder">41</container>
                         <unitdate>1959</unitdate>
                     </did>
-                </c02>
-                <c02 id="ref83" level="file">
+                </c>
+                <c id="ref83" level="file">
                     <did>
                         <unittitle>Sharon Sheeley song lyrics</unittitle>
                         <container id="cid49042" type="Box" label="Text">1</container>
                         <container parent="cid49042" type="Folder">42</container>
                         <unitdate>1962 October 9</unitdate>
                     </did>
-                </c02>
-            </c01>
-            <c01 id="ref11" level="series">
+                </c>
+            </c>
+            <c id="ref11" level="series">
                 <did>
                     <unittitle>Series II: Graphic Materials</unittitle>
                     <unitdate>1950-1993, undated</unitdate>
@@ -541,12 +539,12 @@
                     <head>Scope and Contents</head>
                     <p>Series II: Graphic Materials is divided into three subseries: photographic materials, postcards, and posters. Each subseries contains graphic materials featuring images of Eddie Cochran. The subseries are arranged alphabetically by format and then chronologically.</p>
                 </scopecontent>
-                <c02 id="ref14" level="subseries">
+                <c id="ref14" level="subseries">
                     <did>
                         <unittitle>Subseries 1: Photographic Materials</unittitle>
                         <unitdate>1950-1959, 1993</unitdate>
                     </did>
-                    <c03 id="ref84" level="file">
+                    <c id="ref84" level="file">
                         <did>
                             <unittitle>8" x 10" color photograph of 
                                 <title render="italic">Go, Johnny, Go</title> artwork for the movie</unittitle>
@@ -554,8 +552,8 @@
                             <container parent="cid50039" type="Folder">1</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref86" level="file">
+                    </c>
+                    <c id="ref86" level="file">
                         <did>
                             <unittitle>8" x 10" color photographs of Cochran from 
                                 <title render="italic">The Girl Can’t Help It</title> (2 photographs)</unittitle>
@@ -563,272 +561,272 @@
                             <container parent="cid50029" type="Folder">2</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref87" level="file">
+                    </c>
+                    <c id="ref87" level="file">
                         <did>
                             <unittitle>Signed 8" x 10" promotional photograph of Cochran</unittitle>
                             <container id="cid50040" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50040" type="Folder">3</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref88" level="file">
+                    </c>
+                    <c id="ref88" level="file">
                         <did>
                             <unittitle>Signed 8" x 10" photographs of Bobby Cochran (5 copies)</unittitle>
                             <container id="cid50041" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50041" type="Folder">4</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref89" level="file">
+                    </c>
+                    <c id="ref89" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran with his confirmation class</unittitle>
                             <container id="cid50042" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50042" type="Folder">5</container>
                             <unitdate>1950</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref90" level="file">
+                    </c>
+                    <c id="ref90" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran with DJ Freeman Hover in Denver (6 copies)</unittitle>
                             <container id="cid50043" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50043" type="Folder">6</container>
                             <unitdate>1957</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref91" level="file">
+                    </c>
+                    <c id="ref91" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran from “Go, Johnny, Go”</unittitle>
                             <container id="cid50044" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50044" type="Folder">7</container>
                             <unitdate>1957</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref92" level="file">
+                    </c>
+                    <c id="ref92" level="file">
                         <did>
                             <unittitle>8" x 10" photographs of Cochran taken on his 21st birthday (6 photographs)</unittitle>
                             <container id="cid50045" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50045" type="Folder">8</container>
                             <unitdate>1959</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref93" level="file">
+                    </c>
+                    <c id="ref93" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Eddie Cochran signed by Alice Cochran</unittitle>
                             <container id="cid50046" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50046" type="Folder">9</container>
                             <unitdate>1993</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref94" level="file">
+                    </c>
+                    <c id="ref94" level="file">
                         <did>
                             <unittitle>8" x 10" photographs of Cochran leaning against a tree (5 copies)</unittitle>
                             <container id="cid50047" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50047" type="Folder">10</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref95" level="file">
+                    </c>
+                    <c id="ref95" level="file">
                         <did>
                             <unittitle>8" x 10" promotional photograph of Cochran (4 copies)</unittitle>
                             <container id="cid50048" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50048" type="Folder">11</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref96" level="file">
+                    </c>
+                    <c id="ref96" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran and Sharon Sheeley in 4 different poses</unittitle>
                             <container id="cid50049" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50049" type="Folder">12</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref97" level="file">
+                    </c>
+                    <c id="ref97" level="file">
                         <did>
                             <unittitle>8" x 10" promotional photograph of Cochran, close-up (13 copies)</unittitle>
                             <container id="cid50050" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50050" type="Folder">13</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref98" level="file">
+                    </c>
+                    <c id="ref98" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran looking over his shoulder (27 copies)</unittitle>
                             <container id="cid50051" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50051" type="Folder">14</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref99" level="file">
+                    </c>
+                    <c id="ref99" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran, in jacket, with hands resting on back of chair (25 copies)</unittitle>
                             <container id="cid50052" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50052" type="Folder">15</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref100" level="file">
+                    </c>
+                    <c id="ref100" level="file">
                         <did>
                             <unittitle>8" x 10" promotional photograph of Cochran with the Flamingos</unittitle>
                             <container id="cid50053" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50053" type="Folder">16</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref101" level="file">
+                    </c>
+                    <c id="ref101" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran’s grave</unittitle>
                             <container id="cid50054" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50054" type="Folder">17</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref102" level="file">
+                    </c>
+                    <c id="ref102" level="file">
                         <did>
                             <unittitle>8" x 10" photographs of the Cochran Brothers (2 photographs)</unittitle>
                             <container id="cid50055" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50055" type="Folder">18</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref103" level="file">
+                    </c>
+                    <c id="ref103" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran with fans</unittitle>
                             <container id="cid50056" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50056" type="Folder">19</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref104" level="file">
+                    </c>
+                    <c id="ref104" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran with Gene Vincent</unittitle>
                             <container id="cid50057" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50057" type="Folder">20</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref105" level="file">
+                    </c>
+                    <c id="ref105" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran playing for five people</unittitle>
                             <container id="cid50058" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50058" type="Folder">21</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref106" level="file">
+                    </c>
+                    <c id="ref106" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran at Gold Star studios with band (2 photographs)</unittitle>
                             <container id="cid50059" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50059" type="Folder">22</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref107" level="file">
+                    </c>
+                    <c id="ref107" level="file">
                         <did>
                             <unittitle>8" x 10" photograph of Cochran</unittitle>
                             <container id="cid50060" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50060" type="Folder">23</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref108" level="file">
+                    </c>
+                    <c id="ref108" level="file">
                         <did>
                             <unittitle>8" x 10" photographs of Cochran with and without various musicians (29 photographs)</unittitle>
                             <container id="cid50061" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50061" type="Folder">24</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref109" level="file">
+                    </c>
+                    <c id="ref109" level="file">
                         <did>
                             <unittitle>8" x 10" original photograph of Cochran from the Legendary Masters series</unittitle>
                             <container id="cid50062" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50062" type="Folder">25</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref110" level="file">
+                    </c>
+                    <c id="ref110" level="file">
                         <did>
                             <unittitle>8" x 10" photographs of Cochran from “Untamed Youth” (2 photographs)</unittitle>
                             <container id="cid50063" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50063" type="Folder">26</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref111" level="file">
+                    </c>
+                    <c id="ref111" level="file">
                         <did>
                             <unittitle>8" x 8" photograph of Cochran with two fans</unittitle>
                             <container id="cid50064" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50064" type="Folder">27</container>
                             <unitdate>1957</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref112" level="file">
+                    </c>
+                    <c id="ref112" level="file">
                         <did>
                             <unittitle>8" x 8" Color photographs of Cochran in and out of a hammock (12 photographs)</unittitle>
                             <container id="cid50065" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50065" type="Folder">28</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref113" level="file">
+                    </c>
+                    <c id="ref113" level="file">
                         <did>
                             <unittitle>8" x 8" sepia toned insert from the Legendary Masters series</unittitle>
                             <container id="cid50066" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50066" type="Folder">29</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref114" level="file">
+                    </c>
+                    <c id="ref114" level="file">
                         <did>
                             <unittitle>5" x 7" photographs of Cochran from childhood (40 photographs)</unittitle>
                             <container id="cid50067" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50067" type="Folder">30</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref115" level="file">
+                    </c>
+                    <c id="ref115" level="file">
                         <did>
                             <unittitle>5" x 7" photographs of Cochran (19 copies)</unittitle>
                             <container id="cid50068" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50068" type="Folder">31</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref116" level="file">
+                    </c>
+                    <c id="ref116" level="file">
                         <did>
                             <unittitle>School snapshots of Cochran (2 copies)</unittitle>
                             <container id="cid50069" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50069" type="Folder">32</container>
                             <unitdate>1953</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref117" level="file">
+                    </c>
+                    <c id="ref117" level="file">
                         <did>
                             <unittitle>Color snapshot of Cochran</unittitle>
                             <container id="cid50070" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50070" type="Folder">33</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref118" level="file">
+                    </c>
+                    <c id="ref118" level="file">
                         <did>
                             <unittitle>Snapshots of Cochran (6 photographs)</unittitle>
                             <container id="cid50071" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50071" type="Folder">34</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref119" level="file">
+                    </c>
+                    <c id="ref119" level="file">
                         <did>
                             <unittitle>Wallet-sized snapshots of Cochran (44 photographs)</unittitle>
                             <container id="cid50072" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50072" type="Folder">35</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref120" level="file">
+                    </c>
+                    <c id="ref120" level="file">
                         <did>
                             <unittitle>Snapshots of Cochran from 
                                 <title render="italic">The Girl Can’t Help It</title> (4 photographs)</unittitle>
@@ -836,94 +834,94 @@
                             <container parent="cid50073" type="Folder">36</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref121" level="file">
+                    </c>
+                    <c id="ref121" level="file">
                         <did>
                             <unittitle>Reproduced snapshots of Cochran (18 photographs)</unittitle>
                             <container id="cid50074" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50074" type="Folder">37</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref122" level="file">
+                    </c>
+                    <c id="ref122" level="file">
                         <did>
                             <unittitle>Promotional snapshots (4 photographs)</unittitle>
                             <container id="cid50075" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50075" type="Folder">38</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref123" level="file">
+                    </c>
+                    <c id="ref123" level="file">
                         <did>
                             <unittitle>Snapshots taken in London near to where Cochran died (49 photographs)</unittitle>
                             <container id="cid50076" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50076" type="Folder">39</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref124" level="file">
+                    </c>
+                    <c id="ref124" level="file">
                         <did>
                             <unittitle>Photograph negatives (3 copies)</unittitle>
                             <container id="cid50077" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50077" type="Folder">40</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref15" level="subseries">
+                    </c>
+                </c>
+                <c id="ref15" level="subseries">
                     <did>
                         <unittitle>Subseries 2: Postcards</unittitle>
                         <unitdate>undated</unitdate>
                     </did>
-                    <c03 id="ref85" level="file">
+                    <c id="ref85" level="file">
                         <did>
                             <unittitle>Postcards of Cochran (9 copies)</unittitle>
                             <container id="cid50028" type="Box" label="Graphic materials">2</container>
                             <container parent="cid50028" type="Folder">40</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref16" level="subseries">
+                    </c>
+                </c>
+                <c id="ref16" level="subseries">
                     <did>
                         <unittitle>Subseries 3: Posters</unittitle>
                         <unitdate>February 13, undated</unitdate>
                     </did>
-                    <c03 id="ref125" level="item">
+                    <c id="ref125" level="item">
                         <did>
                             <unittitle>Eddie Cochran and Gene Vincent promotional color concert poster, Saturday</unittitle>
                             <container id="cid50030" type="Box" label="Graphic materials">3</container>
                             <container parent="cid50030" type="Object">1</container>
                             <unitdate>February 13 </unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref126" level="item">
+                    </c>
+                    <c id="ref126" level="item">
                         <did>
                             <unittitle>Eddie Cochran promotional black-and-white poster, Liberty Records: "C’Mon Everybody"</unittitle>
                             <container id="cid50031" type="Box" label="Graphic materials">3</container>
                             <container parent="cid50031" type="Object">2</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref127" level="item">
+                    </c>
+                    <c id="ref127" level="item">
                         <did>
                             <unittitle>Eddie Cochran promotional black-and-white poster, Liberty Records: "Hallelujah, I Love Her So"</unittitle>
                             <container id="cid50032" type="Box" label="Graphic materials">3</container>
                             <container parent="cid50032" type="Object">3</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref128" level="item">
+                    </c>
+                    <c id="ref128" level="item">
                         <did>
                             <unittitle>Eddie Cochran promotional black-and-white poster, Liberty Records: "Sittin’ in the Balcony" / "Dark and Lonely Street" and "We Can’t Sing Rhythm and Blues" / "Dreamer’s Bay"</unittitle>
                             <container id="cid50033" type="Box" label="Graphic materials">3</container>
                             <container parent="cid50033" type="Object">4</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-            </c01>
-            <c01 id="ref12" level="series">
+                    </c>
+                </c>
+            </c>
+            <c id="ref12" level="series">
                 <did>
                     <unittitle>Series III: Printed Materials</unittitle>
                     <unitdate>1953-1993, undated</unitdate>
@@ -936,12 +934,12 @@
                     <head>Separated Materials</head>
                     <p>Some publications have been transferred to the library collection. Please search for the "Eddie Cochran Historical Organization Collection" in the library catalog for a list of donated titles.</p>
                 </separatedmaterial>
-                <c02 id="ref17" level="subseries">
+                <c id="ref17" level="subseries">
                     <did>
                         <unittitle>Subseries 1: Newspapers</unittitle>
                         <unitdate>1959, 1991-1993</unitdate>
                     </did>
-                    <c03 id="ref129" level="file">
+                    <c id="ref129" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Chadron Record</title></unittitle>
@@ -949,8 +947,8 @@
                             <container parent="cid49088" type="Folder">5</container>
                             <unitdate>1959 April 2</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref130" level="file">
+                    </c>
+                    <c id="ref130" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">City Pages</title> (3 copies)</unittitle>
@@ -958,8 +956,8 @@
                             <container parent="cid49089" type="Folder">6</container>
                             <unitdate>1991 May 8</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref131" level="file">
+                    </c>
+                    <c id="ref131" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Daily Mirror</title></unittitle>
@@ -967,8 +965,8 @@
                             <container parent="cid49090" type="Folder">7</container>
                             <unitdate>1992 January </unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref132" level="file">
+                    </c>
+                    <c id="ref132" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Mid-Coast Music</title> (3 copies)</unittitle>
@@ -976,8 +974,8 @@
                             <container parent="cid49091" type="Folder">8</container>
                             <unitdate>1991 May</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref133" level="file">
+                    </c>
+                    <c id="ref133" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">St. Pioneer Press</title></unittitle>
@@ -985,8 +983,8 @@
                             <container parent="cid49092" type="Folder">9</container>
                             <unitdate>1991 June 22</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref134" level="file">
+                    </c>
+                    <c id="ref134" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">St. Paul Pioneer Press</title> (3 copies)</unittitle>
@@ -994,8 +992,8 @@
                             <container parent="cid49093" type="Folder">10</container>
                             <unitdate>1993 April 17</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref135" level="file">
+                    </c>
+                    <c id="ref135" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Star Tribune</title></unittitle>
@@ -1003,8 +1001,8 @@
                             <container parent="cid49094" type="Folder">11</container>
                             <unitdate>1991 June 2</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref136" level="file">
+                    </c>
+                    <c id="ref136" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Sunday Globe</title></unittitle>
@@ -1012,8 +1010,8 @@
                             <container parent="cid49095" type="Folder">12</container>
                             <unitdate>1992 October 4</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref137" level="file">
+                    </c>
+                    <c id="ref137" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Twin Cities Reader</title></unittitle>
@@ -1021,76 +1019,76 @@
                             <container parent="cid49096" type="Folder">13</container>
                             <unitdate>1991 June 19</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref19" level="subseries">
+                    </c>
+                </c>
+                <c id="ref19" level="subseries">
                     <did>
                         <unittitle>Subseries 2: Booklets</unittitle>
                         <unitdate>1957-1993, undated</unitdate>
                     </did>
-                    <c03 id="ref138" level="file">
+                    <c id="ref138" level="file">
                         <did>
                             <unittitle>"Album of Hillbilly and Western Favorites" souvenir booklet</unittitle>
                             <container id="cid49097" type="Box" label="Text">4</container>
                             <container parent="cid49097" type="Folder">1</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref139" level="file">
+                    </c>
+                    <c id="ref139" level="file">
                         <did>
                             <unittitle>"Biggest Show of the Stars for ‘57" tour booklet</unittitle>
                             <container id="cid49098" type="Box" label="Text">4</container>
                             <container parent="cid49098" type="Folder">2</container>
                             <unitdate>1957</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref140" level="file">
+                    </c>
+                    <c id="ref140" level="file">
                         <did>
                             <unittitle>"Country and Western Caravan on Tour" souvenir booklet</unittitle>
                             <container id="cid49099" type="Box" label="Text">4</container>
                             <container parent="cid49099" type="Folder">3</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref141" level="file">
+                    </c>
+                    <c id="ref141" level="file">
                         <did>
                             <unittitle>"Discography: Gene Vincent"</unittitle>
                             <container id="cid49100" type="Box" label="Text">4</container>
                             <container parent="cid49100" type="Folder">4</container>
                             <unitdate>1992</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref142" level="file">
+                    </c>
+                    <c id="ref142" level="file">
                         <did>
                             <unittitle>"Fan Club Directory"</unittitle>
                             <container id="cid49101" type="Box" label="Text">4</container>
                             <container parent="cid49101" type="Folder">5</container>
                             <unitdate>1993</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref143" level="file">
+                    </c>
+                    <c id="ref143" level="file">
                         <did>
                             <unittitle>"Rock and Roll Scene"</unittitle>
                             <container id="cid49102" type="Box" label="Text">4</container>
                             <container parent="cid49102" type="Folder">6</container>
                             <unitdate>1971</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref144" level="file">
+                    </c>
+                    <c id="ref144" level="file">
                         <did>
                             <unittitle>"Something Else: A Tribute to Eddie Cochran"</unittitle>
                             <container id="cid49103" type="Box" label="Text">4</container>
                             <container parent="cid49103" type="Folder">7</container>
                             <unitdate>1979</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref20" level="subseries">
+                    </c>
+                </c>
+                <c id="ref20" level="subseries">
                     <did>
                         <unittitle>Subseries 3: Periodicals</unittitle>
                         <unitdate>1960, 1977-1979, 1983-1992</unitdate>
                     </did>
-                    <c03 id="ref145" level="file">
+                    <c id="ref145" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Guitar Player</title></unittitle>
@@ -1098,8 +1096,8 @@
                             <container parent="cid49104" type="Folder">8</container>
                             <unitdate>1983 December</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref146" level="file">
+                    </c>
+                    <c id="ref146" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Musician Magazine</title></unittitle>
@@ -1107,8 +1105,8 @@
                             <container parent="cid49105" type="Folder">9</container>
                             <unitdate>1991 November</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref147" level="file">
+                    </c>
+                    <c id="ref147" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Not Fade Away</title></unittitle>
@@ -1116,8 +1114,8 @@
                             <container parent="cid49106" type="Folder">10</container>
                             <unitdate>1977-1979</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref148" level="file">
+                    </c>
+                    <c id="ref148" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Now Dig This</title>, issues 61, 68, 85</unittitle>
@@ -1125,8 +1123,8 @@
                             <container parent="cid49107" type="Folder">11</container>
                             <unitdate>1988-1990</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref149" level="file">
+                    </c>
+                    <c id="ref149" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Photoplay</title></unittitle>
@@ -1134,8 +1132,8 @@
                             <container parent="cid49108" type="Folder">12</container>
                             <unitdate>1960 August</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref150" level="file">
+                    </c>
+                    <c id="ref150" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Record Collector</title></unittitle>
@@ -1143,8 +1141,8 @@
                             <container parent="cid49109" type="Folder">13</container>
                             <unitdate>1986 March</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref151" level="file">
+                    </c>
+                    <c id="ref151" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">Record Collector</title></unittitle>
@@ -1152,8 +1150,8 @@
                             <container parent="cid49110" type="Folder">14</container>
                             <unitdate>1992 June</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref152" level="file">
+                    </c>
+                    <c id="ref152" level="file">
                         <did>
                             <unittitle>
                                 <title render="italic">TV Guide</title></unittitle>
@@ -1161,61 +1159,61 @@
                             <container parent="cid49111" type="Folder">15</container>
                             <unitdate>1992 November 7</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref21" level="subseries">
+                    </c>
+                </c>
+                <c id="ref21" level="subseries">
                     <did>
                         <unittitle>Subseries 4: Clippings</unittitle>
                     </did>
-                    <c03 id="ref153" level="file">
+                    <c id="ref153" level="file">
                         <did>
                             <unittitle>Newspaper clippings on Eddie Cochran</unittitle>
                             <container id="cid49112" type="Box" label="Text">4</container>
                             <container parent="cid49112" type="Folder">16-17</container>
                             <unitdate>1959-1993</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref22" level="subseries">
+                    </c>
+                </c>
+                <c id="ref22" level="subseries">
                     <did>
                         <unittitle>Subseries 5: Sheet Music</unittitle>
                         <unitdate>1957-1959, 1961</unitdate>
                     </did>
-                    <c03 id="ref154" level="file">
+                    <c id="ref154" level="file">
                         <did>
                             <unittitle>19 songs (photocopies)</unittitle>
                             <container id="cid49113" type="Box" label="Text">4</container>
                             <container parent="cid49113" type="Folder">17</container>
                             <unitdate>1959, 1961</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref155" level="file">
+                    </c>
+                    <c id="ref155" level="file">
                         <did>
                             <unittitle>“Drive in Show”</unittitle>
                             <container id="cid49114" type="Box" label="Text">4</container>
                             <container parent="cid49114" type="Folder">18</container>
                             <unitdate>1957</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref156" level="file">
+                    </c>
+                    <c id="ref156" level="file">
                         <did>
                             <unittitle>“Summertime Blues” (3 copies)</unittitle>
                             <container id="cid49115" type="Box" label="Text">4</container>
                             <container parent="cid49115" type="Folder">19</container>
                             <unitdate>1958</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref157" level="file">
+                    </c>
+                    <c id="ref157" level="file">
                         <did>
                             <unittitle>“This Should Go on Forever”</unittitle>
                             <container id="cid49116" type="Box" label="Text">4</container>
                             <container parent="cid49116" type="Folder">20</container>
                             <unitdate>1958</unitdate>
                         </did>
-                    </c03>
-                </c02>
-            </c01>
-            <c01 id="ref13" level="series">
+                    </c>
+                </c>
+            </c>
+            <c id="ref13" level="series">
                 <did>
                     <unittitle>Series IV: Audiovisual Materials [RESTRICTED]</unittitle>
                     <unitdate>1957-1988, undated</unitdate>
@@ -1232,7 +1230,7 @@
                     <head>Access Restrictions</head>
                     <p>The condition of some of these materials has not yet been determined for playback purposes and they are, therefore, RESTRICTED. Some of the audiovisual materials in the collection are on defunct media formats and, therefore, are RESTRICTED. Access copies of these materials may have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                 </accessrestrict>
-                <c02 id="ref23" level="subseries">
+                <c id="ref23" level="subseries">
                     <did>
                         <unittitle>Subseries 1: VHS Videocassettes [RESTRICTED]</unittitle>
                         <unitdate>1985, undated</unitdate>
@@ -1241,7 +1239,7 @@
                         <head>Access Restrictions</head>
                         <p>The condition of the materials in this subseries has not yet been determined for playback purposes. Access copies of these materials may have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                     </accessrestrict>
-                    <c03 id="ref159" level="item">
+                    <c id="ref159" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">Bobby Cochran and the Rhythm Rockers</title></unittitle>
@@ -1249,8 +1247,8 @@
                             <container parent="cid787001" type="Object">21</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref160" level="item">
+                    </c>
+                    <c id="ref160" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">Bobby Cochran and the Rock Around the Clock Show</title></unittitle>
@@ -1258,8 +1256,8 @@
                             <container parent="cid787002" type="Object">22</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref161" level="item">
+                    </c>
+                    <c id="ref161" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">Go, Johnny, Go</title></unittitle>
@@ -1267,8 +1265,8 @@
                             <container parent="cid787003" type="Object">23</container>
                             <unitdate>1985</unitdate>
                         </did>
-                    </c03>
-                    <c03 id="ref162" level="item">
+                    </c>
+                    <c id="ref162" level="item">
                         <did>
                             <unittitle>
                                 <title render="italic">Tear it Up: The Rockabilly Documentary</title></unittitle>
@@ -1276,9 +1274,9 @@
                             <container parent="cid787004" type="Object">24</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-                <c02 id="ref26" level="subseries">
+                    </c>
+                </c>
+                <c id="ref26" level="subseries">
                     <did>
                         <unittitle>Subseries 2: Minidiscs [RESTRICTED]</unittitle>
                         <unitdate>undated</unitdate>
@@ -1287,7 +1285,7 @@
                         <head>Access Restrictions</head>
                         <p>Some of the audiovisual materials in the collection are on defunct media formats and, therefore, are RESTRICTED. Access copies of these materials will have to be created prior to use. Consult the Library and Archives staff in advance of your visit to ensure access to these materials is available.</p>
                     </accessrestrict>
-                    <c03 id="ref163" level="item">
+                    <c id="ref163" level="item">
                         <did>
                             <unittitle>Eddie Cochran. 
                                 <title render="italic">Lil’ Bit of Gold</title>. Rhino Records. R3-73005. (2 copies)</unittitle>
@@ -1295,9 +1293,9 @@
                             <container parent="cid50038" type="Object">25</container>
                             <unitdate>undated</unitdate>
                         </did>
-                    </c03>
-                </c02>
-            </c01>
+                    </c>
+                </c>
+            </c>
         </dsc>
     </archdesc>
 </ead>

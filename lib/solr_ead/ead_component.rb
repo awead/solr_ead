@@ -1,0 +1,5 @@
+class EadComponent
+
+
+
+end
