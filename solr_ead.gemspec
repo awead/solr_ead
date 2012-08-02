@@ -4,8 +4,8 @@ require File.expand_path('../lib/solr_ead/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Adam Wead"]
   gem.email         = ["amsterdamos@gmail.com"]
-  gem.description   = %q{Blacklight plugin for indexing ead into solr using OM. Define your own OM terminology to create the solr fields you want from your ead, then write your own views within Blacklight to display the results.}
-  gem.summary       = %q{Blacklight plugin for indexing ead into solr using OM}
+  gem.description   = %q{A gem indexing ead into solr using OM. Define your own OM terminology to create the solr fields you want from your ead, then use solr-based applications like Blacklight to search and display the results.}
+  gem.summary       = %q{A gem for indexing ead into solr using OM}
   gem.homepage      = "http://github.com/awead/ead_solr"
 
   gem.files         = `git ls-files`.split($\)
