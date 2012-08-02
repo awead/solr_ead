@@ -1,7 +1,6 @@
 require "nokogiri"
 require "solrizer"
 require "om"
-require "rsolr"
 
 module SolrEad
   def self.version
