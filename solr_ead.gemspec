@@ -16,9 +16,9 @@ Gem::Specification.new do |gem|
   gem.version       = SolrEad::VERSION
 
   # Dependencies
-  gem.add_dependency('blacklight')
   gem.add_dependency('om')
   gem.add_dependency('solrizer')
+  gem.add_dependency('rsolr')
   # For Development
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'debugger'
