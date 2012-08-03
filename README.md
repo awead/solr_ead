@@ -37,11 +37,11 @@ Or install it yourself as:
 
 ## Usage
 
-    This is still a work in-progress, but the basic idea is:
+This is still a work in-progress, but the basic idea is:
 
     $ rake solr_ead:index FILE=/path/to/your/ead.xml
 
-    You can also do this via the command line:
+You can also do this via the command line:
 
     > indexer = SolrEad::Indexer.new
     > indexer.create(File.new("path/to/your/ead.xml)
