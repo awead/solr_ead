@@ -7,7 +7,9 @@ module SolrEad
   def self.version
     SolrEad::VERSION
   end
-
 end
 
-Dir.glob(File.dirname(__FILE__) + '/solr_ead/*', &method(:require))
+require "solr_ead/document"
+require "solr_ead/component"
+require "solr_ead/component_behaviors"
+require "solr_ead/indexer"

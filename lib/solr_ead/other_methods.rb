@@ -7,11 +7,7 @@ module SolrEad::OtherMethods
     return id
   end
 
-  def self.ead_rake_xml(file)
-    raw = File.read(file)
-    raw.gsub!(/xmlns=".*"/, '')
-    xml = Nokogiri::XML(raw)
-  end
+
 
 
 
@@ -236,61 +232,11 @@ module SolrEad::OtherMethods
     return r
   end
 
-  def ead_prep_component(node,level)
-    part = Nokogiri::XML(node.to_xml)
-    next_level = level.to_i + 1
-    if part.search("//c0#{next_level}").count > 0
-      part.search("//c0#{next_level}").each { |subpart| subpart.remove }
-      return part, "true"
-    else
-      return part, "false"
-    end
-  end
 
-  def ead_parent_refs(node,level)
-    results = Array.new
-    while level > 0
-      level = level - 1
-      parent = node.parent
-      results << parent.attr("id") unless parent.attr("id").nil?
-      node = parent
-    end
-    return results.reverse
-  end
 
-  def ead_parent_unittitles(node,level)
-    results = Array.new
-    # decrement now to avoid looking for "c00" nodes
-    level = level - 1
-    while level > 0
-      parent = node.parent
-      part = Nokogiri::XML(parent.to_xml)
-      results << get_title(part,level)
-      node = parent
-      level = level - 1
-    end
-    return results.reverse
-  end
 
-  def ead_clean_xml(string)
-    string.gsub!(/<title/,"<span")
-    string.gsub!(/<\/title/,"</span")
-    string.gsub!(/render=/,"class=")
-    sanitize = Sanitize.clean(string, :elements => ['span'], :attributes => {'span' => ['class']})
-    sanitize.gsub("\n",'').gsub(/\s+/, ' ').strip
-  end
 
-  def get_title(xml,level)
-    title = xml.at("//c0#{level}/did/unittitle")
-    date  = xml.at("//c0#{level}/did/unitdate")
-    if !title.nil? and !title.content.empty?
-      return ead_clean_xml(title.content)
-    elsif !date.nil? and !date.content.empty?
-      return ead_clean_xml(date.content)
-    else
-      return "[No title available]"
-    end
-  end
+
 
 
 end

@@ -2,6 +2,7 @@ module SolrEad
 class Indexer
 
   include RSolr
+  include SolrEad::ComponentBehaviors
 
   attr_accessor :solr
 
@@ -18,9 +19,7 @@ class Indexer
     doc = SolrEad::Document.from_xml(file)
     solr_doc = doc.to_solr
     self.solr.add solr_doc
-    xml = SolrEad::OtherMethods.ead_rake_xml(file)
-
-
+    add_components file
     self.solr.commit
   end
 
@@ -29,13 +28,29 @@ class Indexer
     doc = SolrEad::Document.from_xml(file)
     solr_doc = doc.to_solr
     self.solr.delete_by_id solr_doc[:id]
+    delete_components solr_doc[:id]
     self.solr.add solr_doc
+    add_components file
     self.solr.commit
   end
 
   def delete(id)
     self.solr.delete_by_id id
+    delete_components id
     self.solr.commit
+  end
+
+  private
+
+  def add_components(file)
+    components(file).each do |node|
+      solr_doc = SolrEad::Component.from_xml(prep(node)).to_solr
+      solr_doc.merge!(additional_component_fields(node))
+      #self.solr.add solr_doc
+    end
+  end
+
+  def delete_components(id)
   end
 
 

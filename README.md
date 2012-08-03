@@ -44,7 +44,7 @@ This is still a work in-progress, but the basic idea is:
 You can also do this via the command line:
 
     > indexer = SolrEad::Indexer.new
-    > indexer.create(File.new("path/to/your/ead.xml)
+    > indexer.create(File.new("path/to/your/ead.xml))
 
 ## Contributing
 
