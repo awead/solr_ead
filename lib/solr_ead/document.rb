@@ -6,11 +6,16 @@ class Document
 
   # Define each term in your ead that you want put into the solr document
   set_terminology do |t|
-    t.root(:path=>"ead", :xmlns=>"urn:isbn:1-931666-22-9", :schema=>"http://www.loc.gov/ead/ead.xsd", "xmlns:ns2"=>"http://www.w3.org/1999/xlink", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance")
+    t.root(:path=>"ead",
+           :xmlns=>"urn:isbn:1-931666-22-9",
+           :schema=>"http://www.loc.gov/ead/ead.xsd",
+           "xmlns:ns2"=>"http://www.w3.org/1999/xlink",
+           "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance",
+           :index_as => [:not_searchable, :not_displayable])
 
-    t.eadheader {
+    t.eadheader(:index_as => [:not_searchable, :not_displayable]) {
       t.eadid
-      t.filedesc {
+      t.filedesc(:index_as => [:not_searchable, :not_displayable]) {
         t.titlestmt {
           t.titleproper {
             t.num
@@ -18,7 +23,7 @@ class Document
           t.titleproper_filing(:path=>"titleproper", :attributes=>{ :type => "filing" })
           t.author
         }
-        t.publicationstmt {
+        t.publicationstmt(:index_as => [:not_searchable, :not_displayable]) {
           t.publisher
           t.address {
             t.addressline
@@ -26,7 +31,7 @@ class Document
           t.date
         }
       }
-      t.profiledesc {
+      t.profiledesc(:index_as => [:not_searchable, :not_displayable]) {
         t.creation {
           t.date
         }
@@ -36,8 +41,8 @@ class Document
       t.revisiondesc
     }
 
-    t.archdesc {
-      t.did {
+    t.archdesc(:index_as => [:not_searchable, :not_displayable]) {
+      t.did(:index_as => [:not_searchable, :not_displayable]) {
         t.unittitle
         t.unitid
         t.repository {
@@ -59,35 +64,35 @@ class Document
           t.normal(:path=>{ :attribute=>"normal" })
         }
       }
-      t.separatedmaterial {
+      t.separatedmaterial(:index_as => [:not_searchable, :not_displayable]) {
         t.head
         t.p
       }
-      t.relatedmaterial {
+      t.relatedmaterial(:index_as => [:not_searchable, :not_displayable]) {
         t.head
         t.p
       }
-      t.prefercite {
+      t.prefercite(:index_as => [:not_searchable, :not_displayable]) {
         t.head
         t.p
       }
-      t.custodhist {
+      t.custodhist(:index_as => [:not_searchable, :not_displayable]) {
         t.head
         t.p
       }
-      t.userestrict {
+      t.userestrict(:index_as => [:not_searchable, :not_displayable]) {
         t.head
         t.p
       }
-      t.accessrestrict {
+      t.accessrestrict(:index_as => [:not_searchable, :not_displayable]) {
         t.head
         t.p
       }
-      t.processinfo {
+      t.processinfo(:index_as => [:not_searchable, :not_displayable]) {
         t.head
         t.p
       }
-      t.controlaccess {
+      t.controlaccess(:index_as => [:not_searchable, :not_displayable]) {
         t.corpname(:index_as=>[:facetable])
         t.famname(:index_as=>[:facetable])
         t.genreform(:index_as=>[:facetable])
@@ -108,6 +113,7 @@ class Document
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
     solr_doc.merge!({:id => self.ead_id.first})
+    solr_doc.merge!({:xml_t => self.to_xml})
     return solr_doc
   end
 

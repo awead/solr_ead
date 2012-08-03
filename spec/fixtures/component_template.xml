@@ -1,0 +1,19 @@
+<c id="ref215" level="item">
+  <did>
+    <unittitle>Internal Revenue Service Form Information Return [RESTRICTED]</unittitle>
+    <langmaterial>
+        <language langcode="eng"/>
+    </langmaterial>
+    <container id="cid871003" type="Box" label="Access Copy">1</container>
+    <container parent="cid871003" type="Folder">22</container>
+    <container parent="cid871003" type="Object">3</container>
+    <container id="cid605004" type="Box" label="Original Copy">5</container>
+    <container parent="cid605004" type="Folder">1</container>
+    <container parent="cid605004" type="Object">3</container>
+    <unitdate>1958</unitdate>
+  </did>
+  <accessrestrict id="ref1189">
+      <head>Access Restrictions</head>
+      <p>This item is confidential and, therefore, is RESTRICTED. A redacted access copy is available.</p>
+  </accessrestrict>
+</c>

@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "An EAD document" do
+describe SolrEad::Document do
 
   before(:all) do
     file = "ARC-0005.xml"
