@@ -43,8 +43,50 @@ class Document
     }
 
     t.archdesc(:index_as => [:not_searchable, :not_displayable]) {
+      t.accessrestrict(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
+      t.accruals(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
+      t.acqinfo(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
+      t.altformavail(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
+      t.appraisal(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
+      t.arrangement(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
+      t.bibliography(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+        t.bibref
+      }
+      t.controlaccess(:index_as => [:not_searchable, :not_displayable]) {
+        t.corpname(:index_as=>[:facetable])
+        t.famname(:index_as=>[:facetable])
+        t.genreform(:index_as=>[:facetable])
+        t.geogname(:index_as=>[:facetable])
+        t.name(:index_as=>[:facetable])
+        t.persname(:index_as=>[:facetable])
+        t.subject(:index_as=>[:facetable])
+      }
+      t.custodhist(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
       t.did(:index_as => [:not_searchable, :not_displayable]) {
-        t.unittitle(:index_as => [:displayable, :facetable])
+        t.unittitle
         t.unitid
         t.repository {
           t.corpname
@@ -65,11 +107,22 @@ class Document
           t.normal(:path=>{ :attribute=>"normal" })
         }
       }
-      t.separatedmaterial(:index_as => [:not_searchable, :not_displayable]) {
+      t.fileplan(:index_as => [:not_searchable, :not_displayable]) {
         t.head
         t.p
       }
-      t.relatedmaterial(:index_as => [:not_searchable, :not_displayable]) {
+      t.note(:index_as => [:not_searchable, :not_displayable]) {
+        t.p
+      }
+      t.odd(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
+      t.originalsloc(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
+      t.phystech(:index_as => [:not_searchable, :not_displayable]) {
         t.head
         t.p
       }
@@ -77,7 +130,19 @@ class Document
         t.head
         t.p
       }
-      t.custodhist(:index_as => [:not_searchable, :not_displayable]) {
+      t.processinfo(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
+      t.relatedmaterial(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
+      t.separatedmaterial(:index_as => [:not_searchable, :not_displayable]) {
+        t.head
+        t.p
+      }
+      t.scopecontent(:index_as => [:not_searchable, :not_displayable]) {
         t.head
         t.p
       }
@@ -85,28 +150,10 @@ class Document
         t.head
         t.p
       }
-      t.accessrestrict(:index_as => [:not_searchable, :not_displayable]) {
-        t.head
-        t.p
-      }
-      t.processinfo(:index_as => [:not_searchable, :not_displayable]) {
-        t.head
-        t.p
-      }
-      t.controlaccess(:index_as => [:not_searchable, :not_displayable]) {
-        t.corpname(:index_as=>[:facetable])
-        t.famname(:index_as=>[:facetable])
-        t.genreform(:index_as=>[:facetable])
-        t.geogname(:index_as=>[:facetable])
-        t.name(:index_as=>[:facetable])
-        t.persname(:index_as=>[:facetable])
-        t.subject(:index_as=>[:facetable])
-      }
     }
 
     # Proxies
     t.ead_id(:proxy=>[:eadheader, :eadid])
-    #t.collection(:proxy=>[:archdesc, :did, :unittitle])
 
 
   end
