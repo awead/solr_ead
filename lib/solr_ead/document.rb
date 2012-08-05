@@ -3,6 +3,7 @@ class Document
 
   include OM::XML::Document
   include Solrizer::XML::TerminologyBasedSolrizer
+  include SolrEad::DocumentBehaviors
 
   # Define each term in your ead that you want put into the solr document
   set_terminology do |t|
@@ -43,7 +44,7 @@ class Document
 
     t.archdesc(:index_as => [:not_searchable, :not_displayable]) {
       t.did(:index_as => [:not_searchable, :not_displayable]) {
-        t.unittitle
+        t.unittitle(:index_as => [:displayable, :facetable])
         t.unitid
         t.repository {
           t.corpname

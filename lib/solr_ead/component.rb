@@ -26,7 +26,7 @@ class Component
 
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
-
+    solr_doc.merge!({:xml_t => self.to_xml})
   end
 
 

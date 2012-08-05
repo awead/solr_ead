@@ -79,6 +79,7 @@ class Indexer
   def delete_components(id)
     response = solr.get 'select', :params => {
       :q      => "ead_id_t:#{id.to_s}",
+      :qt     => "document",
       :start  => 0,
       :rows   => 100000
     }
