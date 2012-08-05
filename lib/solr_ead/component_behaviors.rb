@@ -2,39 +2,74 @@ require "sanitize"
 
 module SolrEad::ComponentBehaviors
 
+  # Takes a file as its input and returns a Nokogiri::XML::NodeSet of component <c> nodes
   def components(file)
-    raw = File.read(file)
-    raw.gsub!(/xmlns=".*"/, '')
-    xml = Nokogiri::XML(raw)
-    xml.xpath("//c")
+    raw = File.read(file).gsub!(/xmlns=".*"/, '')
+    Nokogiri::XML(raw).xpath("//c")
   end
 
+  # Used in conjunction with #components, this takes a single Nokogiri::XML::Element
+  # representing an <c> node from an ead document, and returns a Nokogiri::XML::Document
+  # with any child <c> nodes removed.
+  # == Example
+  # If I input this Nokogiri::XML::Element
+  #   <c>
+  #     <did>etc</did>
+  #     <scopecontent>etc</scopecontent>
+  #     <c>etc</c>
+  #     <c>etc</c>
+  #   </c>
+  # Then I should get back the following Nokogiri::XML::Document
+  #   <c>
+  #     <did>etc</did>
+  #     <scopecontent>etc</scopecontent>
+  #   </c>
   def prep(node)
-    part = Nokogiri::XML(node.to_xml)
-    part.elements.each do |e|
-      e.remove if e.name == "c"
-    end
+    part = Nokogiri::XML(node.to_s)
+    part.xpath("/*/c").each { |e| e.remove }
     return part
   end
 
-  def additional_component_fields(node)
-    return {}
+  # Because the solr documents created from individual components have been removed from
+  # the hierarchy of their original ead, we need to be able to reconstruct the order
+  # in which they appeared, as well as their location within the hierarchy.
+  #
+  # This method takes a single Nokogiri::XMl::Node as its argument that represents a
+  # single <c> component node, but with all of this parent nodes still attached. From
+  # there we can determine all of its parent <c> nodes so that we can correctly
+  # reconstruct its placement within the original ead hierarchy.
+  #
+  # The solr fields return by this method are:
+  #
+  # id:: Unique identifier using the id attribute and the <eadid>
+  # ead_id:: The <eadid> node of the ead. This is so we know which ead this component belongs to.
+  # parent_id:: The id attribute of the parent <c> node.  We need this so we reconstruct the <c> node hierarchy.
+  # parent_id_list:: Array of all id attributes from the component's parent <c> nodes, sorted in descending order
+  # parent_unittitle_list:: Array of all unittitle nodes from the component's parent <c> nodes, sort in descending order
+  # component_children_b:: Boolean field indicating whether or not the component has any child <c> nodes attached to it
+  #
+  # These fields are used so that we may reconstruct placement of a single component
+  # within the hierarchy of the original ead.
+  def additional_component_fields(node, addl_fields = Hash.new)
+    addl_fields[:id]                      = [node.xpath("//eadid").text, node.attr("id")].join(":")
+    addl_fields[:ead_id_t]                = node.xpath("//eadid").text
+    addl_fields[:parent_id_t]             = node.parent.attr("id") unless node.parent.attr("id").nil?
+    addl_fields[:parent_id_list_t]        = parent_id_list(node)
+    addl_fields[:parent_unittitle_list_t] = parent_unittitle_list(node)
+    addl_fields[:component_children_b]    = component_children?(node)
+    return addl_fields
   end
 
-  def parent_refs(node)
-    results = Array.new
-    #if node.respond_to?("parent")
-      while node.parent.name == "c"
-        parent = node.parent
-        results << parent.attr("id") unless parent.attr("id").nil?
-        node = parent
-      end
-    #end
+  def parent_id_list(node, results = Array.new)
+    while node.parent.name == "c"
+      parent = node.parent
+      results << parent.attr("id") unless parent.attr("id").nil?
+      node = parent
+    end
     return results.reverse
   end
 
-  def parent_unittitles(node)
-    results = Array.new
+  def parent_unittitle_list(node, results = Array.new)
     while node.parent.name == "c"
       parent = node.parent
       part = Nokogiri::XML(parent.to_xml)
@@ -56,6 +91,7 @@ module SolrEad::ComponentBehaviors
     end
   end
 
+  # Converts formatting elements in the ead into html tags
   def ead_clean_xml(string)
     string.gsub!(/<title/,"<span")
     string.gsub!(/<\/title/,"</span")
@@ -64,6 +100,11 @@ module SolrEad::ComponentBehaviors
     sanitize.gsub("\n",'').gsub(/\s+/, ' ').strip
   end
 
-
+  # Returns true or false for a component with attached <c> child nodes.
+  # A <c> node with a level attribute of either file or item will have no component
+  # children attached to it.
+  def component_children?(node)
+    node.attr("level").match(/file|item/) ? TRUE : FALSE
+  end
 
 end

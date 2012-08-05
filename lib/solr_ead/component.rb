@@ -8,7 +8,7 @@ class Component
   set_terminology do |t|
     t.root(:path=>"c", :index_as => [:not_searchable, :not_displayable])
     t.ref(:path=>"/c/@id")
-    t.level(:path=>"/c/@level")
+    t.level(:path=>"/c/@level", :index_as => [:facetable])
 
     t.did(:index_as => [:not_searchable, :not_displayable]) {
       t.unittitle

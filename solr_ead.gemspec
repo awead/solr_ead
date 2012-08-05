@@ -23,4 +23,5 @@ Gem::Specification.new do |gem|
   # For Development
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'debugger'
+  gem.add_development_dependency 'rdoc'
 end

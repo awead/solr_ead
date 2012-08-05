@@ -1,4 +1,10 @@
 module SolrEad
+
+# A solr indexer for your ead.
+#   > file = File.new("path/to/your/ead.xml")
+#   > indexer = SolrEad::Indexer.new
+#   > indexer.create(file)
+#   > indexer.delete("EAD-ID")
 class Indexer
 
   include RSolr
@@ -6,6 +12,8 @@ class Indexer
 
   attr_accessor :solr
 
+  # Creates a new instance of SolrEad::Indexer and connects to your solr server
+  # using the url supplied in your config/solr.yml file.
   def initialize(opts={})
     if defined?(Rails.root)
       self.solr = RSolr.connect :url => YAML.load_file(File.join(Rails.root,"config","solr.yml"))[Rails.env]['url']
@@ -14,6 +22,8 @@ class Indexer
     end
   end
 
+  # Indexes your ead and additional component documents with the supplied file, then
+  # commits the results to your solr server.
   def create(file,opts={})
     file = File.new(file)
     doc = SolrEad::Document.from_xml(file)
@@ -23,6 +33,9 @@ class Indexer
     self.solr.commit
   end
 
+  # Updates your ead from a given file by first deleting the existing ead document and
+  # any component documents, then creating a new index from the supplied file.
+  # This method will also commit the results to your solr server when complete.
   def update(file,opts={})
     file = File.new(file)
     doc = SolrEad::Document.from_xml(file)
@@ -34,23 +47,42 @@ class Indexer
     self.solr.commit
   end
 
+  # Deletes the ead document and any component documents from your solr index and
+  # commits the results.
   def delete(id)
     self.solr.delete_by_id id
     delete_components id
     self.solr.commit
   end
 
-  private
+  protected
 
+  # Creates solr documents for each individual component node in the ead.  Field names
+  # and values are determined according to the OM terminology outlined in
+  # SolrEad::Component as well as additional fields taken from the rest of the ead
+  # document as described in SolrEad::ComponentBehaviors#additional_component_fields
+  #
+  # Furthermore, a solr sorting field *sort_i* is added to the document using the index values from the array
+  # of <c> nodes.  This maintains the order of <c> nodes as they appear in the original ead document.
   def add_components(file)
+    counter = 1
     components(file).each do |node|
       solr_doc = SolrEad::Component.from_xml(prep(node)).to_solr
       solr_doc.merge!(additional_component_fields(node))
-      #self.solr.add solr_doc
+      solr_doc.merge!({:sort_i => counter.to_s})
+      self.solr.add solr_doc
+      counter = counter + 1
     end
   end
 
+  # Deletes any document with the solr field ead_id_t equal to the given id
   def delete_components(id)
+    response = solr.get 'select', :params => {
+      :q      => "ead_id_t:#{id.to_s}",
+      :start  => 0,
+      :rows   => 100000
+    }
+    response["response"]["docs"].each { |doc| self.solr.delete_by_id doc["id"] }
   end
 
 
