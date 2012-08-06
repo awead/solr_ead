@@ -57,8 +57,8 @@ module SolrEad::ComponentBehaviors
   # within the hierarchy of the original ead.
   def additional_component_fields(node, addl_fields = Hash.new)
     addl_fields[:id]                      = [node.xpath("//eadid").text, node.attr("id")].join(":")
-    addl_fields[:ead_id_t]                = node.xpath("//eadid").text
-    addl_fields[:parent_id_t]             = node.parent.attr("id") unless node.parent.attr("id").nil?
+    addl_fields[:ead_id_s]                = node.xpath("//eadid").text
+    addl_fields[:parent_id_s]             = node.parent.attr("id") unless node.parent.attr("id").nil?
     addl_fields[:parent_id_list_t]        = parent_id_list(node)
     addl_fields[:parent_unittitle_list_t] = parent_unittitle_list(node)
     addl_fields[:component_children_b]    = component_children?(node)

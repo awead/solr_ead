@@ -161,6 +161,7 @@ class Document
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
     solr_doc.merge!({:id => self.ead_id.first})
+    solr_doc.merge!({:ead_id_s => self.ead_id.first})
     solr_doc.merge!({:xml_t => self.to_xml})
     return solr_doc
   end
