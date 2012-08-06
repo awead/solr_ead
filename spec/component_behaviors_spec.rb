@@ -3,11 +3,8 @@ require "spec_helper"
 describe SolrEad::ComponentBehaviors do
 
   before :all do
-    file = "ARC-0005.xml"
-    @xml = fixture file
-  end
-
-  before :each do
+    @not_numbered = fixture "ARC-0005.xml"
+    @numbered     = fixture "pp002010.xml"
     class TestClass
       include SolrEad::ComponentBehaviors
     end
@@ -15,16 +12,26 @@ describe SolrEad::ComponentBehaviors do
   end
 
   describe "#components" do
-    it "should return at array of Nokogiri nodes" do
-      nodeset = @test.components(@xml)
-      nodeset.should be_a_kind_of(Nokogiri::XML::NodeSet)
-      array.first.should be_a_kind_of(Nokogiri::XML::Element)
+
+    before :all do
+      @non_numbered_nodeset = @test.components(@not_numbered)
+      @numbered_nodeset     = @test.components(@numbered)
+    end
+
+    it "should return a nodeset" do
+      @non_numbered_nodeset.should be_a_kind_of(Nokogiri::XML::NodeSet)
+      @non_numbered_nodeset.first.should be_a_kind_of(Nokogiri::XML::Element)
+    end
+
+    it "should be able to handle both numbered and non-numbered <c> nodes" do
+      @non_numbered_nodeset.count.should == 135
+      @numbered_nodeset.count.should == 83
     end
   end
 
   describe "#prep" do
     it "should return a single component document" do
-      part = @test.prep(@test.components(@xml).first)
+      part = @test.prep(@numbered_nodeset)
       part.should be_a_kind_of(Nokogiri::XML::Document)
     end
 

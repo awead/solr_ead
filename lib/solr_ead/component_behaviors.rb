@@ -3,9 +3,14 @@ require "sanitize"
 module SolrEad::ComponentBehaviors
 
   # Takes a file as its input and returns a Nokogiri::XML::NodeSet of component <c> nodes
+  #
+  # It'll make an attempt at substituting numbered component levels for non-numbered
+  # ones.
   def components(file)
     raw = File.read(file).gsub!(/xmlns=".*"/, '')
-    Nokogiri::XML(raw).xpath("//c")
+    raw.gsub!(/c[0-9]{2,2}/,"c")
+    xml = Nokogiri::XML(raw)
+    return xml.xpath("//c")
   end
 
   # Used in conjunction with #components, this takes a single Nokogiri::XML::Element
