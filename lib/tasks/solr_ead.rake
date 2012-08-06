@@ -16,4 +16,13 @@ namespace :solr_ead do
     indexer.delete(ENV['ID'])
   end
 
+  desc "Index a directory of ead files given by DIR=path/to/directory"
+  task :index_dir do
+    raise "Please specify your direction, ex. DIR=path/to/directory" unless ENV['DIR']
+    indexer = SolrEad::Indexer.new
+    Dir.glob(File.join(ENV['DIR'],"*")).each do |file|
+      indexer.update(file) if File.extname(file).match("xml$")
+    end
+  end
+
 end
