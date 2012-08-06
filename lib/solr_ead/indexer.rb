@@ -41,7 +41,7 @@ class Indexer
     doc = SolrEad::Document.from_xml(file)
     solr_doc = doc.to_solr
     self.solr.delete_by_id solr_doc[:id]
-    delete_components solr_doc[:id]
+    solr.delete_by_query( "ead_id_t:" + solr_doc[:id] )
     self.solr.add solr_doc
     add_components file
     self.solr.commit
@@ -74,18 +74,6 @@ class Indexer
       counter = counter + 1
     end
   end
-
-  # Deletes any document with the solr field ead_id_t equal to the given id
-  def delete_components(id)
-    response = solr.get 'select', :params => {
-      :q      => "ead_id_t:#{id.to_s}",
-      :qt     => "document",
-      :start  => 0,
-      :rows   => 100000
-    }
-    response["response"]["docs"].each { |doc| self.solr.delete_by_id doc["id"] }
-  end
-
 
 end
 end
