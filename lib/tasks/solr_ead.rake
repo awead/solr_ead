@@ -21,7 +21,9 @@ namespace :solr_ead do
     raise "Please specify your direction, ex. DIR=path/to/directory" unless ENV['DIR']
     indexer = SolrEad::Indexer.new
     Dir.glob(File.join(ENV['DIR'],"*")).each do |file|
+      print "Indexing #{File.basename(file)}..."
       indexer.update(file) if File.extname(file).match("xml$")
+      print "done.\n"
     end
   end
 
