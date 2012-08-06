@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==========Schema Conversion:========== 
+ Transformed with dtd2schema.06.xsl 
+Generated: Mon, 20 December 2010 12:01:19 PM EST
+URL: http://hdl.loc.gov/loc.pnp/eadpnp.pp002010
+ ===================================== -->
+<!-- Transformed with v1v2002_4.xsl -->
+<!-- abstract : added from MARC record 99472031 : mfer : 14 September 2009 -->
+
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd"
+     id="mferd3397e3">
+   <eadheader id="mferd3397e4" repositoryencoding="iso15511" relatedencoding="Dublin Core"
+              countryencoding="iso3166-1"
+              scriptencoding="iso15924"
+              dateencoding="iso8601"
+              langencoding="iso639-2b">
+      <eadid countrycode="US" mainagencycode="US-DLC"
+             identifier="hdl:loc.pnp/eadpnp.pp002010"
+             encodinganalog="856$u">http://hdl.loc.gov/loc.pnp/eadpnp.pp002010</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="Title">Visual materials from the Booker T. Washington papers</titleproper>
+            <author encodinganalog="Creator">Prepared by Prints &amp; Photographs Division staff</author>
+         </titlestmt>
+         <publicationstmt>
+            <publisher encodinganalog="Publisher">
+               <extptr xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"
+                       xlink:href="http://lcweb2.loc.gov/xmlcommon/lcseal.jpg"/>Prints &amp; Photographs Division, Library of Congress</publisher>
+            <address>
+               <addressline>Washington, D.C. 20540</addressline>
+            </address>
+            <date normal="2002" encodinganalog="Date" era="ce" calendar="gregorian">2002</date>
+         </publicationstmt>
+         <notestmt>
+            <note id="lccnNote">
+               <p>Catalog Record: 
+				<extref xlink:href="http://lccn.loc.gov/99472031" xlink:actuate="onRequest"
+                          xlink:title="MARC record for collection"
+                          xlink:type="simple">http://lccn.loc.gov/99472031</extref>
+               </p>
+            </note>
+         </notestmt>
+      </filedesc>
+      <profiledesc>
+         <creation>Finding aid converted by Prints &amp; Photographs Division staff
+		  <date era="ce" calendar="gregorian">June, 2002</date>
+         </creation>
+      </profiledesc>
+      <revisiondesc>
+         <change encodinganalog="583">
+            <date normal="2004-07-15" era="ce" calendar="gregorian">2004-07-15</date>
+            <item>converted from EAD 1.0 to EAD 2002 </item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <archdesc type="register" level="collection">
+      <did id="mferd3397e36">
+         <head>Collection Summary</head>
+         <unittitle label="Title" encodinganalog="245$a">Visual materials from the Booker T. Washington papers
+		  <unitdate label="Dates" type="inclusive" normal="1889/1935" encodinganalog="260$c"
+                      era="ce"
+                      calendar="gregorian">1889-1935</unitdate>
+            <unitdate label="Bulk Dates" type="bulk" normal="1897/1915" encodinganalog="260$c"
+                      era="ce"
+                      calendar="gregorian">bulk 1897-1915</unitdate>
+         </unittitle>
+         <unitid label="Call No." encodinganalog="050" countrycode="US" repositorycode="US-DLC">LOT 13164</unitid>
+         <physdesc label="Physical Description" encodinganalog="300">
+            <extent>701 items (chiefly photographic prints); 57 x 41 cm. or smaller.</extent>
+         </physdesc>
+         <repository label="Location" encodinganalog="852">
+            <corpname>
+               <subarea>Prints &amp; Photographs Division</subarea> Library of Congress</corpname>
+            <address>
+               <addressline>Washington, D.C.</addressline>
+            </address>
+         </repository>
+         <!-- abstract : added from MARC record 99472031 : mfer : 14 September 2009 -->
+<abstract label="Summary" encodinganalog="520">Photographs document the activities of Booker T. Washington as a leader and agrarian organizer in the South at the turn of the century. Many depict Booker T. Washington’s speaking engagements at such places as Ocala, Tallahasee, and Daytona, Fla.; Mound Bayou, Miss.; and Baton Rouge, La. The collection also includes photographs that document classes and activities at the Tuskegee Normal and Industrial Institute, Tuskegee, Ala., including a parade for the celebration of the visit of President Theodore Roosevelt on October 24, 1905; celebrations for the twenty-fifth anniversary of the Institute in 1906; and students building dormitories and other facilities. Also includes a group portrait of the faculty of the Institute in 1897, as well as a few images of such faculty members as Frederick Douglass, Emmett Scott, and George Washington Carver. In addition, the collection contains portraits of other African Americans, including Blanche K. Bruce, Henry O. Tanner, John R. Lynch, Richard T. Greener, and John M. Langston, as well as alumni of Tuskegee Institute. Also includes portraits of African American students at other schools in the South. Many images are unique because of personal inscriptions to Booker T. Washington.</abstract>
+         <note label="Note" encodinganalog="500$a">
+            <p>For information about Prints and Photographs Division collections and services, see the
+			 <extref xlink:type="simple" xlink:show="new" xlink:actuate="onRequest"
+                       xlink:href="http://hdl.loc.gov/loc.pnp/pnpweb.000001">Prints &amp; Photographs Division's Reading Room Home Page.</extref>
+            </p>
+         </note>
+         <langmaterial label="Language">Collection material in <language encodinganalog="041" langcode="eng">English</language>
+         </langmaterial>
+      </did>
+      <!--m2cUpdateNodeSet--><controlaccess id="mferd3397e80" altrender=":::F005=^20090728132113.0^"><!--LN:282--><head>Selected Search Terms</head>
+         <note>
+            <p>The following terms have been used to index the description of this collection in the Library's online catalog. They are grouped by name of person or organization, by subject or location, and by occupation and listed alphabetically therein.</p>
+         </note>
+         <!--LN:285--><!--LN:289--><controlaccess id="mferd3399e12">
+            <head>People</head>
+            <persname encodinganalog="700" source="lcnaf"
+                      altrender=":::PWEBRECON=^Bedou%2C+A.+P.+%28Arthur+P.%29%2C+1882-1966%2C^">Bedou, A. P. (Arthur P.), 1882-1966, photographer.</persname>
+            <persname encodinganalog="700" source="lcnaf"
+                      altrender=":::PWEBRECON=^Johnston%2C+Frances+Benjamin%2C+1864-1952%2C^">Johnston, Frances Benjamin, 1864-1952, photographer.</persname>
+            <persname encodinganalog="700" source="lcnaf"
+                      altrender=":::PWEBRECON=^Washington%2C+Booker+T.%2C+1856-1915%2C^">Washington, Booker T., 1856-1915, collector.</persname>
+            <persname encodinganalog="600" role="subject" source="lcnaf"
+                      altrender=":::PWEBRECON=^Washington%2C+Booker+T.%2C+1856-1915.^">Washington, Booker T., 1856-1915.</persname>
+         </controlaccess>
+         <controlaccess id="mferd3399e30">
+            <head>Organizations</head>
+            <corpname encodinganalog="610$a" role="subject" source="unspecified"
+                      altrender=":::PWEBRECON=^Tuskegee+Normal+and+Industrial+Institute+1880-1940.^">Tuskegee Normal and Industrial Institute--1880-1940.</corpname>
+         </controlaccess>
+         <controlaccess id="mferd3399e39">
+            <head>Subjects</head>
+            <subject encodinganalog="650" source="unspecified"
+                     altrender=":::PWEBRECON=^African+Americans+1880-1940.^">African Americans--1880-1940.</subject>
+            <subject encodinganalog="650" source="lctgm"
+                     altrender=":::PWEBRECON=^Buildings+1880-1940.^">Buildings--1880-1940.</subject>
+            <subject encodinganalog="650" source="lctgm"
+                     altrender=":::PWEBRECON=^Educational+facilities+United+States+1880-1940.^">Educational facilities--United States--1880-1940.</subject>
+            <subject encodinganalog="650" source="lctgm"
+                     altrender=":::PWEBRECON=^Floats+%28Parades%29+Alabama+Tuskegee+1900-1910.^">Floats (Parades)--Alabama--Tuskegee--1900-1910.</subject>
+            <subject encodinganalog="650" source="lctgm"
+                     altrender=":::PWEBRECON=^Public+speaking+1900-1920.^">Public speaking--1900-1920.</subject>
+            <subject encodinganalog="650" source="lctgm"
+                     altrender=":::PWEBRECON=^School+children+1880-1940.^">School children--1880-1940.</subject>
+            <subject encodinganalog="650" source="lctgm"
+                     altrender=":::PWEBRECON=^Schools+United+States+1890-1940.^">Schools--United States--1890-1940.</subject>
+            <subject encodinganalog="650" source="lctgm"
+                     altrender=":::PWEBRECON=^Students+1890-1940.^">Students--1890-1940.</subject>
+            <subject encodinganalog="650" source="lctgm"
+                     altrender=":::PWEBRECON=^Universities+%26+colleges+United+States+1890-1940.^">Universities &amp; colleges--United States--1890-1940.</subject>
+            <subject encodinganalog="650" source="lctgm"
+                     altrender=":::PWEBRECON=^Women+Education+United+States+1880-1940.^">Women--Education--United States--1880-1940.</subject>
+            <subject encodinganalog="650" source="lctgm"
+                     altrender=":::PWEBRECON=^Women+Education+United+States+1880-1940.^">Women--Education--United States--1880-1940.</subject>
+         </controlaccess>
+         <controlaccess id="mferd3399e81">
+            <head>Form/Genre</head>
+            <genreform encodinganalog="655" source="gmgpc"
+                       altrender=":::PWEBRECON=^Albumen+prints+1880-1920.^">Albumen prints--1880-1920.</genreform>
+            <genreform encodinganalog="655" source="gmgpc"
+                       altrender=":::PWEBRECON=^Gelatin+silver+prints+1890-1940.^">Gelatin silver prints--1890-1940.</genreform>
+            <genreform encodinganalog="655" source="gmgpc"
+                       altrender=":::PWEBRECON=^Group+portraits+1880-1940.^">Group portraits--1880-1940.</genreform>
+            <genreform encodinganalog="655" source="gmgpc"
+                       altrender=":::PWEBRECON=^Photomechanical+prints+1890-1940.^">Photomechanical prints--1890-1940.</genreform>
+            <genreform encodinganalog="655" source="gmgpc"
+                       altrender=":::PWEBRECON=^Portraits+1880-1940.^">Portraits--1880-1940.</genreform>
+         </controlaccess>
+      </controlaccess>
+      <descgrp id="mferd3397e141" type="admininfo">
+         <head>Administrative Information</head>
+         <acqinfo id="mferd3397e144" encodinganalog="541">
+            <head>Provenance</head>
+            <p>Transfer; Manuscript Division (Booker T. Washington papers); 1973 (DLC/PP-1973:148), 1995 (DLC/PP-1995:013).</p>
+         </acqinfo>
+         <userestrict id="mferd3397e149" encodinganalog="540">
+            <head>Restrictions </head>
+            <p>No known donor restrictions. Rights status of individual images not evaluated. For more information see reference aid:
+			 <extref xlink:type="simple" xlink:show="new" xlink:actuate="onRequest"
+                       xlink:href="http://lcweb.loc.gov/rr/print/195_copr.html">Copyright and Other Restrictions Which Apply to Publication and Other Forms of Distribution of Images: Sources of Information.</extref>
+            </p>
+         </userestrict>
+         <altformavail id="mferd3397e157" encodinganalog="530">
+            <head>Additional form available</head>
+            <p>Digitized images of some items in the collection and their associated identifying information are available through the
+			 <extref xlink:type="simple" xlink:show="new" xlink:actuate="onRequest"
+                       xlink:href="http://lcweb.loc.gov/rr/print/catalog.html">Prints &amp; Photographs Online Catalog,</extref> by searching using the call number, "LOT 13164."</p>
+         </altformavail>
+         <altformavail id="mferd3397e165">
+            <head>Surrogates</head>
+            <p>Six original film negatives are stored offsite under the filing series designation LC-W2723-1 through LC-W2723-6. One glass lantern slide is stored under the filing designation LC-W2733-1. Surrogates for these images in the form of color laser photocopies have been interfiled within the LOT.</p>
+            <p>The LOT also includes original damaged photoprints which have been reformatted as digital surrogates for access purposes. These digitized images were printed and have been interfiled within the LOT for reference purposes. The original damaged photographs cannot be served.</p>
+         </altformavail>
+         <prefercite id="mferd3397e172" encodinganalog="524">
+            <head>Preferred Citation </head>
+            <p>Researchers wishing to cite this collection should include the following information: LOT 13164, Visual Materials from the Booker T. Washington Papers, Prints &amp; Photographs Division, Library of Congress, Washington, D.C.</p>
+         </prefercite>
+      </descgrp>
+      <bioghist id="mferd3397e177" encodinganalog="545">
+         <head>Biographical Note</head>
+         <p>Booker T. Washington was born into slavery in 1856 and after Emancipation grew up in the Kanawha Valley of West Va. At the age of 16 he enrolled in the Hampton Normal and Agricultural Institute, Va. In 1881, on the recommendation of staff of the Hampton Institute, he was hired to found a school for African Americans in Tuskegee, Ala. Booker T. Washington became a prominent leader as the result of his fund-raising efforts for Tuskegee. By 1895, Washington had a reputation as a public speaker which is reflected in this collection. He gained the respect of Theodore Roosevelt, who became a trustee of Tuskegee Normal and Industrial Institute in 1910. Washington died at Tuskegee on November 14, 1915 shortly after a speaking engagement in the Northeast. </p>
+      </bioghist>
+      <scopecontent id="mferd3397e182" encodinganalog="520">
+         <head>Scope and Content Note</head>
+         <p>Photographs document the activities of Booker T. Washington as a leader and agrarian organizer in the South at the turn of the century. Many depict Booker T. Washington's speaking engagements at such places as Ocala, Tallahasee, and Daytona, Fla.; Mound Bayou, Miss.; and Baton Rouge, La. The collection also includes photographs that document classes and activities at the Tuskegee Normal and Industrial Institute, Tuskegee, Ala., including a parade for the celebration of the visit of President Theodore Roosevelt on October 24, 1905; celebrations for the twenty-fifth anniversary of the Institute in 1906; and students building dormitories and other facilities. Also includes a group portrait of the faculty of the Institute in 1897, as well as a few images of such faculty members as Frederick Douglass, Emmett Scott, and George Washington Carver. In addition, the collection contains portraits of other African Americans, including Blanche K. Bruce, Henry O. Tanner, John R. Lynch, Richard T. Greener, and John M. Langston, as well as alumni of Tuskegee Institute. Also includes portraits of African American students at other schools in the South. Many images are unique because of personal inscriptions to Booker T. Washington.</p>
+      </scopecontent>
+      <arrangement id="mferd3397e187" encodinganalog="351$a">
+         <head>Organization of the Papers</head>
+         <p>Arranged by subject and size into twelve sub-groups as follows: Booker T. Washington portraits and memorials (LOT 13164-A); Washington at public speaking engagements (LOT 13164-B); Tuskegee Normal and Industrial Institute (LOT 13164-C); Portraits (LOT 13164-D and LOT 13164-E); Colleges &amp; Universities (LOT 13164-F); Canning &amp; Poultry Club Conference, Caroline Co., Va., Aug. 8, 1913 (LOT 13164-G); YMCA buildings and facilities (LOT 13164-H); Identified and unidentified buildings (LOT 13164-I and LOT 13164-J); Agricultural workers (LOT 13164-K); Miscellaneous (LOT 13164-L).</p>
+      </arrangement>
+      <otherfindaid encodinganalog="555$a" id="lccnURI">
+         <extref xlink:href="http://lccn.loc.gov/99472031" xlink:actuate="onRequest"
+                 xlink:title="MARC record for collection"
+                 xlink:type="simple">http://lccn.loc.gov/99472031</extref>
+      </otherfindaid>
+      <dsc id="mferd3397e192" type="combined">
+         <head>Overview of Collection Arrangement and Content</head>
+         <thead valign="bottom">
+            <row>
+               <entry morerows="0">Contents</entry>
+               <entry morerows="0">Call No.</entry>
+            </row>
+         </thead>
+         <c01 id="mferd3397e201" level="series">
+            <did>
+               <unittitle>Portraits, statues, and memorials of Booker T. Washington and his family
+				<unitdate type="inclusive" normal="1890/1935" era="ce" calendar="gregorian">ca. 1890-1935</unitdate>
+               </unittitle>
+               <unitid id="lot13164-a">LOT 13164-A</unitid>
+               <container>Box 1 (F size) and Box 6 (H size)</container>
+            </did>
+            <scopecontent>
+               <p>Also includes group portraits of Washington family members; a reproduction of a landscape painting by Mrs. Frank R. Hill entitled "Mt. Booker Washington," (1904); a design for a memorial portrait group designed and copyrighted by photographer C.M. Battey (c1911); one portrait of Margaret Murray Washington.</p>
+            </scopecontent>
+         </c01>
+         <c01 id="mferd3397e215" level="series">
+            <did>
+               <unittitle>Washington at public speaking engagements
+				<unitdate type="inclusive" normal="1900/1914" era="ce" calendar="gregorian">ca. 1900-1914</unitdate>
+               </unittitle>
+               <unitid id="lot13164-b">LOT 13164-B</unitid>
+               <container>Box 1 (F size) and Box 6 (H size)</container>
+            </did>
+            <scopecontent>
+               <p>Includes Washington addressing large crowds at locations in Arkansas, California, Florida, Louisiana, Mississippi, South Carolina, Tennessee, and Virginia as well as other unidentified locations. Also views of crowds gathered at the various venues; Washington traveling by coach, automobile, and train to locations; some group portraits, including one of Washington posing with Mary McCloud Bethune.</p>
+            </scopecontent>
+            <arrangement>
+               <p>Arranged alphabetically by city.</p>
+            </arrangement>
+         </c01>
+         <c01 id="mferd3397e232" level="series">
+            <did>
+               <unittitle>Tuskegee Institute
+				<unitdate type="inclusive" normal="1890/1910" era="ce" calendar="gregorian">1890-1910</unitdate>
+               </unittitle>
+               <unitid id="lot13164-c">LOT 13164-C</unitid>
+               <container>Box 2 (F size), Box 6 (H size), and Box 8 (OH size)</container>
+            </did>
+            <scopecontent>
+               <p>Includes campus views of buildings and monuments, student portraits, campus events, including a celebration and parade for President Theodore Roosevelt in 1905 and a 25th anniversary ceremony. Also includes portraits of faculty and alumni; students attending classes.</p>
+            </scopecontent>
+         </c01>
+         <c01 id="mferd3397e246" level="series">
+            <did>
+               <unittitle>Portraits of Washington's associates
+				<unitdate type="inclusive" normal="1889/1914" era="ce" calendar="gregorian">ca. 1889-1914</unitdate>
+               </unittitle>
+               <unitid id="lot13164-d">LOT 13164-D</unitid>
+               <container>Box 3 (F size) and Box 6 (H size)</container>
+               <note>
+                  <p>All are F size unless otherwise noted.</p>
+                  <p>Includes single and group portraits.</p>
+               </note>
+            </did>
+            <arrangement>
+               <p>Arranged alphabetically by sitter's surname.</p>
+            </arrangement>
+            <c02 id="mferd3397e265" level="file">
+               <did>
+                  <unittitle>Altiers, Genoiro
+				  <unitdate type="inclusive" normal="1906" era="ce" calendar="gregorian">1906</unitdate>
+                     <geogname>Puerto Rico</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e275" level="file">
+               <did>
+                  <unittitle>Amos, Moses, Dr.
+				  <unitdate type="inclusive" normal="1904" era="ce" calendar="gregorian">1904</unitdate>
+                     <geogname>Gate City, Georgia</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e285" level="file">
+               <did>
+                  <unittitle>Arkansas Business Mens League</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e289" level="file">
+               <did>
+                  <unittitle>Baldwin, William</unittitle>
+                  <physdesc>(H size)</physdesc>
+               </did>
+            </c02>
+            <c02 id="mferd3397e295" level="file">
+               <did>
+                  <unittitle>Borchers, [Edw.?]
+				  <unitdate type="inclusive" normal="1903" era="ce" calendar="gregorian">1903</unitdate>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e302" level="file">
+               <did>
+                  <unittitle>Bromet, M.S.
+				  <unitdate type="inclusive" normal="1904" era="ce" calendar="gregorian">1904</unitdate>
+                     <geogname>Paris</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e312" level="file">
+               <did>
+                  <unittitle>Brooks, A. L., Major</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e316" level="file">
+               <did>
+                  <unittitle>Brown, E. S.
+				  <geogname>Cambridge, Massachusetts</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e323" level="file">
+               <did>
+                  <unittitle>Bruce, Blanche K.</unittitle>
+                  <physdesc>(H Size)</physdesc>
+               </did>
+            </c02>
+            <c02 id="mferd3397e330" level="file">
+               <did>
+                  <unittitle>Campbell, C. Durham</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e334" level="file">
+               <did>
+                  <unittitle>Chase, Henry W.
+				  <geogname>Washington, D.C.</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e341" level="file">
+               <did>
+                  <unittitle>Coleman, Henry F.
+				  <geogname> Mt. Vernon, Iowa</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e348" level="file">
+               <did>
+                  <unittitle>Cooley, Elizabeth
+				  <geogname>Cooley, Elizabeth</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e355" level="file">
+               <did>
+                  <unittitle>Cooley, Elizabeth
+				  <geogname>San Antonio, Texas</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e362" level="file">
+               <did>
+                  <unittitle>Dowling, Oscar, Dr.</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e366" level="file">
+               <did>
+                  <unittitle>Drouillard, Geo. Cliff.
+				  <geogname>Georges Creek</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e373" level="file">
+               <did>
+                  <unittitle>Douglass, Frederick</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e377" level="file">
+               <did>
+                  <unittitle>Ellison, Geo. S.</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e381" level="file">
+               <did>
+                  <unittitle>Evans, [Z?] T.
+				  <geogname>The Corning Mattress Works</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e388" level="file">
+               <did>
+                  <unittitle>Fisher, Isaac
+				  <geogname>Branch Normal College</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e396" level="file">
+               <did>
+                  <unittitle>Floyd, W. D.
+				  <geogname>Hawkinsville, Alabama</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e403" level="file">
+               <did>
+                  <unittitle>Forrester, Stephenie</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e407" level="file">
+               <did>
+                  <unittitle>Freeman, Julius
+				  <geogname>Wilson, North Carolina</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e414" level="file">
+               <did>
+                  <unittitle>Gibbs, M. W.
+				  <geogname>[Washington, D.C.]</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e421" level="file">
+               <did>
+                  <unittitle>Greener, Richard T.</unittitle>
+                  <physdesc>(H size)</physdesc>
+               </did>
+            </c02>
+            <c02 id="mferd3397e427" level="file">
+               <did>
+                  <unittitle>Griggs, E. M.
+				  <geogname>[Texas]</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e434" level="file">
+               <did>
+                  <unittitle>Guy, Ira O.
+				  <geogname>[Kansas]</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e441" level="file">
+               <did>
+                  <unittitle>Haas, Henry Hubert, L.L.D.
+				  <unitdate type="inclusive" normal="1906" era="ce" calendar="gregorian">1906</unitdate>
+                     <geogname>Roanoke, Virginia</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e451" level="file">
+               <did>
+                  <unittitle>Hardin, Mrs. G. C., and little Margarette</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e455" level="file">
+               <did>
+                  <unittitle>Harford, Mark A.</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e459" level="file">
+               <did>
+                  <unittitle>Herren, John W.
+				  <geogname>Atlanta, Georgia</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e467" level="file">
+               <did>
+                  <unittitle>Jackson, and Emmett J. Scott</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e471" level="file">
+               <did>
+                  <unittitle>James, Jim
+				  <unitdate type="inclusive" normal="1911" era="ce" calendar="gregorian">1911</unitdate>
+                     <geogname>West Point City</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e481" level="file">
+               <did>
+                  <unittitle>Johnson, James W.</unittitle>
+                  <note>
+                     <p>(photos filed under Moton, Robert R.)</p>
+                  </note>
+               </did>
+            </c02>
+            <c02 id="mferd3397e488" level="file">
+               <did>
+                  <unittitle>Jones, Acie
+				  <unitdate type="inclusive" normal="1911" era="ce" calendar="gregorian">1911</unitdate>
+                     <geogname>Thomasville, Georgia</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e498" level="file">
+               <did>
+                  <unittitle>Jones, Lula H.
+				  <unitdate type="inclusive" normal="1914" era="ce" calendar="gregorian">1914</unitdate>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e505" level="file">
+               <did>
+                  <unittitle>Langston, John Mercer</unittitle>
+                  <physdesc>(H size)</physdesc>
+               </did>
+            </c02>
+            <c02 id="mferd3397e511" level="file">
+               <did>
+                  <unittitle>LeBeouf, Miss</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e515" level="file">
+               <did>
+                  <unittitle>Lucas, Dora
+				  <geogname>[Ohio]</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e522" level="file">
+               <did>
+                  <unittitle>Lynch, John R.</unittitle>
+                  <physdesc>(H size)</physdesc>
+               </did>
+            </c02>
+            <c02 id="mferd3397e528" level="file">
+               <did>
+                  <unittitle>Lyon, Ernest (Consul-General to the Republic of Liberia), and Emmett J. Scott
+				  <unitdate type="inclusive" normal="1909" era="ce" calendar="gregorian">1909</unitdate>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e535" level="file">
+               <did>
+                  <unittitle>Marr, J. M.
+				  <geogname>Moundbayou, Mississippi</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e543" level="file">
+               <did>
+                  <unittitle>Martin, Isaac D.
+				  <geogname>[Alabama]</geogname>
+                  </unittitle>
+                  <note>
+                     <p>(2 poses)</p>
+                  </note>
+               </did>
+            </c02>
+            <c02 id="mferd3397e553" level="file">
+               <did>
+                  <unittitle>Mason, [W. G.]</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e557" level="file">
+               <did>
+                  <unittitle>Maxwell, Minnie P.
+				  <geogname>Zenia, Ohio</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e564" level="file">
+               <did>
+                  <unittitle>Maytes, A. L.
+				  <geogname>Chicago, Illinois</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e571" level="file">
+               <did>
+                  <unittitle>Millers Wonderful Musical Family of Washington, D.C.</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e575" level="file">
+               <did>
+                  <unittitle>Millie &amp; Christine (Siamese twins)</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e579" level="file">
+               <did>
+                  <unittitle>Mitchell
+				  <unitdate type="inclusive" normal="1906" era="ce" calendar="gregorian">1906</unitdate>
+                     <geogname>[Illinois]</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e589" level="file">
+               <did>
+                  <unittitle>Monteria Silva, F. R.
+				  <unitdate type="inclusive" normal="1907" era="ce" calendar="gregorian">1907</unitdate>
+                     <geogname>Rio de Janeiro, Brazil</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e599" level="file">
+               <did>
+                  <unittitle>Morris, S. L.</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e603" level="file">
+               <did>
+                  <unittitle>Moton, Robert R. and James W. Johnson
+				  <unitdate type="inclusive" normal="1915" era="ce" calendar="gregorian">[after 1915]</unitdate>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e610" level="file">
+               <did>
+                  <unittitle>Payton, J. W.
+				  <geogname>[South Carolina]</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e618" level="file">
+               <did>
+                  <unittitle>Plummer, D. J.
+				  <geogname>Bournemouth, England</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e625" level="file">
+               <did>
+                  <unittitle>Powell, Annie M.
+				  <geogname> Washington, D.C.</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e632" level="file">
+               <did>
+                  <unittitle>Pratt, Lawton L.
+				  <unitdate type="inclusive" normal="1913" era="ce" calendar="gregorian">[1913]</unitdate>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e639" level="file">
+               <did>
+                  <unittitle>Reid, William Cooper
+				  <unitdate type="inclusive" normal="1903" era="ce" calendar="gregorian">1903</unitdate>
+                     <geogname>Fulton, Mississippi</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e649" level="file">
+               <did>
+                  <unittitle>Roosevelt family</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e653" level="file">
+               <did>
+                  <unittitle>Roosevelt, Theodore
+				  <unitdate type="inclusive" normal="1908" era="ce" calendar="gregorian">1908</unitdate>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e660" level="file">
+               <did>
+                  <unittitle>Sanghorne, Edw. T.
+				  <unitdate type="inclusive" normal="1910" era="ce" calendar="gregorian">[1910]</unitdate>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e667" level="file">
+               <did>
+                  <unittitle>Scott, Emmett J.</unittitle>
+                  <note>
+                     <p>(2 poses)</p>
+                  </note>
+               </did>
+            </c02>
+            <c02 id="mferd3397e674" level="file">
+               <did>
+                  <unittitle>Sheridan, James Jay
+				  <unitdate type="inclusive" normal="1903" era="ce" calendar="gregorian">1903</unitdate>
+                     <geogname>Chicago</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e684" level="file">
+               <did>
+                  <unittitle>Simons, H. L
+				  <geogname>Columbia, South Carolina</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e691" level="file">
+               <did>
+                  <unittitle>Soga, A. Kirkland
+				  <geogname>East London, South Africa</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e699" level="file">
+               <did>
+                  <unittitle>Swann, J. Richard</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e703" level="file">
+               <did>
+                  <unittitle>Tanner, Henry O.</unittitle>
+                  <physdesc>(H size)</physdesc>
+               </did>
+            </c02>
+            <c02 id="mferd3397e709" level="file">
+               <did>
+                  <unittitle>Terborg, William
+				  <geogname>Surinam</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e716" level="file">
+               <did>
+                  <unittitle>Terry, Matt</unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e720" level="file">
+               <did>
+                  <unittitle>[Toicard, C.?]
+				  <unitdate type="inclusive" normal="1905" era="ce" calendar="gregorian">1905</unitdate>
+                     <geogname>Haiti</geogname>
+                  </unittitle>
+                  <note>
+                     <p>(2 poses)</p>
+                  </note>
+               </did>
+            </c02>
+            <c02 id="mferd3397e733" level="file">
+               <did>
+                  <unittitle>Walker, S. C.
+				  <geogname>[California]</geogname>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 id="mferd3397e740" level="file">
+               <did>
+                  <unittitle>Watkins, son of Lee W.</unittitle>
+               </did>
+            </c02>
+         </c01>
+         <c01 id="mferd3397e744" level="series">
+            <did>
+               <unittitle>Unidentified portraits
+				<unitdate type="inclusive" normal="1890/1915" era="ce" calendar="gregorian">ca. 1890-ca. 1915</unitdate>
+               </unittitle>
+               <unitid id="lot13164-e">LOT 13164-E</unitid>
+               <container>Box 4 (F size) and Box 7 (H size)</container>
+            </did>
+            <scopecontent>
+               <p>Includes men, women, and children. Also group portraits.</p>
+            </scopecontent>
+         </c01>
+         <c01 id="mferd3397e758" level="series">
+            <did>
+               <unittitle>Colleges and schools (excluding Tuskegee)
+				<unitdate type="inclusive" normal="1900/1916" era="ce" calendar="gregorian">ca. 1900-1916</unitdate>
+               </unittitle>
+               <unitid id="lot13164-f">LOT 13164-F</unitid>
+               <container>Boxes 5 (F size) and Box 7 (H size)</container>
+            </did>
+            <scopecontent>
+               <p>Includes public schools and colleges primarily in the South; school buildings and group portraits of students standing in front of school buildings; campus views; students attending classes. Also two portraits of Hawaiian school children; one portrait of Japanese school children.</p>
+            </scopecontent>
+            <arrangement>
+               <p>Arranged alphabetically by school name.</p>
+            </arrangement>
+         </c01>
+         <c01 id="mferd3397e775" level="series">
+            <did>
+               <unittitle>Canning &amp; Poultry Club Conference, Caroline Co.
+				<unitdate type="inclusive" normal="1913" era="ce" calendar="gregorian">Aug. 8, 1913</unitdate>
+               </unittitle>
+               <unitid id="lot13164-g">LOT 13164-G</unitid>
+               <container>Box 5 (F size)</container>
+            </did>
+         </c01>
+         <c01 id="mferd3397e786" level="series">
+            <did>
+               <unittitle>YMCA
+				<unitdate type="inclusive" era="ce" calendar="gregorian">1912-ca. 1915</unitdate>
+               </unittitle>
+               <unitid id="lot13164-h">LOT 13164-H</unitid>
+               <container>Box 5 (F size)</container>
+            </did>
+            <scopecontent>
+               <p>Includes buildings and activities at YMCA facilities in Arundel-on-the-Bay, Md., Bexton, Iowa, Chicago, Ill., Columbus, Ga., Indianapolis, Ind., Philadelphia, Washington, D.C.</p>
+            </scopecontent>
+            <arrangement>
+               <p>Arranged alphabetically by city.</p>
+            </arrangement>
+         </c01>
+         <c01 id="mferd3397e803" level="series">
+            <did>
+               <unittitle>Buildings
+				<unitdate type="inclusive" normal="1900/1915" era="ce" calendar="gregorian">ca. 1900-ca. 1915</unitdate>
+               </unittitle>
+               <unitid id="lot13164-i">LOT 13164-I</unitid>
+               <container>Box 5 (F size)</container>
+            </did>
+            <scopecontent>
+               <p>Residences, commercial buildings, and churches. Includes the Frederick Douglass home in Anacostia, Washington, D.C. Includes views in Alabama, Florida, Kansas, Maryland, Massachusetts, Mississippi, Tennessee, and Virginia.</p>
+            </scopecontent>
+            <arrangement>
+               <p>Arranged alphabetically by city.</p>
+            </arrangement>
+         </c01>
+         <c01 id="mferd3397e821" level="series">
+            <did>
+               <unittitle>Unidentified buildings
+				<unitdate type="inclusive" normal="1900/1915" era="ce" calendar="gregorian">ca. 1900-ca. 1915</unitdate>
+               </unittitle>
+               <unitid id="lot13164-j">LOT 13164-J</unitid>
+               <container>Box 5 (F size)</container>
+            </did>
+            <scopecontent>
+               <p>Exterior views of dwellings and commercial buildings.</p>
+            </scopecontent>
+         </c01>
+         <c01 id="mferd3397e835" level="series">
+            <did>
+               <unittitle>Agricultural workers
+				<unitdate type="inclusive" normal="1905/1915" era="ce" calendar="gregorian">ca. 1905-ca. 1915</unitdate>
+               </unittitle>
+               <unitid id="lot13164-k">LOT 13164-K</unitid>
+               <container>Box 5 (F size)</container>
+            </did>
+            <scopecontent>
+               <p>Children and adults working or posing in gardens. One group portrait of two aged women posing in front of a tent.</p>
+            </scopecontent>
+         </c01>
+         <c01 id="mferd3397e849" level="series">
+            <did>
+               <unittitle>Miscellaneous subjects
+				<unitdate type="inclusive" normal="1900/1910" era="ce" calendar="gregorian">ca. 1900-ca. 1910</unitdate>
+               </unittitle>
+               <unitid id="lot13164-l">LOT 13164-L</unitid>
+               <container>Box 5 (F size)</container>
+            </did>
+            <scopecontent>
+               <p>Includes city views, some buildings, people at unidentified events, other unidentified subjects. One unidentified color waterfront view; one praline candy box with a portrait of two women.</p>
+            </scopecontent>
+         </c01>
+      </dsc>
+      <index id="mferd3397e863">
+         <head>Index to Photographers in LOT 13164</head>
+         <p>Names of photographers and studios--and the cities and states in which they operated-- are noted below as they appear on the photographs. Studio names appear in direct order; personal names in invented order (i.e., filed by surname).</p>
+         <indexentry>
+            <name>Abercromby, H.A., Orlando, FL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Audiotrium Studio, Atlanta, GA</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Battey, C.M., Tuskegee Inst.</name>
+            <ptrgrp>
+               <ref xlink:type="simple" target="lot13164-f">LOT 13164-F;</ref>
+               <ref xlink:type="simple" target="lot13164-k">LOT 13164-K</ref>
+            </ptrgrp>
+         </indexentry>
+         <indexentry>
+            <name>Bedou, A.P., New Orleans, LA</name>
+            <ptrgrp>
+               <ref xlink:type="simple" target="lot13164-a">LOT 13164-A;</ref>
+               <ref xlink:type="simple" target="lot13164-b">LOT 13164-B;</ref>
+               <ref xlink:type="simple" target="lot13164-c">LOT 13164-C;</ref>
+               <ref xlink:type="simple" target="lot13164-e">LOT 13164-E;</ref>
+               <ref xlink:type="simple" target="lot13164-f">LOT 13164-F;</ref>
+               <ref xlink:type="simple" target="lot13164-i">LOT 13164-I;</ref>
+               <ref xlink:type="simple" target="lot13164-l">LOT 13164-L</ref>
+            </ptrgrp>
+         </indexentry>
+         <indexentry>
+            <name>Bell, J.S., Portland, OR</name>
+            <ref xlink:type="simple" target="lot13164-a">LOT 13164-A</ref>
+         </indexentry>
+         <indexentry>
+            <name>Bell's, C.M., Washington, DC</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Bilbrey, Tuskegee, AL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Bilbrey, G.M., Tuskegee, AL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Brown &amp; Co., Detroit, MI</name>
+            <ref xlink:type="simple" target="lot13164-a">LOT 13164-A</ref>
+         </indexentry>
+         <indexentry>
+            <name>Burt, G. W., Moundbayou, Miss.</name>
+            <ptrgrp>
+               <ref xlink:type="simple" target="lot13164-f">LOT 13164-F;</ref>
+               <ref xlink:type="simple" target="lot13164-i">LOT 13164-I</ref>
+            </ptrgrp>
+         </indexentry>
+         <indexentry>
+            <name>Campbell Studio, Honea Path, SC</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Chapman, J.R., West Indies</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Cleary, J.W., [Jamaica]</name>
+            <ref xlink:type="simple" target="lot13164-l">LOT 13164-L</ref>
+         </indexentry>
+         <indexentry>
+            <name>Colman, Montgomery, AL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Connel-Irwin, Martins Ferry, OH</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Cooke, E. W., Snow Hill, AL</name>
+            <ref xlink:type="simple" target="lot13164-k">LOT 13164-K</ref>
+         </indexentry>
+         <indexentry>
+            <name>Cox Brothers, Tuskegee, AL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Cumming, Geo. W., Greensboro, AL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Cuneo Photo Studio, Euterpe &amp; Dryades</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Detroit Publishing Company</name>
+            <ref xlink:type="simple" target="lot13164-c">LOT 13164-C</ref>
+         </indexentry>
+         <indexentry>
+            <name>Dolan's Studio, Way Cross, GA</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Folsom, A.H., Roxbury, MA </name>
+            <ref xlink:type="simple" target="lot13164-j">LOT 13164-J</ref>
+         </indexentry>
+         <indexentry>
+            <name>Forest, O.V.</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Gandy, John M.</name>
+            <ref xlink:type="simple" target="lot13164-b">LOT 13164-B</ref>
+         </indexentry>
+         <indexentry>
+            <name>Gray, Boston, MA</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Gretter, Frankport</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Groeninger Photo, Baltimore, MD</name>
+            <ref xlink:type="simple" target="lot13164-l">LOT 13164-L</ref>
+         </indexentry>
+         <indexentry>
+            <name>Harding, Franklin, LA</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Jacotin, Charles, Paris, France</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Jackson, E.W.</name>
+            <ptrgrp>
+               <ref xlink:type="simple" target="lot13164-d">LOT 13164-D;</ref>
+               <ref xlink:type="simple" target="lot13164-f">LOT 13164-F</ref>
+            </ptrgrp>
+         </indexentry>
+         <indexentry>
+            <name>Johnston, Frances Benjamin</name>
+            <ref xlink:type="simple" target="lot13164-c">LOT 13164-C</ref>
+         </indexentry>
+         <indexentry>
+            <name>Jones, Baltimore, MD</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Kaufmann's, Pittsburgh, PA</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Kerfoot, C.E., Washington, DC</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Killick, J. H., London, England</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Ladde, M.H., Amsterdam</name>
+            <ref xlink:type="simple" target="lot13164-d">"LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Lingwood &amp; Jakins, East London, South Africa</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Livingston, Chas. S., Montgomery, AL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>McMullan, C.H., Greenville, AL</name>
+            <ref xlink:type="simple" target="lot13164-f">LOT 13164-F</ref>
+         </indexentry>
+         <indexentry>
+            <name>Macon Art Gallery, Macon, GA</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Marshall-Jackson Company, Chicago, IL</name>
+            <ref xlink:type="simple" target="lot13164-a">LOT 13164-A</ref>
+         </indexentry>
+         <indexentry>
+            <name>Maury, Salem [VA]</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Mitchell, J.E., Studio, Washington, DC</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Moore, R.N., [Baltimore, MD]</name>
+            <ref xlink:type="simple" target="lot13164-l">LOT 13164-L</ref>
+         </indexentry>
+         <indexentry>
+            <name>Morse, Chicago, IL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Pach Bros., NY</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Partridge, Geo. H., Chicago, IL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Peck, Palo Alto, CA</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Polk, P.H., Tuskegee Institute, AL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Rapid Art Photography, Bournemouth, England</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Robinson, Chas. D., Tuskegee, AL</name>
+            <ptrgrp>
+               <ref xlink:type="simple" target="lot13164-a">LOT 13164-A;</ref>
+               <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+            </ptrgrp>
+         </indexentry>
+         <indexentry>
+            <name>Roller Printing and Paper Co., Canton, OH</name>
+            <ref xlink:type="simple" target="lot13164-l">LOT 13164-L</ref>
+         </indexentry>
+         <indexentry>
+            <name>Scurlock, Washington, D.C.</name>
+            <ptrgrp>
+               <ref xlink:type="simple" target="lot13164-d">LOT 13164-D;</ref>
+               <ref xlink:type="simple" target="lot13164-h">LOT 13164-H;</ref>
+               <ref xlink:type="simple" target="lot13164-k">LOT 13164-K</ref>
+            </ptrgrp>
+         </indexentry>
+         <indexentry>
+            <name>Shepherd, St. Paul, MN</name>
+            <ref xlink:type="simple" target="lot13164-a">LOT 13164-A</ref>
+         </indexentry>
+         <indexentry>
+            <name>Shepherd, 27 E. 7th St., St. Paul, MN</name>
+            <ref xlink:type="simple" target="lot13164-a">LOT 13164-A</ref>
+         </indexentry>
+         <indexentry>
+            <name>Service Engraving Co., Montgomery, AL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Shumacher, Los Angeles, CA</name>
+            <ref xlink:type="simple" target="lot13164-a">LOT 13164-A</ref>
+         </indexentry>
+         <indexentry>
+            <name>Siegel Studio, The, Chicago, Ill.</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Taylor, Nashville, TN</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Teddinghaus, E.B., Birmingham, AL</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Thomas, E.L., Anderson, SC</name>
+            <ref xlink:type="simple" target="lot13164-a">LOT13164-A</ref>
+         </indexentry>
+         <indexentry>
+            <name>Tressler, Montgomery, AL</name>
+            <ref xlink:type="simple" target="lot13164-e">LOT 13164-E</ref>
+         </indexentry>
+         <indexentry>
+            <name>Turner, A., Washington, DC</name>
+            <ref xlink:type="simple" target="lot13164-a">LOT 13164-A</ref>
+         </indexentry>
+         <indexentry>
+            <name>Tuskegee Institute</name>
+            <ref xlink:type="simple" target="lot13164-c">LOT 13164-C</ref>
+         </indexentry>
+         <indexentry>
+            <name>Utica Eng. Co., Utica, NY</name>
+            <ref xlink:type="simple" target="lot13164-i">LOT 13164-I</ref>
+         </indexentry>
+         <indexentry>
+            <name>Watkins, Palestine, TX</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>We-He, Topeka, Kansas</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Wendt, Boonton, NJ</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+         <indexentry>
+            <name>Winsor, Evanston, [IL]</name>
+            <ref xlink:type="simple" target="lot13164-d">LOT 13164-D</ref>
+         </indexentry>
+      </index>
+   </archdesc>
+</ead>
