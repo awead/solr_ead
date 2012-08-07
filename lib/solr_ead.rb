@@ -9,7 +9,8 @@ module SolrEad
   end
 end
 
-require "field_mapper"
+require "ead_mapper"
+require "solr_ead/terminology_based_solrizer"
 require "solr_ead/document_behaviors"
 require "solr_ead/document"
 require "solr_ead/component_behaviors"

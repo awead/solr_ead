@@ -2,7 +2,7 @@ module SolrEad
 class Component
 
   include OM::XML::Document
-  include Solrizer::XML::TerminologyBasedSolrizer
+  include SolrEad::TerminologyBasedSolrizer
 
   # Define each term in your ead that you want put into the solr document
   set_terminology do |t|
