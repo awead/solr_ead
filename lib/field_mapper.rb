@@ -1,7 +1,7 @@
-class FieldMapper < Solrizer::FieldMapper
+class FieldMapper < Solrizer::FieldMapper::Default
 
   id_field 'id'
-  index_as :searchable do |t|
+  index_as :searchablerfoo do |t|
     t.default :suffix => '_s'
     t.date    :suffix => '_dt'
     t.string  :suffix => '_t'
@@ -13,8 +13,8 @@ class FieldMapper < Solrizer::FieldMapper
     t.float   :suffix => '_f'
     t.double  :suffix => '_d'
   end
-  index_as :displayable,          :suffix => '_display'
-  index_as :facetable,            :suffix => '_facet'
+  index_as :displayablerfoo,          :suffix => '_display'
+  index_as :facetablerfoo,            :suffix => '_facet'
   index_as :sortable,             :suffix => '_sort'
   index_as :unstemmed_searchable, :suffix => '_unstem_search'
 

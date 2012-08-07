@@ -9,12 +9,11 @@ module SolrEad
   end
 end
 
-require "solr_ead/field_mapper"
+require "field_mapper"
 require "solr_ead/document_behaviors"
 require "solr_ead/document"
 require "solr_ead/component_behaviors"
 require "solr_ead/component"
 require "solr_ead/indexer"
-require "solr_ead/field_mapper"
 
 require 'solr_ead/railtie' if defined?(Rails)
