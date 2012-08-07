@@ -3,28 +3,65 @@ require "spec_helper"
 describe SolrEad::Document do
 
   before(:all) do
-    file = "ARC-0005.xml"
-    file2 = "pp002010.xml"
-    @doc      = SolrEad::Document.from_xml(fixture file) { |conf|
-      conf.default_xml.noblanks
-    }
-    @doc2      = SolrEad::Document.from_xml(fixture file2) { |conf|
-      conf.default_xml.noblanks
-    }
+    @ex1 = SolrEad::Document.from_xml(fixture "ARC-0005.xml") { |conf| conf.default_xml.noblanks }
+    @ex2 = SolrEad::Document.from_xml(fixture "pp002010.xml") { |conf| conf.default_xml.noblanks }
+    @solr_ex1 = @ex1.to_solr
+    @solr_ex2 = @ex2.to_solr
   end
 
   describe "the terminology" do
 
+    it "should have an id field" do
+      @ex1.eadid.first.should == "ARC-0005"
+    end
+
+    it "should have a simple title" do
+      @ex1.title.first.should match "Eddie Cochran Historical Organization Collection"
+    end
+
+    it "should have some subject headings" do
+      @ex1.persname.should include "Cochran, Eddie, 1938-1960"
+      @ex1.genreform.should include "Newspapers"
+      @ex1.subject.should include "Rockabilly music"
+      @ex2.corpname.should include "Tuskegee Normal and Industrial Institute--1880-1940."
+      @ex2.genreform.should include "Group portraits--1880-1940."
+      @ex2.geogname.should include "Washington, D.C."
+      @ex2.name.should include "Bell, J.S., Portland, OR"
+      @ex2.persname.should include "Johnston, Frances Benjamin, 1864-1952, photographer."
+      @ex2.subject.should include "Buildings--1880-1940."
+    end
+
+    it "should have scope and contents" do
+      pending
+    end
+
   end
 
-  describe "#to_solr" do
+  describe "the solr document" do
 
-    it "should give me a solr document" do
-      solr_doc = @doc.to_solr
-      solr_doc2 = @doc2.to_solr
-      solr_doc[:id].should == "ARC-0005"
-      solr_doc[:xml_t].should match "<c\s"
-      solr_doc2[:xml_t].should match "<c01\s"
+    it "should have the appropriate id fields" do
+      @solr_ex1["eadid_s"].should == "ARC-0005"
+      @solr_ex1["id"].should == "ARC-0005"
+      @solr_ex2["eadid_s"].should == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
+      @solr_ex2["id"].should == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
+      @solr_ex1[:xml_t].should match "<c\s"
+      @solr_ex2[:xml_t].should match "<c01\s"\
+    end
+
+    it "should have faceted terms created from subject headings" do
+      @solr_ex1["persname_facet"].should include "Cochran, Eddie, 1938-1960"
+      @solr_ex1["genreform_facet"].should include "Newspapers"
+      @solr_ex1["subject_facet"].should include "Rockabilly music"
+      @solr_ex2["corpname_facet"].should include "Tuskegee Normal and Industrial Institute--1880-1940."
+      @solr_ex2["genreform_facet"].should include "Group portraits--1880-1940."
+      @solr_ex2["geogname_facet"].should include "Washington, D.C."
+      @solr_ex2["name_facet"].should include "Bell, J.S., Portland, OR"
+      @solr_ex2["persname_facet"].should include "Johnston, Frances Benjamin, 1864-1952, photographer."
+      @solr_ex2["subject_facet"].should include "Buildings--1880-1940."
+    end
+
+    it "should index head tags as display and p tags as text" do
+      pending
     end
 
   end
