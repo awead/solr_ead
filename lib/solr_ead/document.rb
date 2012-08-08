@@ -18,7 +18,13 @@ class Document
     t.persname(:index_as=>[:facetable])
     t.subject(:index_as=>[:facetable])
 
-    t.title(:path=>"titleproper", :attributes=>{ :type => :none })
+    # These terms are proxied to match with Blacklight's default facets, but otherwise
+    # you can remove them or rename the above facet terms to match with your solr
+    # implementation.
+    t.subject_geo(:proxy=>[:geogname])
+    t.subject_topic(:proxy=>[:subject])
+
+    t.title(:path=>"titleproper", :attributes=>{ :type => :none }, :index_as=>[:searchable, :displayable])
     t.title_filing(:path=>"titleproper", :attributes=>{ :type => "filing" }, :index_as=>[:not_searchable, :sortable])
 
     # General field available within archdesc
@@ -60,6 +66,7 @@ class Document
     solr_doc.merge!({"id"          => self.eadid.first})
     solr_doc.merge!({"eadid_s"     => self.eadid.first})
     solr_doc.merge!({"xml_display" => self.to_xml})
+    solr_doc.merge!({"format"      => "Archival Collection"})
     return solr_doc
   end
 
