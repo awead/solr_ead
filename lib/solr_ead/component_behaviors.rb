@@ -47,17 +47,17 @@ module SolrEad::ComponentBehaviors
   # The solr fields return by this method are:
   #
   # id:: Unique identifier using the id attribute and the <eadid>
-  # ead_id:: The <eadid> node of the ead. This is so we know which ead this component belongs to.
-  # parent_id:: The id attribute of the parent <c> node.  We need this so we reconstruct the <c> node hierarchy.
-  # parent_id_list:: Array of all id attributes from the component's parent <c> nodes, sorted in descending order
-  # parent_unittitle_list:: Array of all unittitle nodes from the component's parent <c> nodes, sort in descending order
+  # eadid_s:: The <eadid> node of the ead. This is so we know which ead this component belongs to.
+  # parent_id_s:: The id attribute of the parent <c> node
+  # parent_id_list_t:: see parent_id_list
+  # parent_unittitle_list_t:: see parent_id_list
   # component_children_b:: Boolean field indicating whether or not the component has any child <c> nodes attached to it
   #
   # These fields are used so that we may reconstruct placement of a single component
   # within the hierarchy of the original ead.
   def additional_component_fields(node, addl_fields = Hash.new)
     addl_fields[:id]                      = [node.xpath("//eadid").text, node.attr("id")].join(":")
-    addl_fields[:ead_id_s]                = node.xpath("//eadid").text
+    addl_fields[:eadid_s]                 = node.xpath("//eadid").text
     addl_fields[:parent_id_s]             = node.parent.attr("id") unless node.parent.attr("id").nil?
     addl_fields[:parent_id_list_t]        = parent_id_list(node)
     addl_fields[:parent_unittitle_list_t] = parent_unittitle_list(node)
@@ -65,6 +65,9 @@ module SolrEad::ComponentBehaviors
     return addl_fields
   end
 
+  # Array of all id attributes from the component's parent <c> nodes, sorted in descending order
+  # This is used to reconstruct the order of component documents that should appear above
+  # a specific item-level component.
   def parent_id_list(node, results = Array.new)
     while node.parent.name == "c"
       parent = node.parent
@@ -74,6 +77,11 @@ module SolrEad::ComponentBehaviors
     return results.reverse
   end
 
+  # Array of all unittitle nodes from the component's parent <c> nodes, sort in descending order
+  # This is useful if you want to display a list of a component's parent containers in
+  # the correct order, ex:
+  #   ["Series I", "Subseries a", "Sub-subseries 1"]
+  # From there, you can assemble and display as you like.
   def parent_unittitle_list(node, results = Array.new)
     while node.parent.name == "c"
       parent = node.parent

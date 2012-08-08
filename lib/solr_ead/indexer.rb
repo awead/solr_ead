@@ -39,9 +39,10 @@ class Indexer
   # This method will also commit the results to your solr server when complete.
   def update(file,opts={})
     file = File.new(file)
-    doc = SolrEad::Document.from_xml(file)
+    raw = SolrEad::Document.remove_namespaces(file)
+    doc = SolrEad::Document.from_xml(raw)
     solr_doc = doc.to_solr
-    self.solr.delete_by_query( 'ead_id_s:"' + solr_doc[:id] + '"' )
+    self.solr.delete_by_query( 'eadid_s:"' + solr_doc["id"] + '"' )
     self.solr.add solr_doc
     add_components file
     self.solr.commit
@@ -50,7 +51,7 @@ class Indexer
   # Deletes the ead document and any component documents from your solr index and
   # commits the results.
   def delete(id)
-    self.solr.delete_by_query( 'ead_id_s:"' + id + '"')
+    self.solr.delete_by_query( 'eadid_s:"' + id + '"')
     self.solr.commit
   end
 
