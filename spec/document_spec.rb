@@ -47,7 +47,7 @@ describe SolrEad::Document do
     end
 
     it "should have scope and contents" do
-      pending
+      @ex2.scopecontent.first.should match /^Photographs/
     end
 
     it "should have one separatedmaterial material note from the archdesc section" do
@@ -63,8 +63,8 @@ describe SolrEad::Document do
       @solr_ex1["id"].should == "ARC-0005"
       @solr_ex2["eadid_s"].should == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
       @solr_ex2["id"].should == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
-      @solr_ex1[:xml_t].should match "<c\s"
-      @solr_ex2[:xml_t].should match "<c01\s"\
+      @solr_ex1["xml_display"].should match "<c\s"
+      @solr_ex2["xml_display"].should match "<c01\s"\
     end
 
     it "should have faceted terms created from subject headings" do
@@ -82,6 +82,8 @@ describe SolrEad::Document do
     it "should index head tags as display and p tags as text" do
       @solr_ex1["separatedmaterial_heading_display"].should include "Separated Materials"
       @solr_ex1["separatedmaterial_t"].first.should match /^Commercially-released publications.*materials are available.$/
+      @solr_ex2["scopecontent_heading_display"].should include "Scope and Content Note"
+      @solr_ex2["scopecontent_t"].first.should match /^Photographs/
     end
 
   end

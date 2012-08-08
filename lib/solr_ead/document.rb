@@ -22,6 +22,8 @@ class Document
 
     t.separatedmaterial(:path=>"archdesc/separatedmaterial/p")
     t.separatedmaterial_heading(:path=>"archdesc/separatedmaterial/head", :index_as=>[:not_text, :displayable])
+    t.scopecontent(:path=>"archdesc/scopecontent/p")
+    t.scopecontent_heading(:path=>"archdesc/scopecontent/head", :index_as=>[:not_text, :displayable])
 
 
   end
@@ -30,7 +32,7 @@ class Document
     super(solr_doc)
     solr_doc.merge!({"id" => self.eadid.first})
     solr_doc.merge!({"eadid_s" => self.eadid.first})
-    solr_doc.merge!({:xml_t => self.to_xml})
+    solr_doc.merge!({"xml_display" => self.to_xml})
     return solr_doc
   end
 
