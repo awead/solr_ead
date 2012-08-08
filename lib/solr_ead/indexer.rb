@@ -26,7 +26,8 @@ class Indexer
   # commits the results to your solr server.
   def create(file,opts={})
     file = File.new(file)
-    doc = SolrEad::Document.from_xml(file)
+    raw = SolrEad::Document.remove_namespaces(file)
+    doc = SolrEad::Document.from_xml(raw)
     solr_doc = doc.to_solr
     self.solr.add solr_doc
     add_components file

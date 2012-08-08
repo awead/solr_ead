@@ -3,13 +3,28 @@ require "spec_helper"
 describe SolrEad::Document do
 
   before(:all) do
-    @ex1 = SolrEad::Document.from_xml(fixture "ARC-0005.xml") { |conf| conf.default_xml.noblanks }
-    @ex2 = SolrEad::Document.from_xml(fixture "pp002010.xml") { |conf| conf.default_xml.noblanks }
+    @file1 = SolrEad::Document.remove_namespaces(fixture "ARC-0005.xml")
+    @file2 = SolrEad::Document.remove_namespaces(fixture "pp002010.xml")
+    @ex1 = SolrEad::Document.from_xml(@file1)
+    @ex2 = SolrEad::Document.from_xml(@file2)
     @solr_ex1 = @ex1.to_solr
     @solr_ex2 = @ex2.to_solr
   end
 
-  describe "the terminology" do
+  describe ".remove_namespaces" do
+
+    it "should remove the xmlns attributes from a file" do
+      [@file1, @file2].each do |file|
+        result = file.to_s
+        result.should_not match /xmls/
+        result.should_not match /xsi/
+        result.should match /<ead/
+      end
+    end
+
+  end
+
+  describe "#terminology" do
 
     it "should have an id field" do
       @ex1.eadid.first.should == "ARC-0005"
@@ -35,9 +50,13 @@ describe SolrEad::Document do
       pending
     end
 
+    it "should have one separatedmaterial material note from the archdesc section" do
+      @ex1.separatedmaterial.first.should match /^Commercially-released publications.*materials are available.$/
+    end
+
   end
 
-  describe "the solr document" do
+  describe ".to_solr" do
 
     it "should have the appropriate id fields" do
       @solr_ex1["eadid_s"].should == "ARC-0005"
@@ -61,7 +80,8 @@ describe SolrEad::Document do
     end
 
     it "should index head tags as display and p tags as text" do
-      pending
+      @solr_ex1["separatedmaterial_heading_display"].should include "Separated Materials"
+      @solr_ex1["separatedmaterial_t"].first.should match /^Commercially-released publications.*materials are available.$/
     end
 
   end

@@ -7,12 +7,7 @@ class Document
 
   # Define each term in your ead that you want put into the solr document
   set_terminology do |t|
-    t.root(:path=>"ead",
-           :xmlns=>"urn:isbn:1-931666-22-9",
-           :schema=>"http://www.loc.gov/ead/ead.xsd",
-           "xmlns:ns2"=>"http://www.w3.org/1999/xlink",
-           "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance",
-           :index_as => [:not_text])
+    t.root(:path=>"ead", :index_as => [:not_text])
 
     t.eadid
     t.corpname(:index_as=>[:facetable])
@@ -25,10 +20,8 @@ class Document
 
     t.title(:path=>"titleproper", :attributes=>{ :type => :none })
 
-    t.scopecontent(:index_as=>[:not_text]) {
-      t.field(:path=>"p")
-      t.heading(:path=>"head", :index_as=>[:not_text, :displayable])
-    }
+    t.separatedmaterial(:path=>"archdesc/separatedmaterial/p")
+    t.separatedmaterial_heading(:path=>"archdesc/separatedmaterial/head", :index_as=>[:not_text, :displayable])
 
 
   end
@@ -40,6 +33,12 @@ class Document
     solr_doc.merge!({:xml_t => self.to_xml})
     return solr_doc
   end
+
+  def self.remove_namespaces(file)
+    xml = Nokogiri::XML(File.read(file))
+    return xml.remove_namespaces!
+  end
+
 
 end
 end
