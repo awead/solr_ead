@@ -1,10 +1,10 @@
 require "spec_helper"
 
-describe EadComponent do
+describe SolrEad::Component do
 
   before(:all) do
     file = "component_template.xml"
-    @doc = EadComponent.from_xml(fixture file)
+    @doc = SolrEad::Component.from_xml(fixture file)
   end
 
   describe "the solr document" do

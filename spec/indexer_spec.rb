@@ -60,7 +60,7 @@ describe SolrEad::Indexer do
   describe "specifying custom om definitions" do
 
     before :all do
-      class CustomDocument < EadDocument
+      class CustomDocument < SolrEad::Document
         include OM::XML::Document
         include Solrizer::XML::TerminologyBasedSolrizer
         include SolrEad::OmBehaviors
@@ -71,7 +71,7 @@ describe SolrEad::Indexer do
         end
       end
 
-      class CustomComponent < EadComponent
+      class CustomComponent < SolrEad::Component
         include OM::XML::Document
         include Solrizer::XML::TerminologyBasedSolrizer
         set_terminology do |t|

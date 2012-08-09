@@ -1,4 +1,4 @@
-class EadDocument
+class SolrEad::Document
 
   include OM::XML::Document
   include Solrizer::XML::TerminologyBasedSolrizer

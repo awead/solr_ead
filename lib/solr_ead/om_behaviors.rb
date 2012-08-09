@@ -5,10 +5,10 @@ module SolrEad::OmBehaviors
 #
 # Instead of using the xml as-as, this module will override OM::XML::Container.to_xml
 # and remove all the namespaces from the xml first, then return the Nokogiri object.
-# This makes working with the terminologies in EadDocument much easier.
+# This makes working with the terminologies in SolrEad::Document much easier.
 #
 # Any customized ead document definitions should include this module. ex:
-#   class EadDocument
+#   class MyDocument < SolrEad::Document
 #
 #     include OM::XML::Document
 #     include Solrizer::XML::TerminologyBasedSolrizer

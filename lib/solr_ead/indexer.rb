@@ -13,7 +13,7 @@ module SolrEad
 # ==Default indexing
 # This will index your ead into one solr document for the main portion of ead and then
 # multiple documents for the component documents.  The fields for the main document
-# are defined in EadDocument and fields for the component are defined in EadComponent.
+# are defined in SolrEad::Document and fields for the component are defined in SolrEad::Component.
 #   > file = File.new("path/to/your/ead.xml")
 #   > indexer = SolrEad::Indexer.new
 #   > indexer.create(file)
@@ -22,9 +22,9 @@ module SolrEad
 # ==Simple indexing
 # By using the :simple option, SolrEad will create only one solr document from one ead.
 # The default implementation of SolrEad is to create multiple documents, so fields
-# defined in EadDocument reflect this.  For example, no component fields are defined in
-# EadDocument, so none would be indexed.  If you elect to use the :simple option, you'll
-# want to override EadDocument with your own and define any additional component fields
+# defined in SolrEad::Document reflect this.  For example, no component fields are defined in
+# SolrEad::Document, so none would be indexed.  If you elect to use the :simple option, you'll
+# want to override SolrEad::Document with your own and define any additional component fields
 # you want to appear in your index.
 #   > file = File.new("path/to/your/ead.xml")
 #   > indexer = SolrEad::Indexer.new(:simple => true)
@@ -87,13 +87,13 @@ class Indexer
   #
   # Determines if you have specified a custom definition for your ead document.
   # If you've defined a class CustomDocument, and have passed it as an option
-  # to your indexer, then SolrEad will use that class instead of EadDocument.
+  # to your indexer, then SolrEad will use that class instead of SolrEad::Document.
   def om_document(file)
     if options[:document]
       raise "You're trying to use a custom ead document definition that isn't defined" unless defined?(("::" + options[:document]))
       eval("::" + options[:document]).from_xml(File.new(file))
     else
-      EadDocument.from_xml(File.new(file))
+      SolrEad::Document.from_xml(File.new(file))
     end
   end
 
@@ -101,23 +101,23 @@ class Indexer
   #
   # Determines if you have specified a custom definition for your ead component.
   # If you've defined a class CustomComponent, and have passed it as an option
-  # to your indexer, then SolrEad will use that class instead of EadComponent.
+  # to your indexer, then SolrEad will use that class instead of SolrEad::Component.
   def om_component_from_node(node)
     if options[:component]
       raise "You're trying to use a custom ead component definition that isn't defined" unless defined?(("::" + options[:component]))
       solr_doc = eval("::" + options[:component]).from_xml(prep(node))
     else
-      EadComponent.from_xml(prep(node))
+      SolrEad::Component.from_xml(prep(node))
     end
   end
 
   # Creates solr documents for each individual component node in the ead.  Field names
   # and values are determined according to the OM terminology outlined in
-  # EadComponent as well as additional fields taken from the rest of the ead
+  # SolrEad::Component as well as additional fields taken from the rest of the ead
   # document as described in SolrEad::Behaviors#additional_component_fields.
   #
   # Fields from both the terminology and #additional_component_fields are all assembled
-  # into one solr document via the EadComponent#to_solr method.  Any customizations to
+  # into one solr document via the SolrEad::Component#to_solr method.  Any customizations to
   # the contents or appearance of the fields can take place within that method.
   #
   # Furthermore, one final field is added to the solr document after the #to_solr method.

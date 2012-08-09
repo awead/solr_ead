@@ -1,10 +1,10 @@
 require "spec_helper"
 
-describe EadDocument do
+describe SolrEad::Document do
 
   before(:all) do
-    @ex1 = EadDocument.from_xml(fixture "ARC-0005.xml")
-    @ex2 = EadDocument.from_xml(fixture "pp002010.xml")
+    @ex1 = SolrEad::Document.from_xml(fixture "ARC-0005.xml")
+    @ex2 = SolrEad::Document.from_xml(fixture "pp002010.xml")
     @solr_ex1 = @ex1.to_solr
     @solr_ex2 = @ex2.to_solr
   end
