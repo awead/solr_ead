@@ -12,6 +12,7 @@ class Component
 
     t.title(:path=>"unittitle", :attributes=>{ :type => :none }, :index_as=>[:searchable, :displayable])
 
+    # Default facets
     t.corpname(:index_as=>[:facetable])
     t.famname(:index_as=>[:facetable])
     t.genreform(:index_as=>[:facetable])
@@ -19,6 +20,12 @@ class Component
     t.name(:index_as=>[:facetable])
     t.persname(:index_as=>[:facetable])
     t.subject(:index_as=>[:facetable])
+
+    # Archival material
+    t.container(:attributes=>{ :type => "Box" }, :index_as => [:not_searchable, :not_displayable]) {
+      t.label(:path=>{ :attribute=>"label" }, :index_as => [:facetable])
+    }
+    t.material(:proxy=>[:container, :label])
 
     # These terms are proxied to match with Blacklight's default facets, but otherwise
     # you can remove them or rename the above facet terms to match with your solr
