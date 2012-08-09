@@ -1,3 +1,4 @@
+# :nodoc
 require "solr_ead"
 require "debugger"
 
@@ -14,11 +15,11 @@ RSpec.configure do |config|
 
 end
 
-def fixture(file)
+def fixture(file) #:nodoc
   File.new(File.join(File.dirname(__FILE__), 'fixtures', file))
 end
 
-def debug_solr_doc(doc)
+def debug_solr_doc(doc) #:nodoc
   doc.keys.each do |key|
     unless key.to_s.match("xml_t")
       puts "#" * 50
