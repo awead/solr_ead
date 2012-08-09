@@ -1,7 +1,0 @@
-module SolrEad::DocumentBehaviors
-
-
-
-
-
-end
