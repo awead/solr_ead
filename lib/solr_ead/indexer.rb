@@ -25,9 +25,7 @@ class Indexer
   # Indexes your ead and additional component documents with the supplied file, then
   # commits the results to your solr server.
   def create(file,opts={})
-    file = File.new(file)
-    raw = SolrEad::Document.remove_namespaces(file)
-    doc = SolrEad::Document.from_xml(raw)
+    doc = SolrEad::Document.from_xml(File.new(file))
     solr_doc = doc.to_solr
     self.solr.add solr_doc
     add_components file
@@ -38,9 +36,7 @@ class Indexer
   # any component documents, then creating a new index from the supplied file.
   # This method will also commit the results to your solr server when complete.
   def update(file,opts={})
-    file = File.new(file)
-    raw = SolrEad::Document.remove_namespaces(file)
-    doc = SolrEad::Document.from_xml(raw)
+    doc = SolrEad::Document.from_xml(File.new(file))
     solr_doc = doc.to_solr
     self.solr.delete_by_query( 'eadid_s:"' + solr_doc["id"] + '"' )
     self.solr.add solr_doc
