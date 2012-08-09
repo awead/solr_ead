@@ -121,9 +121,4 @@ module SolrEad::Behaviors
     node.attr("level").match(/file|item/) ? FALSE : TRUE
   end
 
-  # One final method for tweaking our solr fields
-  def custom_component_fields(solr_doc)
-    solr_doc.merge!({"heading_display" => [ solr_doc["parent_unittitle_list_t"], solr_doc["title_display"] ].join(" >> ") })
-  end
-
 end
