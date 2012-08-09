@@ -3,10 +3,25 @@ require "spec_helper"
 describe SolrEad::Document do
 
   before(:all) do
-    @ex1 = SolrEad::Document.from_xml(fixture "ARC-0005.xml")
-    @ex2 = SolrEad::Document.from_xml(fixture "pp002010.xml")
+    @file1 = SolrEad::Document.remove_namespaces(fixture "ARC-0005.xml")
+    @file2 = SolrEad::Document.remove_namespaces(fixture "pp002010.xml")
+    @ex1 = SolrEad::Document.from_xml(@file1)
+    @ex2 = SolrEad::Document.from_xml(@file2)
     @solr_ex1 = @ex1.to_solr
     @solr_ex2 = @ex2.to_solr
+  end
+
+  describe ".remove_namespaces" do
+
+    it "should remove the xmlns attributes from a file" do
+      [@file1, @file2].each do |file|
+        result = file.to_s
+        result.should_not match /xmls/
+        result.should_not match /xsi/
+        result.should match /<ead/
+      end
+    end
+
   end
 
   describe "#terminology" do
