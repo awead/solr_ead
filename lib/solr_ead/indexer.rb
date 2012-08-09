@@ -63,9 +63,7 @@ class Indexer
   def add_components(file)
     counter = 1
     components(file).each do |node|
-      solr_doc = SolrEad::Component.from_xml(prep(node)).to_solr
-      solr_doc.merge!(additional_component_fields(node))
-      solr_doc.merge!(custom_component_fields(solr_doc))
+      solr_doc = SolrEad::Component.from_xml(prep(node)).to_solr(additional_component_fields(node))
       solr_doc.merge!({"sort_i" => counter.to_s})
       self.solr.add solr_doc
       counter = counter + 1
