@@ -8,7 +8,7 @@ module SolrEad
 class Indexer
 
   include RSolr
-  include SolrEad::ComponentBehaviors
+  include SolrEad::Behaviors
 
   attr_accessor :solr
 
@@ -56,7 +56,7 @@ class Indexer
   # Creates solr documents for each individual component node in the ead.  Field names
   # and values are determined according to the OM terminology outlined in
   # SolrEad::Component as well as additional fields taken from the rest of the ead
-  # document as described in SolrEad::ComponentBehaviors#additional_component_fields
+  # document as described in SolrEad::Behaviors#additional_component_fields
   #
   # Furthermore, a solr sorting field *sort_i* is added to the document using the index values from the array
   # of <c> nodes.  This maintains the order of <c> nodes as they appear in the original ead document.

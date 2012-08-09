@@ -3,7 +3,6 @@ class Document
 
   include OM::XML::Document
   include Solrizer::XML::TerminologyBasedSolrizer
-  include SolrEad::DocumentBehaviors
 
   # Define each term in your ead that you want put into the solr document
   set_terminology do |t|

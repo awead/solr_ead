@@ -1,6 +1,6 @@
 require "sanitize"
 
-module SolrEad::ComponentBehaviors
+module SolrEad::Behaviors
 
   # Takes a file as its input and returns a Nokogiri::XML::NodeSet of component <c> nodes
   #

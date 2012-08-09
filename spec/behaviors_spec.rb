@@ -1,12 +1,12 @@
 require "spec_helper"
 
-describe SolrEad::ComponentBehaviors do
+describe SolrEad::Behaviors do
 
   before :all do
     @not_numbered = fixture "ARC-0005.xml"
     @numbered     = fixture "pp002010.xml"
     class TestClass
-      include SolrEad::ComponentBehaviors
+      include SolrEad::Behaviors
     end
     @test = TestClass.new
   end
