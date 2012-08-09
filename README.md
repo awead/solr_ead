@@ -1,4 +1,4 @@
-= SolrEad
+# SolrEad
 
 SolrEad is a gem that indexes your ead documents into Solr.  From there, you can use
 other Solr-based applications to search and display your finding aids.  It originated
@@ -14,7 +14,7 @@ The default term definitions are all based on eads created with Archivist's Tool
 so whatever conventions AT has in its ead will be manifested here.  However, you are
 able to override this definitions with your own to meet any specific local needs.
 
-== Indexing
+## Indexing
 
 SolrEad's default way of indexing a single ead document is to create one solr document for the initial
 part of the ead and then separate documents for each component node.  You may also elect
@@ -22,7 +22,7 @@ use a simple indexing option which creates only one solr document per ead docume
 
 For more information on indexing, see the documentation for SolrEad::Indexer.
 
-== Installation
+## Installation
 
 Add this line to your application's Gemfile:
 
@@ -36,7 +36,7 @@ Or install it yourself:
 
     $ gem install solr_ead
 
-== Usage
+## Usage
 
     $ rake solr_ead:index FILE=/path/to/your/ead.xml
 
@@ -45,7 +45,7 @@ You can also do this via the command line:
     > indexer = SolrEad::Indexer.new
     > indexer.create(File.new("path/to/your/ead.xml))
 
-=== Usage with Blacklight
+### Usage with Blacklight
 
 This code originated in a Blacklight application and some of its default solr fields
 reflect a Blacklight-style solr implementation.  For example, certain facet fields
@@ -57,11 +57,11 @@ this into working solution, you'll need to modify both the definitions of docume
 and components within SolrEad and configure Blacklight's own display and facet fields
 accordingly.
 
-== Customization
+## Customization
 
 Coming soon!
 
-== Contributing
+## Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -69,6 +69,6 @@ Coming soon!
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-== Copyright
+## Copyright
 
 Copyright (c) 2012 Adam Wead. See LICENSE for details.
