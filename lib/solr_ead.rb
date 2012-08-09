@@ -12,8 +12,8 @@ end
 require "ead_mapper"
 require "terminology_based_solrizer"
 require "solr_ead/behaviors"
-require "solr_ead/document"
-require "solr_ead/component"
 require "solr_ead/indexer"
+require "ead_document"
+require "ead_component"
 
 require 'solr_ead/railtie' if defined?(Rails)

@@ -25,7 +25,7 @@ class Indexer
   # Indexes your ead and additional component documents with the supplied file, then
   # commits the results to your solr server.
   def create(file,opts={})
-    doc = SolrEad::Document.from_xml(File.new(file))
+    doc = EadDocument.from_xml(File.new(file))
     solr_doc = doc.to_solr
     self.solr.add solr_doc
     add_components file
@@ -36,7 +36,7 @@ class Indexer
   # any component documents, then creating a new index from the supplied file.
   # This method will also commit the results to your solr server when complete.
   def update(file,opts={})
-    doc = SolrEad::Document.from_xml(File.new(file))
+    doc = EadDocument.from_xml(File.new(file))
     solr_doc = doc.to_solr
     self.solr.delete_by_query( 'eadid_s:"' + solr_doc["id"] + '"' )
     self.solr.add solr_doc
@@ -55,7 +55,7 @@ class Indexer
 
   # Creates solr documents for each individual component node in the ead.  Field names
   # and values are determined according to the OM terminology outlined in
-  # SolrEad::Component as well as additional fields taken from the rest of the ead
+  # EadComponent as well as additional fields taken from the rest of the ead
   # document as described in SolrEad::Behaviors#additional_component_fields
   #
   # Furthermore, a solr sorting field *sort_i* is added to the document using the index values from the array
@@ -63,7 +63,7 @@ class Indexer
   def add_components(file)
     counter = 1
     components(file).each do |node|
-      solr_doc = SolrEad::Component.from_xml(prep(node)).to_solr(additional_component_fields(node))
+      solr_doc = EadComponent.from_xml(prep(node)).to_solr(additional_component_fields(node))
       solr_doc.merge!({"sort_i" => counter.to_s})
       self.solr.add solr_doc
       counter = counter + 1

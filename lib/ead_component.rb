@@ -1,5 +1,4 @@
-module SolrEad
-class Component
+class EadComponent
 
   include OM::XML::Document
   include Solrizer::XML::TerminologyBasedSolrizer
@@ -73,5 +72,4 @@ class Component
     solr_doc.merge!({"heading_display" => [ solr_doc["parent_unittitle_list_t"], self.title.first ].join(" >> ")  })
   end
 
-end
 end

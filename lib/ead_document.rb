@@ -1,5 +1,4 @@
-module SolrEad
-class Document
+class EadDocument
 
   include OM::XML::Document
   include Solrizer::XML::TerminologyBasedSolrizer
@@ -82,5 +81,4 @@ class Document
     return tmpl
   end
 
-end
 end
