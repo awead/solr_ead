@@ -2,6 +2,7 @@ class EadDocument
 
   include OM::XML::Document
   include Solrizer::XML::TerminologyBasedSolrizer
+  include SolrEad::OmBehaviors
 
   # Define each term in your ead that you want put into the solr document
   set_terminology do |t|
@@ -67,18 +68,6 @@ class EadDocument
     solr_doc.merge!({"format"          => "Archival Collection"})
     solr_doc.merge!({"heading_display" => ("Guide to the " + self.title.first)})
     return solr_doc
-  end
-
-  # Overrides OM::XML::Container.from_xml to remove namespaces from xml input
-  def self.from_xml(xml=nil, tmpl=self.new) # :nodoc:
-    if xml.nil?
-      # noop: handled in #ng_xml accessor..  tmpl.ng_xml = self.xml_template
-    elsif xml.kind_of? Nokogiri::XML::Node
-      tmpl.ng_xml = xml.remove_namespaces!
-    else
-      tmpl.ng_xml = Nokogiri::XML::Document.parse(xml).remove_namespaces!
-    end
-    return tmpl
   end
 
 end
