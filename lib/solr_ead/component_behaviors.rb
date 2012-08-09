@@ -52,6 +52,7 @@ module SolrEad::ComponentBehaviors
   # parent_id_list_t:: see parent_id_list
   # parent_unittitle_list_t:: see parent_id_list
   # component_children_b:: Boolean field indicating whether or not the component has any child <c> nodes attached to it
+  # heading_display:: Custom display heading for component documents
   #
   # These fields are used so that we may reconstruct placement of a single component
   # within the hierarchy of the original ead.
@@ -117,7 +118,12 @@ module SolrEad::ComponentBehaviors
   # A <c> node with a level attribute of either file or item will have no component
   # children attached to it.
   def component_children?(node)
-    node.attr("level").match(/file|item/) ? TRUE : FALSE
+    node.attr("level").match(/file|item/) ? FALSE : TRUE
+  end
+
+  # One final method for tweaking our solr fields
+  def custom_component_fields(solr_doc)
+    solr_doc.merge!({"heading_display" => [ solr_doc["parent_unittitle_list_t"], solr_doc["title_display"] ].join(" >> ") })
   end
 
 end

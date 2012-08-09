@@ -34,6 +34,25 @@ describe SolrEad::ComponentBehaviors do
       part = @test.prep(@numbered_nodeset)
       part.should be_a_kind_of(Nokogiri::XML::Document)
     end
+  end
+
+  describe "#component_children?" do
+
+    it "should return true for series-level components" do
+      ["series","subseries"].each do |level|
+        xml = '<c id="ref42" level="' + level +'"></c>'
+        node = Nokogiri::XML(xml)
+        @test.component_children?(node.elements.first).should be_true
+      end
+    end
+
+    it "should return false for item-level components" do
+      ["file","item"].each do |level|
+        xml = '<c id="ref42" level="' + level +'"></c>'
+        node = Nokogiri::XML(xml)
+        @test.component_children?(node.elements.first).should be_false
+      end
+    end
 
   end
 
