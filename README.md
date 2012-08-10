@@ -64,8 +64,8 @@ create your own definitions for documents and components, here's what you can do
 
 ### Writing a custom document defintion
 
-Under lib or another directory of your choice, create the file custom_document.rb
-Edit custom_document.rb
+Under lib or another directory of your choice, create the file custom_document.rb with
+the following content:
 
     class CustomDocument < SolrEad::Document
 
@@ -89,7 +89,7 @@ Edit custom_document.rb
 
     end
 
-From the console, index you ead document using your new definition
+From the console, index you ead document using your new definition.
 
     > file = "path/to/ead.xml"
     > indexer = SolrEad::Indexer.new(:document=>"CustomDocument")
