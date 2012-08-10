@@ -89,12 +89,7 @@ class Indexer
   # If you've defined a class CustomDocument, and have passed it as an option
   # to your indexer, then SolrEad will use that class instead of SolrEad::Document.
   def om_document(file)
-    if options[:document]
-      raise "You're trying to use a custom ead document definition that isn't defined" unless defined?(("::" + options[:document]))
-      eval("::" + options[:document]).from_xml(File.new(file))
-    else
-      SolrEad::Document.from_xml(File.new(file))
-    end
+    options[:document] ? options[:document].from_xml(File.new(file)) : SolrEad::Document.from_xml(File.new(file))
   end
 
   # Returns an OM document from a given Nokogiri node
@@ -103,12 +98,7 @@ class Indexer
   # If you've defined a class CustomComponent, and have passed it as an option
   # to your indexer, then SolrEad will use that class instead of SolrEad::Component.
   def om_component_from_node(node)
-    if options[:component]
-      raise "You're trying to use a custom ead component definition that isn't defined" unless defined?(("::" + options[:component]))
-      solr_doc = eval("::" + options[:component]).from_xml(prep(node))
-    else
-      SolrEad::Component.from_xml(prep(node))
-    end
+    options[:component] ? options[:component].from_xml(prep(node)) : SolrEad::Component.from_xml(prep(node))
   end
 
   # Creates solr documents for each individual component node in the ead.  Field names

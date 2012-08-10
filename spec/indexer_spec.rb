@@ -84,27 +84,26 @@ describe SolrEad::Indexer do
     end
 
     it "should raise an error if you use an undefined class" do
-      indexer = SolrEad::Indexer.new(:document => "BogusClass")
-      lambda {indexer.create(@file)}.should raise_error NameError
+      lambda {SolrEad::Indexer.new(:document => BogusClass)}.should raise_error NameError
     end
 
     it "should accept a document definition" do
-      indexer = SolrEad::Indexer.new(:document => "CustomDocument")
+      indexer = SolrEad::Indexer.new(:document => CustomDocument)
       indexer.create(@file)
     end
 
     it "should accept a component definition" do
-      indexer = SolrEad::Indexer.new(:component => "CustomComponent")
+      indexer = SolrEad::Indexer.new(:component => CustomComponent)
       indexer.create(@file)
     end
 
     it "should accept a simple custom document definition" do
-      indexer = SolrEad::Indexer.new(:document => "CustomDocument", :simple=>true)
+      indexer = SolrEad::Indexer.new(:document => CustomDocument, :simple=>true)
       indexer.create(@file)
     end
 
     it "should accept both custom definitions and components" do
-      indexer = SolrEad::Indexer.new(:document => "CustomDocument", :component => "CustomComponent")
+      indexer = SolrEad::Indexer.new(:document => CustomDocument, :component => CustomComponent)
       indexer.create(@file)
     end
 
