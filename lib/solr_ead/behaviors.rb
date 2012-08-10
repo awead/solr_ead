@@ -116,10 +116,9 @@ module SolrEad::Behaviors
   end
 
   # Returns true or false for a component with attached <c> child nodes.
-  # A <c> node with a level attribute of either file or item will have no component
-  # children attached to it.
-  def component_children?(node)
-    node.attr("level").match(/file|item/) ? FALSE : TRUE
+  def component_children?(node, t = Array.new)
+    node.children.each { |n| t << n.name }
+    t.include?("c") ? TRUE : FALSE
   end
 
 end

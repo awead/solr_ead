@@ -38,7 +38,52 @@ describe SolrEad::Behaviors do
 
   describe "#component_children?" do
 
+    before :all do
+      @true = '
+        <c id="ref167" level="file">
+          <did>
+            <unittitle>Zines</unittitle>
+          </did>
+          <c id="ref169" level="file">
+            <did>
+              <unittitle>Contagion</unittitle>
+              <container id="cid384011" type="Box" label="Graphic materials">SF2</container>
+              <container parent="cid384011" type="Folder">8</container>
+              <unitdate>1980-1981</unitdate>
+            </did>
+          </c>
+          <c id="ref171" level="file">
+            <did>
+              <unittitle>Single issues</unittitle>
+              <container id="cid384012" type="Box" label="Graphic materials">SF2</container>
+              <container parent="cid384012" type="Folder">9</container>
+              <unitdate>1977-1985</unitdate>
+            </did>
+          </c>
+        </c>
+      '
+      @false = '
+        <c id="ref167" level="file">
+          <did>
+            <unittitle>Zines</unittitle>
+          </did>
+        </c>
+      '
+    end
+
+
+    it "should return true for components that have c nodes below them" do
+      node = Nokogiri::XML(@true)
+      @test.component_children?(node.elements.first).should be_true
+    end
+
+    it "should return false for components that do not have c nodes below them" do
+      node = Nokogiri::XML(@false)
+      @test.component_children?(node.elements.first).should be_false
+    end
+
     it "should return true for series-level components" do
+      pending "This is an old test"
       ["series","subseries"].each do |level|
         xml = '<c id="ref42" level="' + level +'"></c>'
         node = Nokogiri::XML(xml)
@@ -47,6 +92,7 @@ describe SolrEad::Behaviors do
     end
 
     it "should return false for item-level components" do
+      pending "This is an old test"
       ["file","item"].each do |level|
         xml = '<c id="ref42" level="' + level +'"></c>'
         node = Nokogiri::XML(xml)
