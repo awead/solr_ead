@@ -17,5 +17,6 @@ class EadMapper < Solrizer::FieldMapper
   index_as :facetable,             :suffix => '_facet'
   index_as :sortable,              :suffix => '_sort'
   index_as :unstemmed_searchable,  :suffix => '_unstem_search'
-
+  index_as :heading,               :suffix => '_heading'
+  index_as :string,                :suffix => '_s'
 end
