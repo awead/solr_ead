@@ -67,28 +67,28 @@ create your own definitions for documents and components, here's what you can do
 1. Under lib or another directory of your choice, create the file custom_document.rb
 2. Edit custom_document.rb
 
-    > class CustomDocument < SolrEad::Document
-    >
-    >  include OM::XML::Document
-    >  include Solrizer::XML::TerminologyBasedSolrizer
-    >  include SolrEad::OmBehaviors
-    >
-    >  set_terminology do |t|
-    >    t.root(:path=>"ead", :index_as => [:not_searchable])
-    >    t.eadid
-    >
-    >    # Add additional term definitions here
-    >
-    >  end
-    >
-    >  # Optionally, you may tweak other solr fields here.  Otherwise, you can leave this
-    >  # method out of your definition.
-    >  def to_solr(solr_doc = Hash.new)
-    >    super(solr_doc)
-    >
-    >  end
-    >
-    > end
+     class CustomDocument < SolrEad::Document
+
+      include OM::XML::Document
+      include Solrizer::XML::TerminologyBasedSolrizer
+      include SolrEad::OmBehaviors
+
+      set_terminology do |t|
+        t.root(:path="ead", :index_as = [:not_searchable])
+        t.eadid
+
+        # Add additional term definitions here
+
+      end
+
+      # Optionally, you may tweak other solr fields here.  Otherwise, you can leave this
+      # method out of your definition.
+      def to_solr(solr_doc = Hash.new)
+        super(solr_doc)
+
+      end
+
+     end
 
 3. From the console, index you ead document using your new definition
 
