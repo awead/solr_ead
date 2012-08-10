@@ -64,10 +64,10 @@ create your own definitions for documents and components, here's what you can do
 
 ### Writing a custom document defintion
 
-1. Under lib or another directory of your choice, create the file custom_document.rb
-2. Edit custom_document.rb
+Under lib or another directory of your choice, create the file custom_document.rb
+Edit custom_document.rb
 
-     class CustomDocument < SolrEad::Document
+    class CustomDocument < SolrEad::Document
 
       include OM::XML::Document
       include Solrizer::XML::TerminologyBasedSolrizer
@@ -85,12 +85,11 @@ create your own definitions for documents and components, here's what you can do
       # method out of your definition.
       def to_solr(solr_doc = Hash.new)
         super(solr_doc)
-
       end
 
-     end
+    end
 
-3. From the console, index you ead document using your new definition
+From the console, index you ead document using your new definition
 
     > file = "path/to/ead.xml"
     > indexer = SolrEad::Indexer.new(:document=>"CustomDocument")
