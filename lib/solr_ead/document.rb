@@ -64,7 +64,6 @@ class SolrEad::Document
     super(solr_doc)
     solr_doc.merge!({"id"              => self.eadid.first})
     solr_doc.merge!({"eadid_s"         => self.eadid.first})
-    solr_doc.merge!({"xml_display"     => self.to_xml})
     solr_doc.merge!({"format"          => "Archival Collection"})
     solr_doc.merge!({"heading_display" => ("Guide to the " + self.title.first)})
     return solr_doc

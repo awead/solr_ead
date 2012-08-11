@@ -39,6 +39,11 @@ describe SolrEad::Document do
       @ex1.separatedmaterial.first.should match /^Commercially-released publications.*materials are available.$/
     end
 
+    it "should have its xml" do
+      @ex1.to_xml.should match "<c\s"
+      @ex2.to_xml.should match "<c01\s"\
+    end
+
   end
 
   describe ".to_solr" do
@@ -48,8 +53,7 @@ describe SolrEad::Document do
       @solr_ex1["id"].should == "ARC-0005"
       @solr_ex2["eadid_s"].should == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
       @solr_ex2["id"].should == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
-      @solr_ex1["xml_display"].should match "<c\s"
-      @solr_ex2["xml_display"].should match "<c01\s"\
+
     end
 
     it "should have faceted terms created from subject headings" do

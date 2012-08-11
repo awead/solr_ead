@@ -67,8 +67,7 @@ class SolrEad::Component
 
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
-    solr_doc.merge!({"xml_display" => self.to_xml})
-    solr_doc.merge!({"format"      => "Archival Item"})
+    solr_doc.merge!({"format"          => "Archival Item"})
     solr_doc.merge!({"heading_display" => [ solr_doc["parent_unittitle_list_t"], self.title.first ].join(" >> ")  })
   end
 
