@@ -7,12 +7,9 @@ module SolrEad::OmBehaviors
 # and remove all the namespaces from the xml first, then return the Nokogiri object.
 # This makes working with the terminologies in SolrEad::Document much easier.
 #
-# Any customized ead document definitions should include this module. ex:
+# Any customized ead document definitions that extend SolrEad::Document will include this
+# module. Example:
 #   class MyDocument < SolrEad::Document
-#
-#     include OM::XML::Document
-#     include Solrizer::XML::TerminologyBasedSolrizer
-#     include SolrEad::Container
 #
 #   end
 
