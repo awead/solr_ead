@@ -84,16 +84,12 @@ application.
 Chances are the default definitions are not sufficient for your needs.  If you want to
 create your own definitions for documents and components, here's what you can do.
 
-### Writing a custom document defintion
+### Writing a custom document definition
 
 Under lib or another directory of your choice, create the file custom_document.rb with the
 following content:
 
     class CustomDocument < SolrEad::Document
-
-      include OM::XML::Document
-      include Solrizer::XML::TerminologyBasedSolrizer
-      include SolrEad::OmBehaviors
 
       set_terminology do |t|
         t.root(:path="ead", :index_as = [:not_searchable])
@@ -116,6 +112,39 @@ From the console, index you ead document using your new definition.
     > file = "path/to/ead.xml"
     > indexer = SolrEad::Indexer.new(:document=>"CustomDocument")
     > indexer.create(file)
+
+### Adding custom methods
+
+Suppose you want to add some custom methods that preform additional manipulations of
+your solr fields after they've been pulled from your ead.  You can create a module
+for all your specialized methods and add it to your ead document.
+
+    module MyEadBehaviors
+
+      def special_process(field)
+        # manipulate your field here
+        return field
+      end
+
+    end
+
+Then, include your module in your own custom document and call the method during to_solr:
+
+    class CustomDocument < SolrEad::Document
+
+      include MyEadBehaviors
+
+      # terminology goes here...
+
+      def to_solr(solr_doc = Hash.new)
+        super(solr_doc)
+        solr_doc.merge!({"solr_field" => special_process(self.field_name)})
+      end
+
+    end
+
+Your solr document will now include the field "solr_field" that has taken the term
+"field_name" and processed it with the special_process method.
 
 ### Solr schema configurations
 
