@@ -115,7 +115,7 @@ From the console, index you ead document using your new definition.
 
 ### Adding custom methods
 
-Suppose you want to add some custom methods that preform additional manipulations of
+Suppose you want to add some custom methods that perform additional manipulations of
 your solr fields after they've been pulled from your ead.  You can create a module
 for all your specialized methods and add it to your ead document.
 
