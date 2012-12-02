@@ -16,8 +16,8 @@ Gem::Specification.new do |gem|
   gem.version       = SolrEad::VERSION
 
   # Dependencies
-  gem.add_dependency('om')
-  gem.add_dependency('solrizer')
+  gem.add_dependency('om',       '~> 1.8.0')
+  gem.add_dependency('solrizer', '~> 2.0.0')
   gem.add_dependency('rsolr')
   gem.add_dependency('sanitize')
   gem.add_development_dependency('yard')
