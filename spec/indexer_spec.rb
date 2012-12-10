@@ -14,20 +14,20 @@ describe SolrEad::Indexer do
 
     it "should index a new ead from a file" do
       @indexer.create(@file)
-      q = @indexer.solr.get 'select', :params => {:q=>'eadid_s:"ARC-0005"', :qt=>'document'}
+      q = @indexer.solr.get 'select', :params => {:q=>'ead_id:"ARC-0005"', :qt=>'document'}
       q["response"]["numFound"].should == 136
     end
 
 
     it "should update an ead from a file" do
       @indexer.update(@file)
-      q = @indexer.solr.get 'select', :params => {:q=>'eadid_s:"ARC-0005"', :qt=>'document'}
+      q = @indexer.solr.get 'select', :params => {:q=>'ead_id:"ARC-0005"', :qt=>'document'}
       q["response"]["numFound"].should == 136
     end
 
     it "should delete and ead give an id" do
       @indexer.delete("ARC-0005")
-      q = @indexer.solr.get 'select', :params => {:q=>'eadid_s:"ARC-0005"', :qt=>'document'}
+      q = @indexer.solr.get 'select', :params => {:q=>'ead_id:"ARC-0005"', :qt=>'document'}
       q["response"]["numFound"].should == 0
     end
 
@@ -45,13 +45,13 @@ describe SolrEad::Indexer do
 
     it "should index a new ead from a file as a single solr document" do
       @simple_indexer.create(@file)
-      q = @simple_indexer.solr.get 'select', :params => {:q=>'eadid_s:"ARC-0005"', :qt=>'document'}
+      q = @simple_indexer.solr.get 'select', :params => {:q=>'ead_id:"ARC-0005"', :qt=>'document'}
       q["response"]["numFound"].should == 1
     end
 
     it "should delete a single ead" do
       @simple_indexer.delete("ARC-0005")
-      q = @simple_indexer.solr.get 'select', :params => {:q=>'eadid_s:"ARC-0005"', :qt=>'document'}
+      q = @simple_indexer.solr.get 'select', :params => {:q=>'ead_id:"ARC-0005"', :qt=>'document'}
       q["response"]["numFound"].should == 0
     end
 
@@ -68,6 +68,7 @@ describe SolrEad::Indexer do
           t.root(:path=>"ead", :index_as => [:not_searchable])
           t.title
           t.eadid
+          t.title_num
         end
       end
 

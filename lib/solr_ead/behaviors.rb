@@ -47,25 +47,25 @@ module SolrEad::Behaviors
   # The solr fields returned by this method are:
   #
   # id:: Unique identifier using the id attribute and the <eadid>
-  # eadid_s:: The <eadid> node of the ead. This is so we know which ead this component belongs to.
-  # parent_id_s:: The id attribute of the parent <c> node
-  # parent_ids_display:: Stored as a display fields so it is not indexed. See parent_id_list for more info.
-  # parent_unittitles_display:: Stored as a display fields so it is not indexed. See parent_id_list for more info.
+  # ead_id:: The <eadid> node of the ead. This is so we know which ead this component belongs to.
+  # parent_id:: The id attribute of the parent <c> node
+  # parent_id_s:: Array of all the parent component ids for a given component.
+  # parent_unittitles_display:: Array of title fields for all the parent components of a given component.
   # component_level_i:: numeric level of the component
   # component_children_b:: Boolean field indicating whether or not the component has any child <c> nodes attached to it
-  # document_unittitle_display:: Title field of the ead document of which this component is a part
+  # collection_facet:: Title field of the ead document so we can facet on all components in a collection
   #
   # These fields are used so that we may reconstruct placement of a single component
   # within the hierarchy of the original ead.
   def additional_component_fields(node, addl_fields = Hash.new)
     addl_fields["id"]                         = [node.xpath("//eadid").text, node.attr("id")].join
-    addl_fields["eadid_s"]                    = node.xpath("//eadid").text
-    addl_fields["parent_id_s"]                = node.parent.attr("id") unless node.parent.attr("id").nil?
-    addl_fields["parent_ids_display"]         = parent_id_list(node)
+    addl_fields["ead_id"]                     = node.xpath("//eadid").text
+    addl_fields["parent_id"]                  = node.parent.attr("id") unless node.parent.attr("id").nil?
+    addl_fields["parent_id_s"]                = parent_id_list(node)
     addl_fields["parent_unittitles_display"]  = parent_unittitle_list(node)
     addl_fields["component_level_i"]          = parent_id_list(node).length + 1
     addl_fields["component_children_b"]       = component_children?(node)
-    addl_fields["document_unittitle_display"] = node.xpath("//archdesc/did/unittitle").text
+    addl_fields["collection_facet"]           = node.xpath("//archdesc/did/unittitle").text
     return addl_fields
   end
 

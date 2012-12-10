@@ -20,15 +20,15 @@ describe SolrEad::Document do
     end
 
     it "should have some subject headings" do
-      @ex1.persname.should include "Cochran, Eddie, 1938-1960"
+      @ex1.persname.should  include "Cochran, Eddie, 1938-1960"
       @ex1.genreform.should include "Newspapers"
-      @ex1.subject.should include "Rockabilly music"
-      @ex2.corpname.should include "Tuskegee Normal and Industrial Institute--1880-1940."
+      @ex1.subject.should   include "Rockabilly music"
+      @ex2.corpname.should  include "Tuskegee Normal and Industrial Institute--1880-1940."
       @ex2.genreform.should include "Group portraits--1880-1940."
-      @ex2.geogname.should include "Washington, D.C."
-      @ex2.name.should include "Bell, J.S., Portland, OR"
-      @ex2.persname.should include "Johnston, Frances Benjamin, 1864-1952, photographer."
-      @ex2.subject.should include "Buildings--1880-1940."
+      @ex2.geogname.should  include "Washington, D.C."
+      @ex2.name.should      include "Bell, J.S., Portland, OR"
+      @ex2.persname.should  include "Johnston, Frances Benjamin, 1864-1952, photographer."
+      @ex2.subject.should   include "Buildings--1880-1940."
     end
 
     it "should have scope and contents" do
@@ -49,10 +49,10 @@ describe SolrEad::Document do
   describe ".to_solr" do
 
     it "should have the appropriate id fields" do
-      @solr_ex1["eadid_s"].should == "ARC-0005"
-      @solr_ex1["id"].should == "ARC-0005"
-      @solr_ex2["eadid_s"].should == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
-      @solr_ex2["id"].should == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
+      @solr_ex1["ead_id"].should  == "ARC-0005"
+      @solr_ex1["id"].should      == "ARC-0005"
+      @solr_ex2["ead_id"].should  == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
+      @solr_ex2["id"].should      == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
 
     end
 
@@ -66,13 +66,6 @@ describe SolrEad::Document do
       @solr_ex2["name_facet"].should include "Bell, J.S., Portland, OR"
       @solr_ex2["persname_facet"].should include "Johnston, Frances Benjamin, 1864-1952, photographer."
       @solr_ex2["subject_facet"].should include "Buildings--1880-1940."
-    end
-
-    it "should index head tags as display and p tags as text" do
-      @solr_ex1["separatedmaterial_heading_display"].should include "Separated Materials"
-      @solr_ex1["separatedmaterial_t"].first.should match /^Commercially-released publications.*materials are available.$/
-      @solr_ex2["scopecontent_heading_display"].should include "Scope and Content Note"
-      @solr_ex2["scopecontent_t"].first.should match /^Photographs/
     end
 
   end

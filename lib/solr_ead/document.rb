@@ -8,7 +8,7 @@ class SolrEad::Document
   set_terminology do |t|
     t.root(:path=>"ead")
 
-    t.eadid(:index_as=>[:string])
+    t.eadid
     t.corpname(:index_as=>[:facetable])
     t.famname(:index_as=>[:facetable])
     t.genreform(:index_as=>[:facetable])
@@ -23,62 +23,59 @@ class SolrEad::Document
     t.subject_geo(:proxy=>[:geogname])
     t.subject_topic(:proxy=>[:subject])
 
-    t.title(:path=>"titleproper", :attributes=>{ :type => :none }, :index_as=>[:searchable, :displayable])
+    t.title(:path=>"archdesc/did/unittitle", :index_as=>[:searchable, :displayable])
     t.title_filing(:path=>"titleproper", :attributes=>{ :type => "filing" }, :index_as=>[:sortable])
-    t.title_num(:path=>"titleproper/num", :attributes=>{ :type => :none }, :index_as=>[:string])
-    t.extent(:path=>"archdesc/did/physdesc/extent", :index_as=>[:searchable])
-    t.unitdate(:path=>"archdesc/did/unitdate[not(@type)]", :index_as=>[:searchable])
-    t.unitdate_bulk(:path=>"archdesc/did/unitdate[@type='bulk']", :index_as=>[:searchable])
-    t.unitdate_inclusive(:path=>"archdesc/did/unitdate[@type='inclusive']", :index_as=>[:searchable])
-    t.langmaterial(:path=>"archdesc/did/langmaterial", :index_as=>[:string])
-    t.langusage(:path=>"eadheader/profiledesc/langusage", :index_as=>[:string])
-    t.abstract(:path=>"archdesc/did/abstract") {
-      t.label(:path => {:attribute=>"label"}, :index_as=>[:z])
-    }
+    t.title_num(:path=>"archdesc/did/unitid")
+    t.extent(:path=>"archdesc/did/physdesc/extent")
+    t.unitdate(:path=>"archdesc/did/unitdate[not(@type)]", :index_as=>[:displayable])
+    t.unitdate_bulk(:path=>"archdesc/did/unitdate[@type='bulk']")
+    t.unitdate_inclusive(:path=>"archdesc/did/unitdate[@type='inclusive']")
+    t.language(:path=>"archdesc/did/langmaterial", :index_as=>[:displayable, :facetable])
+    t.abstract(:path=>"archdesc/did/abstract", :index_as=>[:searchable])
 
-    t.collection(:path=>"archdesc/did/unittitle", :index_as=>[:facetable, :displayable, :searchable])
+    t.collection(:proxy=>[:title], :index_as=>[:facetable])
 
 
     # General field available within archdesc
     t.accessrestrict(:path=>"archdesc/accessrestrict/p", :index_as=>[:searchable])
-    t.accessrestrict_heading(:path=>"archdesc/accessrestrict/head", :index_as=>[:z])
+    t.accessrestrict_heading(:path=>"archdesc/accessrestrict/head")
     t.accruals(:path=>"archdesc/accruals/p", :index_as=>[:searchable])
-    t.accruals_heading(:path=>"archdesc/accruals/head", :index_as=>[:z])
+    t.accruals_heading(:path=>"archdesc/accruals/head")
     t.acqinfo(:path=>"archdesc/acqinfo/p", :index_as=>[:searchable])
-    t.acqinfo_heading(:path=>"archdesc/acqinfo/head", :index_as=>[:z])
+    t.acqinfo_heading(:path=>"archdesc/acqinfo/head")
     t.altformavail(:path=>"archdesc/altformavail/p", :index_as=>[:searchable])
-    t.altformavail_heading(:path=>"archdesc/altformavail/head", :index_as=>[:z])
+    t.altformavail_heading(:path=>"archdesc/altformavail/head")
     t.appraisal(:path=>"archdesc/appraisal/p", :index_as=>[:searchable])
-    t.appraisal_heading(:path=>"archdesc/appraisal/head", :index_as=>[:z])
+    t.appraisal_heading(:path=>"archdesc/appraisal/head")
     t.arrangement(:path=>"archdesc/arrangement/p", :index_as=>[:searchable])
-    t.arrangement_heading(:path=>"archdesc/arrangement/head", :index_as=>[:z])
+    t.arrangement_heading(:path=>"archdesc/arrangement/head")
     t.custodhist(:path=>"archdesc/custodhist/p", :index_as=>[:searchable])
-    t.custodhist_heading(:path=>"archdesc/custodhist/head", :index_as=>[:z])
+    t.custodhist_heading(:path=>"archdesc/custodhist/head")
     t.fileplan(:path=>"archdesc/fileplan/p", :index_as=>[:searchable])
-    t.fileplan_heading(:path=>"archdesc/fileplan/head", :index_as=>[:z])
+    t.fileplan_heading(:path=>"archdesc/fileplan/head")
     t.originalsloc(:path=>"archdesc/originalsloc/p", :index_as=>[:searchable])
-    t.originalsloc_heading(:path=>"archdesc/originalsloc/head", :index_as=>[:z])
+    t.originalsloc_heading(:path=>"archdesc/originalsloc/head")
     t.phystech(:path=>"archdesc/phystech/p", :index_as=>[:searchable])
-    t.phystech_heading(:path=>"archdesc/phystech/head", :index_as=>[:z])
+    t.phystech_heading(:path=>"archdesc/phystech/head")
     t.processinfo(:path=>"archdesc/processinfo/p", :index_as=>[:searchable])
-    t.processinfo_heading(:path=>"archdesc/processinfo/head", :index_as=>[:z])
+    t.processinfo_heading(:path=>"archdesc/processinfo/head")
     t.relatedmaterial(:path=>"archdesc/relatedmaterial/p", :index_as=>[:searchable])
-    t.relatedmaterial_heading(:path=>"archdesc/relatedmaterial/head", :index_as=>[:z])
+    t.relatedmaterial_heading(:path=>"archdesc/relatedmaterial/head")
     t.separatedmaterial(:path=>"archdesc/separatedmaterial/p", :index_as=>[:searchable])
-    t.separatedmaterial_heading(:path=>"archdesc/separatedmaterial/head", :index_as=>[:z])
+    t.separatedmaterial_heading(:path=>"archdesc/separatedmaterial/head")
     t.scopecontent(:path=>"archdesc/scopecontent/p", :index_as=>[:searchable])
-    t.scopecontent_heading(:path=>"archdesc/scopecontent/head", :index_as=>[:z])
+    t.scopecontent_heading(:path=>"archdesc/scopecontent/head")
     t.userestrict(:path=>"archdesc/userestrict/p", :index_as=>[:searchable])
-    t.userestrict_heading(:path=>"archdesc/userestrict/head", :index_as=>[:z])
+    t.userestrict_heading(:path=>"archdesc/userestrict/head")
 
   end
 
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
     solr_doc.merge!({"id"              => self.eadid.first})
-    solr_doc.merge!({"eadid_s"         => self.eadid.first})
+    solr_doc.merge!({"ead_id"          => self.eadid.first})
     solr_doc.merge!({"format"          => "Archival Collection"})
-    solr_doc.merge!({"heading_display" => ("Guide to the " + self.title.first)})
+    solr_doc.merge!({"heading_display" => ("Guide to the " + self.title.first + " (" + self.title_num.first + ")")}) unless self.title_num.empty?
     return solr_doc
   end
 

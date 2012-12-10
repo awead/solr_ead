@@ -68,7 +68,7 @@ class Indexer
   def update(file)
     doc = om_document(File.new(file))
     solr_doc = doc.to_solr
-    solr.delete_by_query( 'eadid_s:"' + solr_doc["id"] + '"' )
+    solr.delete_by_query( 'ead_id:"' + solr_doc["id"] + '"' )
     solr.add solr_doc
     add_components(file) unless options[:simple]
     solr.commit
@@ -77,7 +77,7 @@ class Indexer
   # Deletes the ead document and any component documents from your solr index and
   # commits the results.
   def delete(id)
-    solr.delete_by_query( 'eadid_s:"' + id + '"')
+    solr.delete_by_query( 'ead_id:"' + id + '"')
     solr.commit
   end
 

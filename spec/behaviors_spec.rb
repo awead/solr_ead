@@ -82,24 +82,6 @@ describe SolrEad::Behaviors do
       @test.component_children?(node.elements.first).should be_false
     end
 
-    it "should return true for series-level components" do
-      pending "This is an old test"
-      ["series","subseries"].each do |level|
-        xml = '<c id="ref42" level="' + level +'"></c>'
-        node = Nokogiri::XML(xml)
-        @test.component_children?(node.elements.first).should be_true
-      end
-    end
-
-    it "should return false for item-level components" do
-      pending "This is an old test"
-      ["file","item"].each do |level|
-        xml = '<c id="ref42" level="' + level +'"></c>'
-        node = Nokogiri::XML(xml)
-        @test.component_children?(node.elements.first).should be_false
-      end
-    end
-
   end
 
 end
