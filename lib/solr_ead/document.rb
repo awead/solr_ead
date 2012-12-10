@@ -27,9 +27,9 @@ class SolrEad::Document
     t.title_filing(:path=>"titleproper", :attributes=>{ :type => "filing" }, :index_as=>[:sortable])
     t.title_num(:path=>"archdesc/did/unitid")
     t.extent(:path=>"archdesc/did/physdesc/extent")
-    t.unitdate(:path=>"archdesc/did/unitdate[not(@type)]", :index_as=>[:displayable])
-    t.unitdate_bulk(:path=>"archdesc/did/unitdate[@type='bulk']")
-    t.unitdate_inclusive(:path=>"archdesc/did/unitdate[@type='inclusive']")
+    t.unitdate(:path=>"archdesc/did/unitdate[not(@type)]", :index_as=>[:unstemmed])
+    t.unitdate_bulk(:path=>"archdesc/did/unitdate[@type='bulk']", :index_as=>[:unstemmed])
+    t.unitdate_inclusive(:path=>"archdesc/did/unitdate[@type='inclusive']", :index_as=>[:unstemmed])
     t.language(:path=>"archdesc/did/langmaterial", :index_as=>[:displayable, :facetable])
     t.abstract(:path=>"archdesc/did/abstract", :index_as=>[:searchable])
 
