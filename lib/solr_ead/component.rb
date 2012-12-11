@@ -9,8 +9,8 @@ class SolrEad::Component
     t.ref_(:path=>"/c/@id")
     t.level(:path=>"/c/@level", :index_as=>[:facetable])
 
-    t.title(:path=>"unittitle", :attributes=>{ :type => :none }, :index_as=>[:searchable, :displayable])
-    t.unitdate(:index_as=>[:searchable, :displayable])
+    t.title(:path=>"unittitle", :attributes=>{ :type => :none }, :index_as=>[:displayable])
+    t.unitdate(:index_as=>[:displayable])
 
     # Facets
     t.corpname(:index_as=>[:facetable])
