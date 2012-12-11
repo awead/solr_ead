@@ -30,7 +30,8 @@ class SolrEad::Document
     t.unitdate(:path=>"archdesc/did/unitdate[not(@type)]", :index_as=>[:unstemmed])
     t.unitdate_bulk(:path=>"archdesc/did/unitdate[@type='bulk']", :index_as=>[:unstemmed])
     t.unitdate_inclusive(:path=>"archdesc/did/unitdate[@type='inclusive']", :index_as=>[:unstemmed])
-    t.language(:path=>"archdesc/did/langmaterial", :index_as=>[:displayable, :facetable])
+    t.language(:path=>"archdesc/did/langmaterial", :index_as=>[:displayable])
+    t.langcode(:path=>"did/langmaterial/language/@langcode")
     t.abstract(:path=>"archdesc/did/abstract", :index_as=>[:searchable])
 
     t.collection(:proxy=>[:title], :index_as=>[:facetable])

@@ -40,6 +40,7 @@ class SolrEad::Component
     t.physdesc(:path=>"did/physdesc[not(dimensions)]", :index_as=>[:displayable])
     t.dimensions(:path=>"did/physdesc/dimensions", :index_as=>[:displayable])
     t.langcode(:path=>"did/langmaterial/language/@langcode")
+    t.language(:path=>"did/langmaterial", :index_as=>[:displayable])
 
     # Description
     t.accessrestrict(:path=>"accessrestrict/p", :index_as=>[:displayable])
