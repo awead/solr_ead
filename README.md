@@ -50,11 +50,20 @@ You can also do this via the command line:
 This code originated in a Blacklight application and some of its default solr fields
 reflect a Blacklight-style solr implementation.  For example, certain facet fields such as
 subject_topic_facet and title_display will appear in your solr index by default.  If you
-are trying out the gem within a default Blacklight installation, you should be able to
-index your ead without any modifications.  However, the only fields that will appear in
-your search results will be format and title.  In order to make this into working
-solution, you'll need to modify both the definitions of documents and components within
-SolrEad and configure Blacklight's own display and facet fields accordingly.
+are trying out the gem within a default Blacklight installation, you will need to make
+one addition to your schema.xml file:
+
+    <dynamicField name="*_id" type="string" indexed="true" stored="true" multiValued="false" />
+
+Fields ending in "_id" are used for identifying components within finding aids as well as
+the finding aid itself, which may not always be the same as the default "id" field for
+the solr document.
+
+Other than that, your solr configuration should require no futher modifications;
+however,  the only fields that will appear in your search results will be format
+and title.  In order to make this into working solution, you'll need to modify
+both the definitions of documents and components within SolrEad and configure
+Blacklight's own display and facet fields accordingly.
 
 ## Applications
 
