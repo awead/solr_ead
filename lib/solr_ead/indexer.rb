@@ -41,6 +41,7 @@ class Indexer
   # Creates a new instance of SolrEad::Indexer and connects to your solr server
   # using the url supplied in your config/solr.yml file.
   def initialize(opts={})
+    Solrizer.default_field_mapper = EadMapper.new
     if defined?(Rails.root)
       url = YAML.load_file(File.join(Rails.root,"config","solr.yml"))[Rails.env]['url']
     elsif ENV['RAILS_ENV']

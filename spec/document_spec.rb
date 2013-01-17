@@ -3,6 +3,7 @@ require "spec_helper"
 describe SolrEad::Document do
 
   before(:all) do
+    Solrizer.default_field_mapper = EadMapper.new
     @ex1 = SolrEad::Document.from_xml(fixture "ARC-0005.xml")
     @ex2 = SolrEad::Document.from_xml(fixture "pp002010.xml")
     @solr_ex1 = @ex1.to_solr

@@ -10,7 +10,6 @@ module SolrEad
 end
 
 require "ead_mapper"
-require "terminology_based_solrizer"
 require "solr_ead/behaviors"
 require "solr_ead/om_behaviors"
 require "solr_ead/indexer"
