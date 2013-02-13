@@ -51,13 +51,15 @@ This code originated in a Blacklight application and some of its default solr fi
 reflect a Blacklight-style solr implementation.  For example, certain facet fields such as
 subject_topic_facet and title_display will appear in your solr index by default.  If you
 are trying out the gem within a default Blacklight installation, you will need to make
-one addition to your schema.xml file:
+the following changes to your schema.xml file:
 
     <dynamicField name="*_id" type="string" indexed="true" stored="true" multiValued="false" />
+    <dynamicField name="*_s"  type="string" indexed="true" stored="true" multiValued="true"  />
 
 Fields ending in "_id" are used for identifying components within finding aids as well as
 the finding aid itself, which may not always be the same as the default "id" field for
-the solr document.
+the solr document.  "_s" fields are not multivalued by default in Blacklight, so you'll
+need to edit the existing entry for this dyamic field to reflect the change.
 
 Other than that, your solr configuration should require no futher modifications;
 however,  the only fields that will appear in your search results will be format
@@ -168,6 +170,15 @@ however, want to surpress this from search results.  To do this, add the followi
 your solrconfig.xml file, under the "search" request handler:
 
     <lst name="appends"><str name="fq">-component_children_b:[TRUE TO *]</str></lst>
+
+## Issues
+
+### eadid format
+
+solr_ead uses the <eadid> node to create unique ids for documents.  Consequently, if you're using
+a rails app, this id will be a part of the url.  If your eadid has .xml or some other combination
+of characters preceeded by a period, this will cause Rails to interpret these characters as a 
+format, which you don't want.  You may need to edit your eadid nodes if this is the case.
 
 ## Contributing
 
