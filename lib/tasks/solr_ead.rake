@@ -1,5 +1,3 @@
-require "solr_ead"
-
 namespace :solr_ead do
 
   desc "Index and ead into solr using FILE=<path/to/ead.xml>"
