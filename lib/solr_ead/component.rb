@@ -86,7 +86,7 @@ class SolrEad::Component
     super(solr_doc)
     solr_doc.merge!({"format" => "Archival Item"})
     solr_doc["parent_unittitles_display"].length > 0 ? solr_doc.merge!({"heading_display" => [ solr_doc["parent_unittitles_display"], self.title.first].join(" >> ")  }) : solr_doc.merge!({"heading_display" => self.title.first  })
-    solr_doc.merge!({"ref_id" => self.ref.first})
+    solr_doc.merge!({"ref_id" => self.ref.first.strip})
   end
 
 end
