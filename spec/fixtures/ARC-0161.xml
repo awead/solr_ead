@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <eadheader findaidstatus="Complete" repositoryencoding="iso15511" countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b">
+        <eadid>ARC-0161</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper>Jimmy Baynes Collection (Rock and Roll Hall of Fame and Museum Collection)
+                    <num>ARC.0161</num>
+                </titleproper>
+                <titleproper type="filing">Baynes Jimmy Collection (Rock and Roll Hall of Fame and Museum Collection)</titleproper>
+                <author>Finding aid prepared by Rachel Somerville, Project Archivist; Jennie Thomas, Head Archivist</author>
+            </titlestmt>
+            <publicationstmt>
+                <publisher>Library and Archives</publisher>
+                <address>
+                    <addressline>2809 Woodland Ave</addressline>
+                    <addressline>Cleveland, OH, 44115</addressline>
+                    <addressline>216-515-1956</addressline>
+                    <addressline>library@rockhall.org</addressline>
+                </address>
+                <date>September 29, 2011</date>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>This finding aid was produced using the Archivists' Toolkit
+                <date>2013-03-19T16:36-0400</date>
+            </creation>
+            <langusage>English</langusage>
+            <descrules>Describing Archives: A Content Standard</descrules>
+        </profiledesc>
+        <revisiondesc>
+            <change>
+                <date>March 11, 2013</date>
+                <item></item>
+            </change>
+        </revisiondesc>
+    </eadheader>
+    <archdesc level="collection">
+        <did>
+            <unittitle>Jimmy Baynes Collection (Rock and Roll Hall of Fame and Museum Collection)</unittitle>
+            <unitid>ARC.0161</unitid>
+            <repository>
+                <corpname>Library and Archives</corpname>
+            </repository>
+            <langmaterial>
+                <language langcode="eng"/>
+            </langmaterial>
+            <physdesc>
+                <extent>0.83 Linear feet</extent>
+                <extent>(2 Hollinger boxes)</extent>
+            </physdesc>
+            <unitdate normal="1955/1966" type="bulk">Bulk, 1955-1966</unitdate>
+            <unitdate normal="1953/1983" type="inclusive">1953-1983</unitdate>
+            <langmaterial id="ref11" label="Language of Materials">English</langmaterial>
+            <abstract id="ref14" label="Collection Overview">The Jimmy Baynes Collection (Rock and Roll Hall of Fame and Museum Collection) spans the years 1953 to 1983 and includes some undated materials, with the bulk of the collection materials falling between the years 1955 and 1966. The Jimmy Baynes Collection is arranged into eight series by content: Jimmy Baynes, artists, distributors, radio stations, venues, unidentified individuals, unidentified groups, and miscellaneous. The collection consists of black-and-white and color photographs and negatives taken at Cleveland music halls, as well as some promotional materials for local artists, concerts, radio stations, record distributors, and venues. Prominent artists featured in this collection include: Louis Armstrong, LaVern Baker, Count Basie, James Brown, Ruth Brown, Ray Charles, Bill Doggett, the Drifters, the Four Tops, Aretha Franklin, Alan Freed, Bill Haley and the Comets, Roy Hamilton, Lionel Hampton, Mahalia Jackson, Louis Jordan, Jerry Lee Lewis, Frankie Lymon, Memphis Slim, Rick Nelson, the O'Jays, the Platters, Lloyd Price, the Temptations, Joe Tex, Martha and the Vandellas, Dinah Washington, and Jackie Wilson. Cleveland venues/locations featured include the Ankara, Band Box, the Birdland Lounge, Cabin Club, Carlton House, Cleveland Arena, Club Manhattan, Club Trinidad, Cotton Club, Gus's Show Bar Lounge, Lake Glen Country Club, the Lancer, Leo's Casino, the Lorain Armory, Masonic Temple, the Mirror Show Bar, Music Box, Pla-mor Ballroom, the Sheraton-Cleveland, Statler Hotel, and the Wheel Lounge. These materials provide rich insight to the R&amp;B, jazz, and rock performers of the 1950s and 1960s, but more specifically to the local Cleveland music community of that time. Handwritten notes in pencil found on the backs of any photographs were taken by the processing archivist during a meeting on January 9, 2013 with local jazz historian Joe Mosbrook; retired Cleveland Public Library music librarian Bill Anderson; George Hendricks of the vocal group, the Hesitations; Rock and Roll Hall of Fame and Museum employees Beverly Flowers and Howard Kramer; and retired Rock and Roll Hall of Fame and Museum President and CEO Terry Stewart. Extended notes included for some of the artists and venues are the result of research conducted for the Library and Archives' exhibit, "Through the Lens of Jimmy Baynes: Cleveland Rock and Roll History, 1950s-1960s" (February-April 2013).</abstract>
+            <origination label="creator">
+                <persname rules="aacr" source="local" role="Photographer (pht)">Baynes, Jimmy</persname>
+            </origination>
+        </did>
+        <custodhist id="ref10">
+            <head>Custodial History</head>
+            <p>The Jimmy Baynes Collection (Rock and Roll Hall of Fame and Museum Collection) was purchased by the Rock and Roll Hall of Fame and Museum, Inc. from Steve Carl in 2009 and 2011.</p>
+        </custodhist>
+        <prefercite id="ref12">
+            <head>Preferred Citation</head>
+            <p>[Identification of Item], Jimmy Baynes Collection (Rock and Roll Hall of Fame and Museum Collection), Library and Archives, Rock and Roll Hall of Fame and Museum.</p>
+        </prefercite>
+        <processinfo id="ref13">
+            <head>Processing Information</head>
+            <p>Processed by Rachel Somerville, Project Archivist. Completed September 29, 2011. Revised by Jennie Thomas, Head Archivist. Completed March 11, 2013. Descriptive sources and standards used to create this inventory: DACS and local processing manual.</p>
+        </processinfo>
+        <userestrict id="ref17">
+            <head>Use Restrictions</head>
+            <p>The copyright interests in this collection have not been transferred to the Rock and Roll Hall of Fame and Museum, Inc. For more information, please consult the staff of the Library and Archives.</p>
+        </userestrict>
+        <accessrestrict id="ref18">
+            <head>Access Restrictions</head>
+            <p>Collection is open for research. Patrons must sign the Acknowledgment of Legal Responsibilities and Privacy Rights statement on the Researcher Registration form before using this collection. Consult the Library and Archives in advance of your visit to ensure access to these materials is available.</p>
+        </accessrestrict>
+        <bibliography id="ref273">
+            <head>Bibliography</head>
+            <bibref>All Music Guide. Accessed February 4, 2013. http://www.allmusic.com/.</bibref>
+            <bibref>A.M. Richard Fine Art. "Polaroid: Instant Joy." News release. June 2010.</bibref>
+            <bibref>Doo-Wop: Biography, Groups and Discography. Accessed February 4, 2013. http://doo-wop.blogg.org/.</bibref>
+            <bibref>Gart, Galen, comp. and ed. Rhythm and Blues in Cleveland, 1955 Edition. Winter Haven, FL: Big Nickel Productions, 2003.</bibref>
+            <bibref>Kitchen Sisters. "Walkin' Talkin' Bill Hawkins: Searching For My Father's Voice." Lost and Found Sound. NPR, 1999. Accessed January 25, 2013. http://www.npr.org/programs/lnfsound/stories/991217.stories.html.</bibref>
+            <bibref>Mosbrook, Joe. Jazzed in Cleveland. 1996-1998. Accessed January 18, 2013. http://www.cleveland.oh.us/wmv_news/#JAZZED.</bibref>
+            <bibref>Mosbrook, Joe. Cleveland Jazz History, 2nd ed. Cleveland, Ohio: Northeast Ohio Jazz Society, c2003.</bibref>
+            <bibref>"Venues." Buckeye Beat. Accessed February 1, 2013. http://www.buckeyebeat.com/venuesframe.html.</bibref>
+            <bibref>Wolff, Carlo. Cleveland Rock and Roll Memories: True and Tall Tales of the Glory Days, Told by Musicians, DJs, Promoters, and Fans Who Made the Scene in the '60s, '70s, and '80s. Cleveland, OH: Gray and Co., c2006.</bibref>
+        </bibliography>
+        <bioghist id="ref214">
+            <head>Biographical Note</head>
+            <p>Following the lively Cleveland music scene from the 1940s into the 2000s was railway postal clerk James Hamilton Baynes, Jr. (July 12, 1922-September 9, 2010). "Jimmy" was the oldest of 11, growing up on East 43rd and East 87th Streets in Cleveland. He learned to play the piano from his mother and, somewhere along the way, also picked up the harp and a passion for photography. He is remembered for his dark suits, his smile, and, of course, his camera.</p>
+            <p>Baynes supplemented his weekly paycheck by photographing local events in the African-American community. He would snap Polaroids of the people featured in and attending the events and sell the instant images for $5.00 each. Though Baynes was not a trained photographer, the images he created over six decades—whether of weddings, beauty competitions, burlesque shows, or live music performances—provide an authentic and candid glimpse into African-American life, music, and culture in Cleveland. Throughout the years, Baynes’ photographs appeared in local magazines and newspapers, such as the Call and Post. From June 19 to July 31, 2010, Baynes' photos were exhibited at the A.M. Richard Fine Art Gallery in Brooklyn, New York, in the show, Polaroid: Instant Joy, alongside images by famous artists William Wegman, Ellen Carey, and Chuck Close. The gallery's press release for the exhibit called Baynes' photographs of ladies out for a night on the town in 1960s Cleveland, "deceivingly modest" and "beautiful."</p>
+        </bioghist>
+        <separatedmaterial id="ref274">
+            <head>Separated Materials</head>
+            <p>Some items are on exhibit. These items are noted at the file level. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+        </separatedmaterial>
+        <relatedmaterial id="ref283">
+            <head>Related Materials</head>
+            <p>Additional photographs by Jimmy Baynes can be found in the following collections in this repository: LaMont Robinson Collection. Related materials providing content on local Cleveland jazz and R&amp;B artists and venues may be found in other collections that constitute a part of the Northeast Ohio Popular Music Archives.</p>
+        </relatedmaterial>
+        <controlaccess>
+            <corpname rules="aacr" source="naf">5 Royales</corpname>
+            <persname rules="aacr" source="naf">Adams, Faye</persname>
+            <corpname rules="aacr" source="local">Ankara (Nightclub)</corpname>
+            <persname rules="aacr">Armstrong, Louis, 1901-1971</persname>
+            <persname rules="aacr">Baker, LaVern</persname>
+            <persname rules="aacr">Basie, Count, 1904-1984</persname>
+            <persname rules="aacr" source="local">Baynes, Jimmy</persname>
+            <persname rules="aacr" source="local">Boles, Thomas, baritone saxophonist</persname>
+            <persname rules="aacr">Brown, Clarence, 1924-2005</persname>
+            <persname rules="aacr">Brown, James, 1933-2006</persname>
+            <persname rules="aacr">Brown, Ruth, 1928-2006</persname>
+            <persname rules="dacs" source="local">Burton, James, 1939-</persname>
+            <corpname rules="aacr" source="local">Cabin Club (Nightclub : Cleveland, Ohio)</corpname>
+            <persname rules="aacr" source="local" role="Former owner (fmo)">Carl, Steve</persname>
+            <corpname rules="aacr" source="local">Carlton House (Cleveland, Ohio)</corpname>
+            <persname rules="aacr">Charles, Ray, 1930-2004</persname>
+            <persname rules="aacr" source="local">Chic-a-Dee</persname>
+            <corpname rules="aacr" source="local">Cleveland Arena</corpname>
+            <corpname rules="aacr" source="local">Club Manhattan (Nightclub)</corpname>
+            <corpname rules="aacr" source="local">Club Trinidad (Nightclub : Cleveland, Ohio)</corpname>
+            <corpname rules="aacr">Comets (Musical group)</corpname>
+            <persname rules="aacr" source="local">Cooper, Joe, drummer</persname>
+            <corpname rules="aacr" source="local">Cotton Club (Nightclub : Cleveland, Ohio)</corpname>
+            <corpname rules="aacr" source="local">Cotton Club (Nightclub : Washington, D.C.)</corpname>
+            <persname rules="aacr">Davis, Eddie, 1922-1986</persname>
+            <persname rules="aacr" source="local">Davis, Kenny, trumpet player</persname>
+            <persname rules="aacr">Doggett, Bill, 1916-1996</persname>
+            <corpname rules="aacr" source="naf">Drifters (Musical group)</corpname>
+            <persname rules="aacr" source="local">Evans, Russell, guitarist</persname>
+            <persname rules="aacr">Ford, Scotty</persname>
+            <corpname rules="aacr">Four Tops (Musical group)</corpname>
+            <persname rules="aacr">Franklin, Aretha</persname>
+            <persname rules="aacr">Freed, Alan</persname>
+            <persname rules="aacr">Haley, Bill, 1925-1981</persname>
+            <persname rules="aacr" source="naf">Hamilton, Roy</persname>
+            <persname rules="aacr">Hampton, Lionel</persname>
+            <persname rules="aacr" source="local">Haynes, Phillis</persname>
+            <persname rules="aacr">Heard, Fats</persname>
+            <persname rules="aacr" source="local">Hendricks, George, vocalist</persname>
+            <corpname rules="aacr">Honeytones (Musical group)</corpname>
+            <persname rules="aacr" source="local">Jackson, Lawrence Jacktown</persname>
+            <persname rules="aacr" source="local">Jackson, Mahalia, 1911-1972</persname>
+            <persname rules="aacr" source="local">James, Jimmy, musician</persname>
+            <persname rules="aacr" source="local">Jenkins, Duke</persname>
+            <persname rules="aacr">Jordan, Louis, 1908-1975</persname>
+            <persname rules="aacr">King, B.B.</persname>
+            <persname rules="aacr">Landers, Jimmy</persname>
+            <corpname rules="aacr" source="local">Leo's Casino (Nightclub : Cleveland, Ohio)</corpname>
+            <persname rules="aacr">Lewis, Jerry Lee</persname>
+            <persname rules="aacr">Lymon, Frankie</persname>
+            <persname rules="aacr">Memphis Slim</persname>
+            <corpname rules="aacr">Metrotones (Musical group)</corpname>
+            <corpname rules="aacr" source="local">Montclairs (Vocal group)</corpname>
+            <corpname rules="aacr" source="local">Moondog and Band (Musical group)</corpname>
+            <corpname rules="aacr" source="local">Music Box (Nightclub : Cleveland, Ohio)</corpname>
+            <persname rules="aacr">Nelson, Rick, 1940-1985</persname>
+            <corpname rules="aacr" source="local">Northeast Ohio Popular Music Archives</corpname>
+            <persname rules="aacr" source="local">Norwood, Helen</persname>
+            <persname rules="aacr" source="local">O'Jay, Eddie</persname>
+            <corpname rules="aacr">O'Jays (Musical group)</corpname>
+            <persname rules="aacr">Overbea, Danny</persname>
+            <persname rules="aacr" source="local">Pearson, Lloyd</persname>
+            <corpname rules="dacs" source="local">Platters (Musical group)</corpname>
+            <corpname rules="aacr" source="local">Price Sisters</corpname>
+            <persname rules="aacr">Price, Lloyd</persname>
+            <persname rules="aacr">Ragland, Lou</persname>
+            <persname rules="aacr" source="local">Raye, Jimmie</persname>
+            <persname rules="aacr">Reed, Lula</persname>
+            <persname rules="aacr" source="local">Richards, Karin</persname>
+            <corpname rules="aacr" source="local">Rock and Roll Hall of Fame and Museum Collection</corpname>
+            <corpname rules="aacr" role="Owner (own)">Rock and Roll Hall of Fame and Museum</corpname>
+            <corpname rules="aacr">Shirley and Lee (Musical group)</corpname>
+            <persname rules="aacr">Smith, Dottie, vocalist</persname>
+            <persname rules="aacr">Staton, Dakota</persname>
+            <persname rules="aacr">Stokes, Carl</persname>
+            <corpname rules="aacr">Teenagers (Musical group)</corpname>
+            <persname rules="aacr" source="local">Tex, Joe, 1933-1982</persname>
+            <persname rules="aacr" source="local">Thompson, Hugh, pianist</persname>
+            <persname rules="aacr">Tolliver, Kim</persname>
+            <corpname rules="aacr">Vandellas (Musical group)</corpname>
+            <persname rules="aacr" source="local">Walkin' Talkin' Bill Hawkins</persname>
+            <persname rules="aacr">Washington, Dinah, 1924-1963 </persname>
+            <persname rules="aacr" source="local">Watts, Lou</persname>
+            <persname rules="aacr" source="local">Wilson, Jackie</persname>
+            <persname rules="aacr" source="local">Wilson, Ralph, saxophonist</persname>
+            <persname rules="aacr">Wilson, Teddy, 1912-1986</persname>
+            <persname rules="aacr" source="local">Yancy, Joe, bassist</persname>
+            <genreform source="aat">Admission tickets</genreform>
+            <genreform source="aat">Business cards</genreform>
+            <genreform source="aat">Invitations</genreform>
+            <subject source="lcsh">Mass media and publicity</subject>
+            <genreform source="aat">Matchbooks</genreform>
+            <genreform source="aat">Menus</genreform>
+            <subject source="lcsh">Music-halls</subject>
+            <genreform source="aat">Negatives (photographic)</genreform>
+            <title source="local">Opal (Cleveland, Ohio)</title>
+            <genreform source="lcsh">Photographs</genreform>
+            <subject source="lcsh">Photography</subject>
+            <subject source="lcsh">Popular music radio stations--Ohio--Cleveland--Periodicals</subject>
+            <genreform source="aat">Printed ephemera</genreform>
+            <subject source="lcsh">Radio personalities--Ohio--Cleveland</subject>
+            <subject source="lcsh">Rock concerts--Ohio--Cleveland</subject>
+            <subject source="local">Rock musicians--Ohio--Cleveland--Pictorial works</subject>
+        </controlaccess>
+        <dsc>
+            <c id="ref63" level="series">
+                <did>
+                    <unittitle>Series I: Jimmy Baynes</unittitle>
+                    <unitdate>undated</unitdate>
+                </did>
+                <scopecontent id="ref216">
+                    <head>Scope and Contents</head>
+                    <p>Series I: Jimmy Baynes, undated, includes a photograph of Baynes with his camera equipment, a business card, and an empty photograph mat promoting Baynes' photography business.</p>
+                </scopecontent>
+                <separatedmaterial id="ref275">
+                    <head>Separated Materials</head>
+                    <p>Some items are on exhibit. These items are noted at the file level. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                </separatedmaterial>
+                <c id="ref213" level="file">
+                    <did>
+                        <unittitle>Baynes, Jimmy</unittitle>
+                        <container id="cid1324009" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1324009" type="Folder">1</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <separatedmaterial id="ref230">
+                        <head>Separated Materials</head>
+                        <p>Undated black-and-white Polaroid photograph of Jimmy Baynes on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+            </c>
+            <c id="ref6" level="series">
+                <did>
+                    <unittitle>Series II: Artists</unittitle>
+                    <unitdate>1953-1973, 1983, undated</unitdate>
+                </did>
+                <scopecontent id="ref219">
+                    <head>Scope and Contents</head>
+                    <p>Series II: Artists spans the years 1953 to 1973 and 1983 and includes undated materials. The bulk of the series contains black-and-white and color photographs and negatives of some of the most popular R&amp;B artists of the late-1950s and 1960s, as well as local Cleveland musicians, business owners, other entertainers (e.g., dancers, comedians, disc jockeys), and politicians from the same time period. Please note that many of the folder dates reflect the date the film was processed, not necessarily the date of the performance. Most images are taken at Cleveland-area venues, including the Arena, the Band Box, Birdland Lounge, Lake Glen Country Club, Leo's Casino, the Lorain Armory, Masonic Temple, the Music Box, Pla-mor Ballroom, the Sheraton-Cleveland, and the Statler Hotel; identified exceptions include Alan Freed (Akron), and Sallie Blair (Cotton Club, Washington, D.C.). High profile artists featured include Louis Armstrong, LaVern Baker, Count Basie, James Brown, Ruth Brown, Ray Charles, the Drifters, the Four Tops, Aretha Franklin, Alan Freed, Bill Haley and the Comets, Roy Hamilton, Lionel Hampton, Mahalia Jackson, Louis Jordan, B.B. King, Jerry Lee Lewis, Frankie Lymon, Rick Nelson, the O'Jays, the Platters, Lloyd Price, the Temptations, the Vandellas, Dinah Washington, and Jackie Wilson. The bulk of the images are of live performances, but there are also more candid photos from backstage and of the audience in attendance at these events. In addition to photographic materials, the series also contains a few business cards for local talent. The files are arranged alphabetically by artist/group name. Within the files, the photographs are arranged chronologically, with undated materials at the end.</p>
+                </scopecontent>
+                <separatedmaterial id="ref276">
+                    <head>Separated Materials</head>
+                    <p>Some items are on exhibit. These items are noted at the file level. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                </separatedmaterial>
+                <c id="ref40" level="file">
+                    <did>
+                        <unittitle>5 Royales</unittitle>
+                        <container id="cid1324005" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324005" type="Folder">2</container>
+                        <unitdate>1956</unitdate>
+                    </did>
+                </c>
+                <c id="ref117" level="file">
+                    <did>
+                        <unittitle>Adams, Faye</unittitle>
+                        <container id="cid1325003" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1325003" type="Folder">3</container>
+                        <unitdate>1959</unitdate>
+                    </did>
+                    <odd id="ref138">
+                        <head>General note</head>
+                        <p>Inscribed to Jimmy Baynes.</p>
+                    </odd>
+                </c>
+                <c id="ref22" level="file">
+                    <did>
+                        <unittitle>Armstrong, Louis</unittitle>
+                        <container id="cid1324001" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324001" type="Folder">4</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref35" level="file">
+                    <did>
+                        <unittitle>Baker, LaVern</unittitle>
+                        <container id="cid1325002" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1325002" type="Folder">5</container>
+                        <unitdate>circa 1958, undated</unitdate>
+                    </did>
+                    <odd id="ref139">
+                        <head>General note</head>
+                        <p>One photo is autographed.</p>
+                    </odd>
+                </c>
+                <c id="ref184" level="file">
+                    <did>
+                        <unittitle>Bandmasters</unittitle>
+                        <container id="cid1324008" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324008" type="Folder">6</container>
+                        <unitdate>circa 1963</unitdate>
+                    </did>
+                    <odd id="ref185">
+                        <head>General note</head>
+                        <p>At the Music Box, which was located downstairs on Euclid Avenue, between 105th and 107th Streets.The Bandmasters were Joe Yancy, George Hendricks (Hesitations), and Lou Ragland.</p>
+                    </odd>
+                    <separatedmaterial id="ref234">
+                        <head>Separated Materials</head>
+                        <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+                <c id="ref30" level="file">
+                    <did>
+                        <unittitle>Basie, Count</unittitle>
+                        <container id="cid1333001" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1333001" type="Folder">7</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref49">
+                        <head>General note</head>
+                        <p>A couple of images include singer Joe Williams.</p>
+                    </odd>
+                </c>
+                <c id="ref169" level="file">
+                    <did>
+                        <unittitle>Blackshaw, Sam</unittitle>
+                        <container id="cid1324007" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324007" type="Folder">8</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref170">
+                        <head>General note</head>
+                        <p>With unidentifed female singer.</p>
+                    </odd>
+                </c>
+                <c id="ref136" level="file">
+                    <did>
+                        <unittitle>Blair, Sallie</unittitle>
+                        <container id="cid1324119" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1324119" type="Folder">9</container>
+                        <unitdate>1956 September 18</unitdate>
+                    </did>
+                    <separatedmaterial id="ref240">
+                        <head>Separated Materials</head>
+                        <p>Color photograph of Blair on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                    <odd id="ref137">
+                        <head>General note</head>
+                        <p>At the Cotton Club, Washington, D.C. One of the photographs is stapled into a Club 77 (7541 Kinsman Rd, Cleveland, Ohio) promotional photograph mat. Inscribed to Jimmy Baynes. Blair was a big-voiced, blues and ballads singer who had a moment in the late 1950s recording for Bethlehem. She never attained widespread popularity but was especially known for her performances of love songs.</p>
+                    </odd>
+                </c>
+                <c id="ref32" level="file">
+                    <did>
+                        <unittitle>Brown, Clarence "Gatemouth"</unittitle>
+                        <container id="cid1324010" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324010" type="Folder">10</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref37" level="file">
+                    <did>
+                        <unittitle>Brown, James</unittitle>
+                        <container id="cid1324022" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324022" type="Folder">11</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref36" level="file">
+                    <did>
+                        <unittitle>Brown, Ruth</unittitle>
+                        <container id="cid1333002" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1333002" type="Folder">12</container>
+                        <unitdate>1955 April 8, undated</unitdate>
+                    </did>
+                    <odd id="ref140">
+                        <head>General note</head>
+                        <p>One photograph is inscribed to Jimmy Baynes.</p>
+                    </odd>
+                </c>
+                <c id="ref178" level="file">
+                    <did>
+                        <unittitle>Bryant, Sammy</unittitle>
+                        <container id="cid1324090" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324090" type="Folder">13</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref109" level="file">
+                    <did>
+                        <unittitle>Charles, Ray</unittitle>
+                        <container id="cid1324057" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324057" type="Folder">14</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref130" level="file">
+                    <did>
+                        <unittitle>Chic-a-Dee</unittitle>
+                        <container id="cid1324117" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1324117" type="Folder">15</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref131">
+                        <head>General note</head>
+                        <p>Souvenir photograph for a show featuring Ray Charles and the Raelets at the Pla-mor Ballroom, 10626 Cedar Ave, Cleveland, Ohio. Chic-a-Dee was a locally popular swing piano and organ player, who the Call and Post called, “potentially one of the greatest entertainers to sell their wares locally.” Throughout the 1950s, he could be found performing at Jack’s Musical Bar (6608 Cedar Road), the Paddock Musical Bar (1600 Superior Avenue), Club 77 (7541 Kinsman Road) and Club Trinidad (10607 Superior Avenue).</p>
+                    </odd>
+                    <separatedmaterial id="ref244">
+                        <head>Separated Materials</head>
+                        <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+                <c id="ref148" level="file">
+                    <did>
+                        <unittitle>Cooper, Joe</unittitle>
+                        <container id="cid1324073" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324073" type="Folder">16</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref282">
+                        <head>General note</head>
+                        <p>Left to Right: unidentified (trumpet, trombone), Ace Carter, "Weasel" Parker, unidentified (drums), Joe Cooper</p>
+                    </odd>
+                </c>
+                <c id="ref228" level="file">
+                    <did>
+                        <unittitle>Davis, Eddie</unittitle>
+                        <container id="cid1325001" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1325001" type="Folder">17</container>
+                        <unitdate>1957 February 19</unitdate>
+                    </did>
+                </c>
+                <c id="ref39" level="file">
+                    <did>
+                        <unittitle>Doggett, Bill</unittitle>
+                        <container id="cid1333003" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1333003" type="Folder">18</container>
+                        <unitdate>1957, undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref171" level="file">
+                    <did>
+                        <unittitle>Dorsey, Lee</unittitle>
+                        <container id="cid1324086" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324086" type="Folder">19</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref174">
+                        <head>General note</head>
+                        <p>At the Music Box. In this photograph, Dorsey was likely performing the song, “Ride your Pony,” with the line “(Pull out your pistol yeah) / Now get ready, now shoot / Shoot shoot.”</p>
+                    </odd>
+                    <separatedmaterial id="ref267">
+                        <head>Separated Materials</head>
+                        <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+                <c id="ref120" level="file">
+                    <did>
+                        <unittitle>Drifters</unittitle>
+                        <container id="cid1324062" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324062" type="Folder">20</container>
+                        <unitdate>circa 1954-1955</unitdate>
+                    </did>
+                    <odd id="ref121">
+                        <head>General note</head>
+                        <p>Pictured (left to right): David Baughan, Gerhart Thrasher, Bill Pinkney, Andrew Thrasher, Jimmy Oliver. This is a transitional line up that existed between Clyde McPhatter’s departure for a solo career and Ben E. King’s arrival. The Drifters were inducted into the Rock and Roll Hall of Fame in 1988.</p>
+                    </odd>
+                    <separatedmaterial id="ref247">
+                        <head>Separated Materials</head>
+                        <p>Black-and-white 8" x 10" photograph on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+                <c id="ref195" level="file">
+                    <did>
+                        <unittitle>Edsels</unittitle>
+                        <container id="cid1324099" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324099" type="Folder">21</container>
+                        <unitdate>1959 July 15</unitdate>
+                    </did>
+                </c>
+                <c id="ref225" level="file">
+                    <did>
+                        <unittitle>Fats Heard Combo</unittitle>
+                        <container id="cid1324106" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324106" type="Folder">22</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <separatedmaterial id="ref242">
+                        <head>Separated Materials</head>
+                        <p>Black-and-white photograph of the Fats Heard Combo filming at WEWS-TV on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                    <odd id="ref270">
+                        <head>General note</head>
+                        <p>Eugene “Fats” Heard began drum lessons while attending Cleveland’s Outhwaite Junior High School. After Central High School, where he was a member of the marching band and orchestra, Heard studied at the Cleveland Institute of Music. Heard was most popular during the 1950s, playing with Lionel Hampton’s band after WWII and with the Erroll Garner Trio beginning in 1953. Towards the end of the 1950s, Heard left Garner to spend more time with his family—touring occasionally with Sarah Vaughn, Teddy Wilson, and Carmen McRae—but spending most of his time operating the Modern Jazz Room near old Central Market.</p>
+                    </odd>
+                </c>
+                <c id="ref177" level="file">
+                    <did>
+                        <unittitle>Five Quails</unittitle>
+                        <container id="cid1324088" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324088" type="Folder">23</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <separatedmaterial id="ref259">
+                        <head>Separated Materials</head>
+                        <p>Black-and-white Polaroid photograph on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                    <odd id="ref272">
+                        <head>General note</head>
+                        <p>Art Kirkpatrick quit the Hepsters in 1955 to form his own group with Billy Strawbridge, Billy Fulgham, Donald Brown and James Williams, the Five Quails, who appeared regularly at the Rose Room at the Hotel Majestic (East 55th Street) and weekly on the Duke Jenkins Show, a weekly television show at Cleveland’s WEWS-TV Channel 5. They played local haunts like the Pla-mor (10626 Cedar Avenue), the Spaghetti Inn (at Wade Park) and the Keith Theater (105th Street and Euclid Avenue).</p>
+                    </odd>
+                </c>
+                <c id="ref76" level="file">
+                    <did>
+                        <unittitle>Ford, Scotty</unittitle>
+                        <container id="cid1324039" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324039" type="Folder">24a</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref278" level="file">
+                    <did>
+                        <unittitle>Four Coins</unittitle>
+                        <container id="cid1338001" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1338001" type="Folder">24b</container>
+                        <unitdate>March 28-March 30</unitdate>
+                    </did>
+                </c>
+                <c id="ref41" level="file">
+                    <did>
+                        <unittitle>Four Tops</unittitle>
+                        <container id="cid1333004" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1333004" type="Folder">25</container>
+                        <unitdate>1983</unitdate>
+                    </did>
+                    <odd id="ref101">
+                        <head>General note</head>
+                        <p>At Leo's Casino.</p>
+                    </odd>
+                </c>
+                <c id="ref23" level="file">
+                    <did>
+                        <unittitle>Franklin, Aretha</unittitle>
+                        <container id="cid1324011" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324011" type="Folder">26</container>
+                        <unitdate>1963, undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref27" level="file">
+                    <did>
+                        <unittitle>Freed, Alan</unittitle>
+                        <container id="cid1324012" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324012" type="Folder">27</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref100">
+                        <head>General note</head>
+                        <p>In Akron.</p>
+                    </odd>
+                </c>
+                <c id="ref176" level="file">
+                    <did>
+                        <unittitle>Grady, Shirley, Carlos Artega, Elizabeth Oliver (left to right)</unittitle>
+                        <container id="cid1324089" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324089" type="Folder">28</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref42" level="file">
+                    <did>
+                        <unittitle>Haley, Bill, and the Comets</unittitle>
+                        <container id="cid1324025" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324025" type="Folder">29</container>
+                        <unitdate>circa 1956</unitdate>
+                    </did>
+                    <odd id="ref99">
+                        <head>General note</head>
+                        <p>At the Cleveland Arena.</p>
+                    </odd>
+                </c>
+                <c id="ref26" level="file">
+                    <did>
+                        <unittitle>Hamilton, Roy</unittitle>
+                        <container id="cid1324013" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324013" type="Folder">30</container>
+                        <unitdate>1956, undated</unitdate>
+                    </did>
+                    <odd id="ref98">
+                        <head>General note</head>
+                        <p>At the Band Box--one of many nightclubs in the University Circle area, including the Sky Bar, the Mirror Show Bar, Jack’s Place, Club 100 and the Town Casino.</p>
+                    </odd>
+                    <separatedmaterial id="ref252">
+                        <head>Separated Materials</head>
+                        <p>Black-and-white 8" x 10" photograph of Roy Hamilton with Ralph Wilson on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+                <c id="ref33" level="file">
+                    <did>
+                        <unittitle>Hampton, Lionel</unittitle>
+                        <container id="cid1324014" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324014" type="Folder">31</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref188" level="file">
+                    <did>
+                        <unittitle>Hawkins, Ken</unittitle>
+                        <container id="cid1324095" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324095" type="Folder">32</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref189">
+                        <head>General note</head>
+                        <p>Left to Right: Harry Hanson, unidentified, Marv Johnson (Motown), unidentified, unidentified, Ken Hawkins</p>
+                    </odd>
+                </c>
+                <c id="ref89" level="file">
+                    <did>
+                        <unittitle>Haynes, Phillis</unittitle>
+                        <container id="cid1324050" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324050" type="Folder">33</container>
+                        <unitdate>1965</unitdate>
+                    </did>
+                    <odd id="ref90">
+                        <head>General note</head>
+                        <p>At the Music Box. Haynes was the owner of the Pinwheel Lounge (East 106th Street). The Pinwheel was a major club for soul acts, where both local and out of town acts performed. The Pinwheel was a popular venue for performing artists, as Haynes was not only the owner but a perfomer herself, so she treated the talent very well.</p>
+                    </odd>
+                    <separatedmaterial id="ref268">
+                        <head>Separated Materials</head>
+                        <p>Color photograph of Phillis Haynes on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+                <c id="ref154" level="file">
+                    <did>
+                        <unittitle>Honeytones</unittitle>
+                        <container id="cid1333007" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1333007" type="Folder">34</container>
+                        <unitdate>1955 January 7</unitdate>
+                    </did>
+                    <odd id="ref155">
+                        <head>General note</head>
+                        <p>In Akron, Ohio.</p>
+                    </odd>
+                </c>
+                <c id="ref151" level="file">
+                    <did>
+                        <unittitle>Jackson, Lawrence "Jacktown"</unittitle>
+                        <container id="cid1324074" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324074" type="Folder">35</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref212">
+                        <head>General note</head>
+                        <p>One photograph includes an unidentified male vocal group.</p>
+                    </odd>
+                </c>
+                <c id="ref43" level="file">
+                    <did>
+                        <unittitle>Jackson, Mahalia</unittitle>
+                        <container id="cid1324026" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324026" type="Folder">36</container>
+                        <unitdate>1961</unitdate>
+                    </did>
+                </c>
+                <c id="ref166" level="file">
+                    <did>
+                        <unittitle>James, Jimmy</unittitle>
+                        <container id="cid1324083" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324083" type="Folder">37</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref80" level="file">
+                    <did>
+                        <unittitle>Jenkins, Duke</unittitle>
+                        <container id="cid1324046" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324046" type="Folder">38</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref124">
+                        <head>General note</head>
+                        <p>Duke Jenkins—originally from Canton, Ohio—and his orchestra arrived in Cleveland from Chicago in May 1952 to succeed Ralph Wilson at the Rose Room of the Majestic Hotel (East 55th Street); a gig that Jenkins and his crew maintained for five years. The group’s Thursday night jam sessions brought in musicians from all over the country. The Duke Jenkins Show, a weekly television show at Cleveland’s WEWS-TV Channel 5, was in production from 1955 to 1956. The show, which played on all three Cleveland television stations on Saturdays at 12:30 p.m., featured the group playing R&amp;B, mambo, standards and pop ballads, with the vocal group, the Five Quails, and two guest acts each week, usually a touring jazz artist.</p>
+                    </odd>
+                    <separatedmaterial id="ref257">
+                        <head>Separated Materials</head>
+                        <p>Black-and-white 8" x 10" photograph of the Duke Jenkins Show, and black-and-white photograph of Duke Jenkins and his orchestra performing at the Rose Room, on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+                <c id="ref31" level="file">
+                    <did>
+                        <unittitle>Jordan, Louis</unittitle>
+                        <container id="cid1324015" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324015" type="Folder">39</container>
+                        <unitdate>1953, 1957, undated</unitdate>
+                    </did>
+                    <odd id="ref142">
+                        <head>General note</head>
+                        <p>One photograph includes Dottie Smith.</p>
+                    </odd>
+                </c>
+                <c id="ref29" level="file">
+                    <did>
+                        <unittitle>King, B.B.</unittitle>
+                        <container id="cid1324016" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324016" type="Folder">40</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref87" level="file">
+                    <did>
+                        <unittitle>Landers, Robert</unittitle>
+                        <container id="cid1324051" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324051" type="Folder">41</container>
+                        <unitdate>1967</unitdate>
+                    </did>
+                    <odd id="ref88">
+                        <head>General note</head>
+                        <p>A couple of the images include "Rubber Legs" Lee. Landers and Lee were a musical comedy team.</p>
+                    </odd>
+                </c>
+                <c id="ref34" level="file">
+                    <did>
+                        <unittitle>Lewis, Jerry Lee</unittitle>
+                        <container id="cid1324017" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324017" type="Folder">42</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref79" level="file">
+                    <did>
+                        <unittitle>Lymon, Frankie, and the Teenagers</unittitle>
+                        <container id="cid1324047" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324047" type="Folder">43</container>
+                        <unitdate>circa 1956</unitdate>
+                    </did>
+                    <odd id="ref97">
+                        <head>General note</head>
+                        <p>At the Cleveland Arena, most likely during the Biggest Rock 'n Roll Show of '56.</p>
+                    </odd>
+                </c>
+                <c id="ref133" level="file">
+                    <did>
+                        <unittitle>Lynn, Terry</unittitle>
+                        <container id="cid1324118" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1324118" type="Folder">44</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref134">
+                        <head>General note</head>
+                        <p>At the Lake Glen Country Club, Cleveland, Ohio. Inscribed to Jimmy Baynes.</p>
+                    </odd>
+                </c>
+                <c id="ref156" level="file">
+                    <did>
+                        <unittitle>Memphis Slim</unittitle>
+                        <container id="cid1324078" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324078" type="Folder">45</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref125" level="file">
+                    <did>
+                        <unittitle>Metrotones</unittitle>
+                        <container id="cid1324063" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324063" type="Folder">46</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref126">
+                        <head>General note</head>
+                        <p>Includes Lawrence Jacktown Jackson on drums and Don Banks on guitar.</p>
+                    </odd>
+                </c>
+                <c id="ref149" level="file">
+                    <did>
+                        <unittitle>Mills Brothers</unittitle>
+                        <container id="cid1324075" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324075" type="Folder">47</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref150">
+                        <head>General note</head>
+                        <p>Promotional photograph. Inscribed.</p>
+                    </odd>
+                </c>
+                <c id="ref105" level="file">
+                    <did>
+                        <unittitle>Montclairs</unittitle>
+                        <container id="cid1324054" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324054" type="Folder">48</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref116">
+                        <head>General note</head>
+                        <p>One photograph includes Little Eddie Woods.</p>
+                    </odd>
+                </c>
+                <c id="ref78" level="file">
+                    <did>
+                        <unittitle>Moondog and Band</unittitle>
+                        <container id="cid1324114" type="Box" label="Text">1</container>
+                        <container parent="cid1324114" type="Folder">49</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref86">
+                        <head>General note</head>
+                        <p>Business card.</p>
+                    </odd>
+                </c>
+                <c id="ref81" level="file">
+                    <did>
+                        <unittitle>Nelson, Rick</unittitle>
+                        <container id="cid1324048" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324048" type="Folder">50</container>
+                        <unitdate>1961</unitdate>
+                    </did>
+                    <odd id="ref96">
+                        <head>General note</head>
+                        <p>At the Cleveland Arena. With James Burton.</p>
+                    </odd>
+                </c>
+                <c id="ref193" level="file">
+                    <did>
+                        <unittitle>Norwood, Helen</unittitle>
+                        <container id="cid1324098" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324098" type="Folder">51</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref127" level="file">
+                    <did>
+                        <unittitle>O'Jay, Eddie</unittitle>
+                        <container id="cid1324064" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324064" type="Folder">52</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref128">
+                        <head>General note</head>
+                        <p>Disc jockey at WSRS.</p>
+                    </odd>
+                </c>
+                <c id="ref48" level="file">
+                    <did>
+                        <unittitle>O'Jays</unittitle>
+                        <container id="cid1333005" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1333005" type="Folder">53</container>
+                        <unitdate>1973</unitdate>
+                    </did>
+                </c>
+                <c id="ref180" level="file">
+                    <did>
+                        <unittitle>Overbea, Danny</unittitle>
+                        <container id="cid1324091" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324091" type="Folder">54</container>
+                        <unitdate>circa 1955 December 12</unitdate>
+                    </did>
+                    <odd id="ref181">
+                        <head>General note</head>
+                        <p>With Ralph Wilson and his combo.</p>
+                    </odd>
+                </c>
+                <c id="ref92" level="file">
+                    <did>
+                        <unittitle>Platters</unittitle>
+                        <container id="cid1324052" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324052" type="Folder">55</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref93">
+                        <head>General note</head>
+                        <p>At the Cleveland Arena.</p>
+                    </odd>
+                </c>
+                <c id="ref167" level="file">
+                    <did>
+                        <unittitle>Price, Lloyd</unittitle>
+                        <container id="cid1324084" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324084" type="Folder">56</container>
+                        <unitdate>1961 March 29</unitdate>
+                    </did>
+                    <odd id="ref175">
+                        <head>General note</head>
+                        <p>At the Lorain Armory. One photograph includes baritone saxophonist Thomas Boles.</p>
+                    </odd>
+                </c>
+                <c id="ref114" level="file">
+                    <did>
+                        <unittitle>Price Sisters</unittitle>
+                        <container id="cid1324060" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324060" type="Folder">57</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref115">
+                        <head>General note</head>
+                        <p>At the Music Box.</p>
+                    </odd>
+                </c>
+                <c id="ref182" level="file">
+                    <did>
+                        <unittitle>Ragland, Lou</unittitle>
+                        <container id="cid1324093" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324093" type="Folder">58</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref183">
+                        <head>General note</head>
+                        <p>Photograph also includes Billy Blackshaw on drums, Kenny Davis on trumpet, Lloyd Pearson on saxophone, and Russell Evans (O'Jays) on guitar.</p>
+                    </odd>
+                </c>
+                <c id="ref192" level="file">
+                    <did>
+                        <unittitle>Raye, Jimmie</unittitle>
+                        <container id="cid1324097" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324097" type="Folder">59</container>
+                        <unitdate>circa 1961</unitdate>
+                    </did>
+                </c>
+                <c id="ref145" level="file">
+                    <did>
+                        <unittitle>Reed, Lula</unittitle>
+                        <container id="cid1324120" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1324120" type="Folder">60</container>
+                        <unitdate>1958 October 26</unitdate>
+                    </did>
+                    <odd id="ref146">
+                        <head>General note</head>
+                        <p>Inscribed to Jimmy Baynes.</p>
+                    </odd>
+                </c>
+                <c id="ref129" level="file">
+                    <did>
+                        <unittitle>Richards, Karin</unittitle>
+                        <container id="cid1333006" type="Box" label="Mixed materials">1</container>
+                        <container parent="cid1333006" type="Folder">61</container>
+                        <unitdate>1958 January 17</unitdate>
+                    </did>
+                    <odd id="ref144">
+                        <head>General note</head>
+                        <p>Inscribed to Jimmy Baynes.</p>
+                    </odd>
+                </c>
+                <c id="ref82" level="file">
+                    <did>
+                        <unittitle>Shirley and Lee</unittitle>
+                        <container id="cid1324049" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324049" type="Folder">62</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref83">
+                        <head>General note</head>
+                        <p>Fan club card.</p>
+                    </odd>
+                </c>
+                <c id="ref141" level="file">
+                    <did>
+                        <unittitle>Smith, Dottie</unittitle>
+                        <container id="cid1324070" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324070" type="Folder">63</container>
+                        <unitdate>1957</unitdate>
+                    </did>
+                    <odd id="ref143">
+                        <head>General note</head>
+                        <p>This image is cropped from the photograph that appears in the Louis Jordan file of Jordan with Smith. Autographed by Smith.</p>
+                    </odd>
+                </c>
+                <c id="ref152" level="file">
+                    <did>
+                        <unittitle>Spencer, Nate</unittitle>
+                        <container id="cid1324076" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324076" type="Folder">64</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref153">
+                        <head>General note</head>
+                        <p>Pictured with Duke Jenkins on piano.</p>
+                    </odd>
+                </c>
+                <c id="ref45" level="file">
+                    <did>
+                        <unittitle>Staton, Dakota</unittitle>
+                        <container id="cid1324028" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324028" type="Folder">65</container>
+                        <unitdate>1959</unitdate>
+                    </did>
+                    <odd id="ref95">
+                        <head>General note</head>
+                        <p>At the Music Box.</p>
+                    </odd>
+                </c>
+                <c id="ref24" level="file">
+                    <did>
+                        <unittitle>Stokes, Carl</unittitle>
+                        <container id="cid1324018" type="Box" label="Graphic materials">1</container>
+                        <container parent="cid1324018" type="Folder">66</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref94">
+                        <head>General note</head>
+                        <p>At the Sheraton-Cleveland. Stokes was the 51st mayor of Cleveland.</p>
+                    </odd>
+                </c>
+                <c id="ref168" level="file">
+                    <did>
+                        <unittitle>Temptations</unittitle>
+                        <container id="cid1324085" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324085" type="Folder">1</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref194">
+                        <head>General note</head>
+                        <p>One photograph includes an image of Ken Hawkins.</p>
+                    </odd>
+                </c>
+                <c id="ref46" level="file">
+                    <did>
+                        <unittitle>Tex, Joe</unittitle>
+                        <container id="cid1324029" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324029" type="Folder">2</container>
+                        <unitdate>1972</unitdate>
+                    </did>
+                    <odd id="ref227">
+                        <head>General note</head>
+                        <p>At Hotel Statler, which was located at Euclid Ave and E 12th St, Cleveland, Ohio.</p>
+                    </odd>
+                </c>
+                <c id="ref77" level="file">
+                    <did>
+                        <unittitle>Thompson, Hugh</unittitle>
+                        <container id="cid1324115" type="Box" label="Text">2</container>
+                        <container parent="cid1324115" type="Folder">3</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref85">
+                        <head>General note</head>
+                        <p>Business card.</p>
+                    </odd>
+                </c>
+                <c id="ref162" level="file">
+                    <did>
+                        <unittitle>Tolliver, Kim</unittitle>
+                        <container id="cid1324080" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324080" type="Folder">4</container>
+                        <unitdate>1966, undated</unitdate>
+                    </did>
+                    <odd id="ref223">
+                        <head>General note</head>
+                        <p>Soul singer Kim Tolliver was born in Lebanon, Tennessee, but spent her formative years in Cleveland’s Hough neighborhood. She built a reputation with dramatic interpretations of blues and soul songs. Gigging for years before recording her first single, she became known as “Cleveland’s answer to Tina Turner.” She cut her first album, Passing Clouds, on Fantasy Records as Kimberly Briggs in 1972. She recorded her second LP, Come and Get Me, on Chess Records as Kim Tolliver. Neither label promoted the LPs, and they were quickly forgotten. Though her recordings were not popular, she continued to be active in local clubs like the Music Box and Gleason’s (5219 Woodland Avenue). In one photograph, Tolliver appears with husband Rex Robinson; together, they were known as the musical act the "Lovers."</p>
+                    </odd>
+                    <separatedmaterial id="ref261">
+                        <head>Separated Materials</head>
+                        <p>Color photograph of Kim Tolliver, circa 1966, on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+                <c id="ref157" level="file">
+                    <did>
+                        <unittitle>Vandellas</unittitle>
+                        <container id="cid1324079" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324079" type="Folder">5</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref158">
+                        <head>General note</head>
+                        <p>At the Music Box.</p>
+                    </odd>
+                </c>
+                <c id="ref186" level="file">
+                    <did>
+                        <unittitle>Wain, Norman</unittitle>
+                        <container id="cid1324094" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324094" type="Folder">6</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref187">
+                        <head>General note</head>
+                        <p>Disc jockey on WDOK.</p>
+                    </odd>
+                </c>
+                <c id="ref160" level="file">
+                    <did>
+                        <unittitle>"Walkin' Talkin'" Bill Hawkins</unittitle>
+                        <container id="cid1324081" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324081" type="Folder">7</container>
+                        <unitdate>1955 May 8</unitdate>
+                    </did>
+                    <odd id="ref161">
+                        <head>General note</head>
+                        <p>In 1948 Bill Hawkins, a former Pullman Porter, became Cleveland's first black disc jockey introducing rhythm and blues, gospel, jazz, and rock and roll. Broadcasting live from the window of his record shop on 105th and Cedar, Walkin' Talkin' Bill Hawkins became a local celebrity. Over the next decade, Hawkins was heard on WJS, WHK, WDOK and WSRS--sometimes all in the same day. He was widely imitated and influenced a generation of DJs--including "Moondog" Alan Freed.</p>
+                    </odd>
+                </c>
+                <c id="ref47" level="file">
+                    <did>
+                        <unittitle>Washington, Dinah</unittitle>
+                        <container id="cid1324108" type="Box" label="Mixed materials">2</container>
+                        <container parent="cid1324108" type="Folder">8</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref224">
+                        <head>General note</head>
+                        <p>Includes promotional photograph mat for the Birdland Lounge, 748 Prospect Ave, Cleveland, Ohio, which contains two flyers for "Jazz-A-Rama" at Shaker-Lee Hall, 3946 Lee Rd.</p>
+                    </odd>
+                </c>
+                <c id="ref163" level="file">
+                    <did>
+                        <unittitle>Watts, Louis</unittitle>
+                        <container id="cid1324082" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324082" type="Folder">9</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref165">
+                        <head>General note</head>
+                        <p>At the Music Box. Watts, an R&amp;B artist who was born without arms, often performed "For Your Precious Love," which, combined with an introductory monologue, brought tears to the majority of his audiences.</p>
+                    </odd>
+                </c>
+                <c id="ref172" level="file">
+                    <did>
+                        <unittitle>Wells, Billy</unittitle>
+                        <container id="cid1324087" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324087" type="Folder">10</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref173">
+                        <head>General note</head>
+                        <p>With unidentified male vocal group.</p>
+                    </odd>
+                </c>
+                <c id="ref147" level="file">
+                    <did>
+                        <unittitle>Wilson, Carl</unittitle>
+                        <container id="cid1324072" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324072" type="Folder">11</container>
+                        <unitdate>1960</unitdate>
+                    </did>
+                </c>
+                <c id="ref28" level="file">
+                    <did>
+                        <unittitle>Wilson, Jackie</unittitle>
+                        <container id="cid1324019" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324019" type="Folder">12</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref281">
+                        <head>General note</head>
+                        <p>At the Play-mor.</p>
+                    </odd>
+                </c>
+                <c id="ref179" level="file">
+                    <did>
+                        <unittitle>Wilson, Ralph</unittitle>
+                        <container id="cid1324092" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324092" type="Folder">13</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <separatedmaterial id="ref255">
+                        <head>Separated Materials</head>
+                        <p>Black-and-white 8" x 10" photograph of Ralph Wilson on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                    <odd id="ref271">
+                        <head>General note</head>
+                        <p>During the mid- to late-1950s, Ralph Wilson and his orchestra played regularly at John Ballard’s Chatterbox (5123 Woodland Avenue). They were the house band for special guests like Brook Benton, Billie Holiday, Arthur Prysock, Della Reese, Jimmy Rushing, Titus Turner and T-Bone Walker. Their previous gig was at the Rose Room of the Majestic Hotel (East 55th Street), which they left mid-1952 for Duke Jenkins and his orchestra to take over.</p>
+                    </odd>
+                </c>
+                <c id="ref118" level="file">
+                    <did>
+                        <unittitle>Wilson, Teddy</unittitle>
+                        <container id="cid1324061" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324061" type="Folder">14</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref190" level="file">
+                    <did>
+                        <unittitle>Young, Stella "Caldonia"</unittitle>
+                        <container id="cid1324096" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324096" type="Folder">15</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref191">
+                        <head>General note</head>
+                        <p>The Stella “Caldonia” Young Revue was essentially a touring vaudevillian show with male and female vocalists, tap dancers, comedians, and Young herself, an exotic shake dancer and contortionist, as master of ceremonies. Young not only dance professionally but took time to teach dance to Cleveland locals like George Hendricks, Vanilla Thomas, and young jazz legend Jimmy Scott. Young also managed the Five Hepsters, who became the Hepsters in 1955. Comedian Charlie Eckstein is pictured on the far left.</p>
+                    </odd>
+                    <separatedmaterial id="ref250">
+                        <head>Separated Materials</head>
+                        <p>Item on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+            </c>
+            <c id="ref65" level="series">
+                <did>
+                    <unittitle>Series III: Record Distributors</unittitle>
+                    <unitdate>1963, undated</unitdate>
+                </did>
+                <scopecontent id="ref217">
+                    <head>Scope and Contents</head>
+                    <p>Series III: Record Distibutors, 1963, undated, includes a copy of the "Mid-Atlantic Record Review" and a flyer from Seaway Distributing Co. The "Mid-Atlantic Record Review" was prepared each week by Mimeo Unlimited, located at 330 Film Building, Cleveland, Ohio. It was a complete listing of the latest releases from distributors King, Cosnat, Mangold, Free State, and Marnel. Seaway Distributing Co. was located at 3142 Prospect Ave, Cleveland, Ohio. The flyer advertises the company's singles showing action, hits, polka singles, new Riverside albums, other Riverside LPs, new battle album, other battle LPs, and new Washington albums.</p>
+                </scopecontent>
+                <c id="ref70" level="file">
+                    <did>
+                        <unittitle>"Mid-Atlantic Record Review"</unittitle>
+                        <container id="cid1324116" type="Box" label="Text">2</container>
+                        <container parent="cid1324116" type="Folder">16</container>
+                        <unitdate>1963 September 23</unitdate>
+                    </did>
+                </c>
+                <c id="ref52" level="file">
+                    <did>
+                        <unittitle>Seaway Distributing Co.</unittitle>
+                        <container id="cid1324110" type="Box" label="Mixed materials">2</container>
+                        <container parent="cid1324110" type="Folder">17</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+            </c>
+            <c id="ref8" level="series">
+                <did>
+                    <unittitle>Series IV: Radio Stations</unittitle>
+                    <unitdate>1961-1966</unitdate>
+                </did>
+                <scopecontent id="ref218">
+                    <head>Scope and Contents</head>
+                    <p>Series IV: Radio Stations, 1961-1966, includes an unidentified disc jockey photograph and "Radio 100 Sound Surveys" from KYW; several WHK channel 14 Tunedex charts; a WIXY-60 music survey; and a program for a "city wide salute" to Mary C. Holt of WJMO.</p>
+                </scopecontent>
+                <c id="ref50" level="file">
+                    <did>
+                        <unittitle>KYW</unittitle>
+                        <container id="cid1324109" type="Box" label="Mixed materials">2</container>
+                        <container parent="cid1324109" type="Folder">18</container>
+                        <unitdate>1964-1965</unitdate>
+                    </did>
+                    <odd id="ref211">
+                        <head>General note</head>
+                        <p>Unidentified disc jockey photograph and "Radio 100 Sound Surveys."</p>
+                    </odd>
+                </c>
+                <c id="ref20" level="file">
+                    <did>
+                        <unittitle>WHK Channel 14 Tunedex charts</unittitle>
+                        <container id="cid1324107" type="Box" label="Text">2</container>
+                        <container parent="cid1324107" type="Folder">19</container>
+                        <unitdate>1961-1965</unitdate>
+                    </did>
+                </c>
+                <c id="ref53" level="file">
+                    <did>
+                        <unittitle>WIXY</unittitle>
+                        <container id="cid1324113" type="Box" label="Text">2</container>
+                        <container parent="cid1324113" type="Folder">20</container>
+                        <unitdate>1966</unitdate>
+                    </did>
+                </c>
+                <c id="ref69" level="file">
+                    <did>
+                        <unittitle>WJMO program for "city wide salute" to Mary C. Holt</unittitle>
+                        <container id="cid1324042" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324042" type="Folder">21</container>
+                        <unitdate>1962 August 12</unitdate>
+                    </did>
+                </c>
+            </c>
+            <c id="ref64" level="series">
+                <did>
+                    <unittitle>Series V: Venues</unittitle>
+                    <unitdate>1962-1971, undated</unitdate>
+                </did>
+                <scopecontent id="ref220">
+                    <head>Scope and Contents</head>
+                    <p>Series V: Venues spans the years 1962 to 1971 and includes some undated materials. The series contains promotional materials and black-and-white exterior photographs and negatives for a few local Cleveland nightclubs and other music venues, including the Ankara, Cabin Club, Carlton House, Cleveland Arena, Club Manhattan, Club Trinidad, Cotton Club, Gus's Show Bar Lounge, Lancer, Leo's Casino, Mirror Show Bar, and the Wheel Lounge. In addition to the photographic materials, there is a promotional photograph mat, a ticket, an invitation, match books, and a menu. The files are arranged alphabetically by venue name. Additional information on the particular venues has been included in the finding aid at the file-level where available.</p>
+                </scopecontent>
+                <separatedmaterial id="ref277">
+                    <head>Separated Materials</head>
+                    <p>Some items are on exhibit. These items are noted at the file level. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                </separatedmaterial>
+                <c id="ref280" level="file">
+                    <did>
+                        <unittitle>Abbott's BBQ</unittitle>
+                        <container id="cid1339001" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1339001" type="Folder">22a</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref72" level="file">
+                    <did>
+                        <unittitle>Ankara</unittitle>
+                        <container id="cid1324044" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324044" type="Folder">22b</container>
+                        <unitdate>1966 October 2</unitdate>
+                    </did>
+                    <odd id="ref73">
+                        <head>General note</head>
+                        <p>"Jazz soriee" ticket. The Ankara was on Route 51. The concert was presented by the "Bafa Girls": Donna Battle, Blondeva Wharton, and Ann Turner and included a performance by Jimmy McGriff's Combo.</p>
+                    </odd>
+                </c>
+                <c id="ref55" level="file">
+                    <did>
+                        <unittitle>Cabin Club</unittitle>
+                        <container id="cid1324111" type="Box" label="Mixed materials">2</container>
+                        <container parent="cid1324111" type="Folder">23</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref56">
+                        <head>General note</head>
+                        <p>Two (2) matchbooks. The Cabin Club was located at 10616 Euclid Ave, Cleveland, Ohio.</p>
+                    </odd>
+                </c>
+                <c id="ref74" level="file">
+                    <did>
+                        <unittitle>Carlton House</unittitle>
+                        <container id="cid1324045" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324045" type="Folder">24</container>
+                        <unitdate>1971 July 3</unitdate>
+                    </did>
+                    <odd id="ref75">
+                        <head>General note</head>
+                        <p>Cabaret party invitation (business card size). The Carlton House was located at 1954 E 79th St. The party included a performance by the Soul Breeds.</p>
+                    </odd>
+                </c>
+                <c id="ref110" level="file">
+                    <did>
+                        <unittitle>Cleveland Arena</unittitle>
+                        <container id="cid1324058" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324058" type="Folder">25</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref226">
+                        <head>General note</head>
+                        <p>The Arena was located at 3717 Euclid, built in 1937. It was the site in March 1952 of radio deejay Alan Freed’s Moondog Coronation Ball. These photographs all appear to be from the Biggest Rock ‘n Roll Show of ’56, which featured artists LaVern Baker, the Colts, Bo Diddley, the Drifters, the Flamingos, Bill Haley and the Comets, Clyde McPhatter, the Platters, the Teen Queens, Frankie Lymon and the Teenagers, Joe Turner, and Red Prysock and his “Rock ‘n Roll” Orchestra. With the opening of Richfield Coliseum in 1974, the Arena ceased to host major events and was demolished in early 1977.</p>
+                    </odd>
+                    <separatedmaterial id="ref249">
+                        <head>Separated Materials</head>
+                        <p>Black-and-white photograph of the exterior on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+                <c id="ref91" level="file">
+                    <did>
+                        <unittitle>Club Manhattan</unittitle>
+                        <container id="cid1324053" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324053" type="Folder">26</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref54" level="file">
+                    <did>
+                        <unittitle>Club Trinidad</unittitle>
+                        <container id="cid1324112" type="Box" label="Text">2</container>
+                        <container parent="cid1324112" type="Folder">27</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref57">
+                        <head>General note</head>
+                        <p>Menu. "House of Jazz" Club Trinidad was located at 10607 Superior Ave, Cleveland, Ohio.</p>
+                    </odd>
+                </c>
+                <c id="ref106" level="file">
+                    <did>
+                        <unittitle>Cotton Club</unittitle>
+                        <container id="cid1324055" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324055" type="Folder">28</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref107">
+                        <head>General note</head>
+                        <p>Located at 2230 E 4th St, Cleveland, Ohio. Opened in 1954. By early 1955, club owner Sam Firsten began presenting national jazz acts, usually for a week at a time, including Gene Ammons, Art Blakey and His Jazz Messengers, Herbie Mann, Charlie Mingus, Bud Powell, and the very popular J. J. Johnson and Kai Winding. In 1957, club owner Sam Firsten renamed it the Moden Jazz Room.</p>
+                    </odd>
+                </c>
+                <c id="ref103" level="file">
+                    <did>
+                        <unittitle>Gus's Show Bar Lounge</unittitle>
+                        <container id="cid1324056" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324056" type="Folder">29</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref104">
+                        <head>General note</head>
+                        <p>Includes Rea &amp; Bea.</p>
+                    </odd>
+                </c>
+                <c id="ref135" level="file">
+                    <did>
+                        <unittitle>Lancer</unittitle>
+                        <container id="cid1324069" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324069" type="Folder">30</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref44" level="file">
+                    <did>
+                        <unittitle>Leo's Casino</unittitle>
+                        <container id="cid1324027" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324027" type="Folder">31</container>
+                        <unitdate>1962, undated</unitdate>
+                    </did>
+                    <odd id="ref68">
+                        <head>General note</head>
+                        <p>The original Leo’s Casino was a bar opened in 1952 by Leo Frank at Central Avenue and East 48th Street. Frank expanded his bar into a jazz room and booked greats such as Dizzy Gillespie, Lou Rawls, and John Coltrane. After the fire, it moved to Carnegie Avenue. In September 1963, Frank was joined by partner Jules Berger, and they opened a new, bigger nightclub in the Quad Hall Hotel at 7500 Euclid Avenue. The new Leo’s Casino seated about 700 people and became the top club for soul and R&amp;B acts, featuring Motown and touring national acts, as well as jazz artists. By the late 1960s, however, the costs of booking top name entertainers had skyrocketed, and the club closed in 1972. In 1999, the Rock and Roll Hall of Fame designated the Euclid Avenue site of the club a historic landmark.</p>
+                    </odd>
+                    <separatedmaterial id="ref264">
+                        <head>Separated Materials</head>
+                        <p>Black-and-white 8" x 10" photograph on exhibit. Consult the Library and Archives staff in advance of your visit for additional information.</p>
+                    </separatedmaterial>
+                </c>
+                <c id="ref58" level="file">
+                    <did>
+                        <unittitle>Mirror Show Bar</unittitle>
+                        <container id="cid1324036" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324036" type="Folder">32</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref60">
+                        <head>General note</head>
+                        <p>Jimmy Baynes photograph presentation mat. The Mirror Show Bar was located at 12376 Superior Ave, Cleveland, Ohio. The Mirror Show was a cocktail lounge with nightly entertainment.</p>
+                    </odd>
+                </c>
+                <c id="ref62" level="file">
+                    <did>
+                        <unittitle>Wheel Lounge</unittitle>
+                        <container id="cid1324037" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324037" type="Folder">33</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                    <odd id="ref66">
+                        <head>General note</head>
+                        <p>Jimmy Baynes photograph presentation mat. The Wheel Lounge was located at 4461 Lee Rd, Cleveland, Ohio. The Lounge specialized in southern barbeque, shoulder, steaks, and chickens. It catered clubs, banquets, and all social events. The proprieter was known simply as "Lu."</p>
+                    </odd>
+                </c>
+            </c>
+            <c id="ref201" level="series">
+                <did>
+                    <unittitle>Series VI: Unidentified Individuals</unittitle>
+                    <unitdate>1955-1965, undated</unitdate>
+                </did>
+                <scopecontent id="ref221">
+                    <head>Scope and Contents</head>
+                    <p>Series VI: Unidentifed Individuals spans the years 1955 to 1965 and includes undated materials. The series consists of black-and-white and color photographs and negatives. The photographic materials were arranged into two files: female performers and male performers, with an additional file of individuals that could not be identified by name or as performers. Identifiable venues include the Band Box, Club Trinidad, and the Music Box. Dated photographs can be found at the front of the file in chronological order; undated photos at the back. Please note that many of the dates reflect the date the film was processed, not necessarily the date of the performance.</p>
+                </scopecontent>
+                <c id="ref205" level="file">
+                    <did>
+                        <unittitle>Female Performers</unittitle>
+                        <container id="cid1324100" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324100" type="Folder">34</container>
+                        <unitdate>1955, 1960, undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref204" level="file">
+                    <did>
+                        <unittitle>Male Performers</unittitle>
+                        <container id="cid1324101" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324101" type="Folder">35</container>
+                        <unitdate>1955-1959, undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref206" level="file">
+                    <did>
+                        <unittitle>Other/Unknown</unittitle>
+                        <container id="cid1324102" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324102" type="Folder">36</container>
+                        <unitdate>1964, undated</unitdate>
+                    </did>
+                </c>
+            </c>
+            <c id="ref199" level="file">
+                <did>
+                    <unittitle>Series VII: Unidentified Groups</unittitle>
+                    <unitdate>1959, undated</unitdate>
+                </did>
+                <scopecontent id="ref222">
+                    <head>Scope and Contents</head>
+                    <p>The materials in Series VII: Unidentified Groups, 1959, undated, have been arranged into 2 files: instrumental groups and vocal groups, with a third file for groups that could not be identified by name or as a performing group. Most performances area assumed to be from Cleveland-area shows. Identifiable venues include Abbotts, the Masonic Temple, and the Music Box. The series consists of black-and-white and color photographs and negatives. Dated photographs can be found at the front of the photograph in chronological order; undated photos at the back. Please note that many of the dates reflect the date the film was processed, not necessarily the date of the performance.</p>
+                </scopecontent>
+                <c id="ref209" level="file">
+                    <did>
+                        <unittitle>Instrumental</unittitle>
+                        <container id="cid1324103" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324103" type="Folder">37</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref207" level="file">
+                    <did>
+                        <unittitle>Vocal</unittitle>
+                        <container id="cid1324104" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324104" type="Folder">38</container>
+                        <unitdate>1959, undated</unitdate>
+                    </did>
+                </c>
+                <c id="ref210" level="file">
+                    <did>
+                        <unittitle>Other/Unknown</unittitle>
+                        <container id="cid1324105" type="Box" label="Graphic materials">2</container>
+                        <container parent="cid1324105" type="Folder">39</container>
+                        <unitdate>undated</unitdate>
+                    </did>
+                </c>
+            </c>
+            <c id="ref202" level="series">
+                <did>
+                    <unittitle>Series VIII: Miscellaneous</unittitle>
+                    <unitdate>1960</unitdate>
+                </did>
+                <scopecontent id="ref215">
+                    <head>Scope and Contents</head>
+                    <p>Series VIII: Miscellaneous, 1960, contains a single issue of the pocket magazine 
+                        <title render="italic">OPAL</title>, from Pride Publications (Cleveland, Ohio). The staff of 
+                        <title render="italic">OPAL</title> included Valena M. Williams, executive editor; John Bentley, art director; and Nathaniel Hubbard, circulation manager. Volume 1, issue 5 includes work by photographers James Gayle, Anderson Marlow, and Harvey Bowie; columnists Bill Clark, Harrison Dillard, Edward Jones, William Matlock, and Mary Zachary; and artwork by cartoonist Ted Walker. It is possible one of the photographs in the magazine could be by Baynes, but none are cited as such. The publication contains information from members of the local community on birthday celebrations and other upcoming events, contest winners, and fashion, as well as longer articles on jazz, the importance of education and peaceful protests, the influence of disc jockeys and popular music on teens, WJMO's middle school student disc jockeys, singer Nancy Wilson, and Isabelle Cooley, co-star of the feature film 
+                        <title render="italic">I Passed for White</title>.</p>
+                </scopecontent>
+                <c id="ref111" level="file">
+                    <did>
+                        <unittitle>Cleveland Opal, Volume 1, Issue 5</unittitle>
+                        <container id="cid1324121" type="Box" label="Periodicals">2</container>
+                        <container parent="cid1324121" type="Folder">40</container>
+                        <unitdate>1960 May 18</unitdate>
+                    </did>
+                </c>
+            </c>
+        </dsc>
+    </archdesc>
+</ead>

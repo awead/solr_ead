@@ -6,8 +6,10 @@ describe SolrEad::Document do
     Solrizer.default_field_mapper = EadMapper.new
     @ex1 = SolrEad::Document.from_xml(fixture "ARC-0005.xml")
     @ex2 = SolrEad::Document.from_xml(fixture "pp002010.xml")
+    @ex3 = SolrEad::Document.from_xml(fixture "ARC-0161.xml")
     @solr_ex1 = @ex1.to_solr
     @solr_ex2 = @ex2.to_solr
+    @solr_ex3 = @ex3.to_solr
   end
 
   describe "#terminology" do
@@ -43,6 +45,10 @@ describe SolrEad::Document do
     it "should have its xml" do
       @ex1.to_xml.should match "<c\s"
       @ex2.to_xml.should match "<c01\s"\
+    end
+
+    it "should have a bibliography" do
+      @ex3.bibliography.first.should == "All Music Guide. Accessed February 4, 2013. http://www.allmusic.com/."
     end
 
   end

@@ -52,6 +52,8 @@ class SolrEad::Document
     t.arrangement_heading(:path=>"archdesc/arrangement/head", :index_as=>[:displayable])
     t.bioghist(:path=>"archdesc/bioghist/p", :index_as=>[:searchable])
     t.bioghist_heading(:path=>"archdesc/bioghist/head", :index_as=>[:displayable])
+    t.bibliography(:path=>"archdesc/bibliography/bibref", :index_as=>[:searchable])
+    t.bibliography_heading(:path=>"archdesc/bibliography/head", :index_as=>[:displayable])
     t.custodhist(:path=>"archdesc/custodhist/p", :index_as=>[:searchable])
     t.custodhist_heading(:path=>"archdesc/custodhist/head", :index_as=>[:displayable])
     t.fileplan(:path=>"archdesc/fileplan/p", :index_as=>[:searchable])
