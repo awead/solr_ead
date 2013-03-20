@@ -39,6 +39,7 @@ GEM
       deprecation
       mediashelf-loggable
       nokogiri (>= 1.4.2)
+    rake (10.0.3)
     rdoc (4.0.0)
       json (~> 1.4)
     redcarpet (2.2.2)
@@ -71,6 +72,7 @@ PLATFORMS
 
 DEPENDENCIES
   debugger
+  rake
   rdoc
   redcarpet
   rspec
