@@ -42,17 +42,19 @@ class Indexer
   # using the url supplied in your config/solr.yml file.
   def initialize(opts={})
     Solrizer.default_field_mapper = EadMapper.new
-    if defined?(Rails.root)
-      url = YAML.load_file(File.join(Rails.root,"config","solr.yml"))[Rails.env]['url']
+    if ENV['WEBSOLR_URL']
+      url = ENV['WEBSOLR_URL']
+    elsif defined?(Rails.root)
+      url = YAML.load(ERB.new(File.read(File.join(Rails.root,"config","solr.yml"))).result)[Rails.env]['url']
     elsif ENV['RAILS_ENV']
-      url = YAML.load_file(File.join(Rails.root,"config","solr.yml"))[ENV['RAILS_ENV']]['url']
+      url = YAML.load(ERB.new(File.read(File.join(Rails.root,"config","solr.yml"))).result)[ENV['RAILS_ENV']]['url']
     else
-      url = YAML.load_file("config/solr.yml")['development']['url']
+      url = YAML.load(ERB.new(File.read("config/solr.yml")).result)['development']['url']
     end
     self.solr = RSolr.connect :url => url
     self.options = opts
   end
-
+  
   # Indexes your ead and additional component documents with the supplied file, then
   # commits the results to your solr server.
   def create(file)
