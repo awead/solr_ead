@@ -47,7 +47,7 @@ class Indexer
     elsif defined?(Rails.root)
       url = YAML.load(ERB.new(File.read(File.join(Rails.root,"config","solr.yml"))).result)[Rails.env]['url']
     elsif ENV['RAILS_ENV']
-      url = YAML.load(ERB.new(File.read(File.join(Rails.root,"config","solr.yml"))).result)[ENV['RAILS_ENV']]['url']
+      url = YAML.load(ERB.new(File.read("config/solr.yml")).result)[ENV['RAILS_ENV']]['url']
     else
       url = YAML.load(ERB.new(File.read("config/solr.yml")).result)['development']['url']
     end
