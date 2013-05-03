@@ -29,16 +29,20 @@ end
 
 # Set up a new indexer object
 # 
-# If CUSTOM_DOCUMENT is present, require the file and instantiate the indexer with it
-# Otherwise instantiate a default indexer
+# Instantiate a new indexer object with a custom document, component and/or simple switch if present
 def load_indexer
+  options = {}
   if ENV['CUSTOM_DOCUMENT']
     raise "Please specify a valid file for your custom document." unless File.exists? ENV['CUSTOM_DOCUMENT']
     require File.join(Rails.root, ENV['CUSTOM_DOCUMENT'])
-    custom_document = File.basename(ENV['CUSTOM_DOCUMENT']).split(".").first.classify.constantize
-    indexer = SolrEad::Indexer.new(:document=>custom_document)
-  else
-    indexer = SolrEad::Indexer.new
+    options[:document] = File.basename(ENV['CUSTOM_DOCUMENT']).split(".").first.classify.constantize
   end
+  if ENV['CUSTOM_COMPONENT']
+    raise "Please specify a valid file for your custom component." unless File.exists? ENV['CUSTOM_COMPONENT']
+    require File.join(Rails.root, ENV['CUSTOM_COMPONENT'])
+    options[:component] = File.basename(ENV['CUSTOM_COMPONENT']).split(".").first.classify.constantize
+  end
+  options[:simple] = (ENV['SIMPLE'] or ENV['SIMPLE']=="true") ? true : false
+  indexer = SolrEad::Indexer.new(options)
   return indexer
 end
