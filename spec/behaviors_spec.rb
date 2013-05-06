@@ -5,6 +5,7 @@ describe SolrEad::Behaviors do
   before :all do
     @not_numbered = fixture "ARC-0005.xml"
     @numbered     = fixture "pp002010.xml"
+    @messy        = fixture "ead_messy_format.xml"
     class TestClass
       include SolrEad::Behaviors
     end
@@ -16,6 +17,7 @@ describe SolrEad::Behaviors do
     before :all do
       @non_numbered_nodeset = @test.components(@not_numbered)
       @numbered_nodeset     = @test.components(@numbered)
+      @messy_nodeset        = @test.components(@messy)
     end
 
     it "should return a nodeset" do
@@ -27,6 +29,11 @@ describe SolrEad::Behaviors do
       @non_numbered_nodeset.count.should == 135
       @numbered_nodeset.count.should == 83
     end
+    
+    it "should find some components even if ead is messily formatted" do
+      @messy_nodeset.count.should > 0
+    end
+    
   end
 
   describe "#prep" do

@@ -39,6 +39,8 @@ Or install it yourself:
 ## Usage
 
     $ rake solr_ead:index FILE=/path/to/your/ead.xml
+    $ rake solr_ead:index_dir DIR=/path/to/your/eads SIMPLE=true
+    $ rake solr_ead:index_dir DIR=/path/to/your/eads SOLR_URL=http://127.0.0.1:8983
 
 You can also do this via the command line:
 
@@ -121,8 +123,28 @@ following content:
 From the console, index you ead document using your new definition.
 
     > file = "path/to/ead.xml"
-    > indexer = SolrEad::Indexer.new(:document=>"CustomDocument")
+    > indexer = SolrEad::Indexer.new(:document=>CustomDocument)
     > indexer.create(file)
+
+Or index from the rake task 
+
+    $ rake solr_ead:index FILE=path/to/file.xml CUSTOM_DOCUMENT=path/to/custom_document.rb
+
+### Writing a custom component definition
+
+Similar to the custom document definition, you can create a custom component definition for component indexing:
+
+    class CustomComponent < SolrEad::Component
+      ...
+    end
+
+Call this from the console
+
+    > indexer = SolrEad::Indexer.new(:document=>CustomDocument, :component=>CustomComponent)
+
+Or from the rake task
+
+    $ rake solr_ead:index FILE=path/to/file.xml CUSTOM_DOCUMENT=path/to/custom_document.rb CUSTOM_COMPONENT=path/to/custom_component.rb
 
 ### Adding custom methods
 
