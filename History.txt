@@ -1,0 +1,6 @@
+0.4.5
+New Features:
+-  Ability to pass in a custom component and the simple param to the rake task
+
+Fixes:
+- fixed greedy regex to allow for "messier" ead xml files
