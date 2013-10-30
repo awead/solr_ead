@@ -1,7 +1,7 @@
 class SolrEad::Component
 
   include OM::XML::Document
-  include Solrizer::XML::TerminologyBasedSolrizer
+  include OM::XML::TerminologyBasedSolrizer
 
   # Define each term in your ead that you want put into the solr document
   set_terminology do |t|
@@ -84,9 +84,21 @@ class SolrEad::Component
 
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
-    solr_doc.merge!({"format" => "Archival Item"})
-    solr_doc["parent_unittitles_display"].length > 0 ? solr_doc.merge!({"heading_display" => [ solr_doc["parent_unittitles_display"], self.title.first].join(" >> ")  }) : solr_doc.merge!({"heading_display" => self.title.first  })
-    solr_doc.merge!({"ref_id" => self.ref.first.strip})
+    Solrizer.insert_field(solr_doc, "format", "Archival Item", :facetable)
+    heading = get_heading solr_doc[Solrizer.solr_name("parent_unittitles", :displayable)]
+    Solrizer.insert_field(solr_doc, "heading", heading, :displayable) unless heading.nil?
+    Solrizer.insert_field(solr_doc, "ref", self.ref.first.strip, :simple)
+  end
+
+  protected
+
+  def get_heading parent_titles = Array.new
+    return nil if parent_titles.nil?
+    if parent_titles.length > 0
+      [parent_titles, self.title.first].join(" >> ")
+    else
+      self.title.first
+    end
   end
 
 end

@@ -1,7 +1,7 @@
 class SolrEad::Document
 
   include OM::XML::Document
-  include Solrizer::XML::TerminologyBasedSolrizer
+  include OM::XML::TerminologyBasedSolrizer
   include SolrEad::OmBehaviors
 
   # Define each term in your ead that you want put into the solr document
@@ -27,9 +27,9 @@ class SolrEad::Document
     t.title_filing(:path=>"titleproper", :attributes=>{ :type => "filing" }, :index_as=>[:sortable])
     t.title_num(:path=>"archdesc/did/unitid")
     t.extent(:path=>"archdesc/did/physdesc/extent")
-    t.unitdate(:path=>"archdesc/did/unitdate[not(@type)]", :index_as=>[:unstemmed])
-    t.unitdate_bulk(:path=>"archdesc/did/unitdate[@type='bulk']", :index_as=>[:unstemmed])
-    t.unitdate_inclusive(:path=>"archdesc/did/unitdate[@type='inclusive']", :index_as=>[:unstemmed])
+    t.unitdate(:path=>"archdesc/did/unitdate[not(@type)]", :index_as=>[:searchable])
+    t.unitdate_bulk(:path=>"archdesc/did/unitdate[@type='bulk']", :index_as=>[:searchable])
+    t.unitdate_inclusive(:path=>"archdesc/did/unitdate[@type='inclusive']", :index_as=>[:searchable])
     t.language(:path=>"archdesc/did/langmaterial", :index_as=>[:displayable])
     t.langcode(:path=>"did/langmaterial/language/@langcode")
     t.abstract(:path=>"archdesc/did/abstract", :index_as=>[:searchable])
@@ -78,9 +78,12 @@ class SolrEad::Document
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
     solr_doc.merge!({"id"              => self.eadid.first.strip})
-    solr_doc.merge!({"ead_id"          => self.eadid.first.strip})
-    solr_doc.merge!({"format"          => "Archival Collection"})
-    solr_doc.merge!({"heading_display" => ("Guide to the " + self.title.first + " (" + self.title_num.first + ")")}) unless self.title_num.empty?
+    Solrizer.insert_field(solr_doc, "format", "Archival Collection", :facetable)
+    Solrizer.insert_field(solr_doc, "ead", self.eadid.first.strip, :simple)
+    unless self.title_num.empty?
+      heading = "Guide to the " + self.title.first + " (" + self.title_num.first + ")"
+      Solrizer.insert_field(solr_doc, "heading", heading, :displayable)
+    end
     return solr_doc
   end
 
