@@ -14,17 +14,19 @@ Gem::Specification.new do |gem|
   gem.name          = "solr_ead"
   gem.require_paths = ["lib"]
   gem.version       = SolrEad::VERSION
+  gem.license       = "Apache 2"
 
   # Dependencies
-  gem.add_dependency('om')
-  gem.add_dependency('solrizer', '~> 2.1.0')
-  gem.add_dependency('rsolr')
-  gem.add_dependency('sanitize')
-  gem.add_development_dependency('yard')
-  gem.add_development_dependency('redcarpet')
-  # For Development
+  gem.add_dependency 'om', '~> 3.0.0'
+  gem.add_dependency 'solrizer', '~> 3.1.0'
+  gem.add_dependency 'rsolr'
+  gem.add_dependency 'sanitize'
+
+  gem.add_development_dependency 'yard'
+  gem.add_development_dependency 'redcarpet'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'debugger'
   gem.add_development_dependency 'rdoc'
+  gem.add_development_dependency 'jettywrapper'
 end

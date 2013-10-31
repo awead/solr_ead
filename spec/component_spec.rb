@@ -13,25 +13,25 @@ describe SolrEad::Component do
 
       before :each do
         additional_fields = {
-          "id"                        => "TEST-0001ref010",
-          "ead_id"                    => "TEST-0001",
-          "parent_id"                 => "ref001",
-          "parent_id_s"               => ["ref001", "ref002", "ref003"],
-          "parent_unittitles_display" => ["Series I", "Subseries A", "Subseries 1"],
-          "component_children_b"      => FALSE
+          "id" => "TEST-0001ref010",
+          Solrizer.solr_name("ead", :simple)                          => "TEST-0001",
+          Solrizer.solr_name("parent", :simple)                       => "ref001",
+          Solrizer.solr_name("parent", :displayable)                  => ["ref001", "ref002", "ref003"],
+          Solrizer.solr_name("parent_unittitles", :displayable)       => ["Series I", "Subseries A", "Subseries 1"],
+          Solrizer.solr_name("component_children", :type => :boolean) => FALSE
         }
         @solr_doc = @doc.to_solr(additional_fields)
       end
 
       it "should accept additional fields from a hash" do
         @solr_doc["id"].should == "TEST-0001ref010"
-        @solr_doc["level_facet"].should include "item"
-        @solr_doc["heading_display"].should == "Series I >> Subseries A >> Subseries 1 >> Internal Revenue Service Form Information Return [RESTRICTED]"
-        @solr_doc["accessrestrict_display"].first.should match /^This item .* is available.$/
+        @solr_doc[Solrizer.solr_name("level", :facetable)].should include "item"
+        @solr_doc[Solrizer.solr_name("heading", :displayable)].first.should == "Series I >> Subseries A >> Subseries 1 >> Internal Revenue Service Form Information Return [RESTRICTED]"
+        @solr_doc[Solrizer.solr_name("accessrestrict", :displayable)].first.should match /^This item .* is available.$/
       end
 
       it "should create fields using type" do
-        @solr_doc["ref_id"].should == "ref215"
+        @solr_doc[Solrizer.solr_name("ref", :simple)].should == "ref215"
       end
 
     end
@@ -39,17 +39,17 @@ describe SolrEad::Component do
     it "should format heading_display with only one element" do
       additional_fields = {
         "id"                        => "TEST-0001ref010",
-        "eadid_s"                   => "TEST-0001",
-        "parent_id_s"               => "ref001",
-        "parent_ids_display"        => ["ref001", "ref002", "ref003"],
-        "parent_unittitles_display" => [],
-        "component_children_b"      => FALSE
+        Solrizer.solr_name("ead", :simple)                          => "TEST-0001",
+        Solrizer.solr_name("parent", :simple)                       => "ref001",
+        Solrizer.solr_name("parent", :displayable)                  => ["ref001", "ref002", "ref003"],
+        Solrizer.solr_name("parent_unittitles", :displayable)       => [],
+        Solrizer.solr_name("component_children", :type => :boolean) => FALSE
       }
       solr_doc = @doc.to_solr(additional_fields)
       solr_doc["id"].should == "TEST-0001ref010"
-      solr_doc["level_facet"].should include "item"
-      solr_doc["heading_display"].should == "Internal Revenue Service Form Information Return [RESTRICTED]"
-      solr_doc["accessrestrict_display"].first.should match /^This item .* is available.$/
+      solr_doc[Solrizer.solr_name("level", :facetable)].should include "item"
+      solr_doc[Solrizer.solr_name("heading", :displayable)].first.should == "Internal Revenue Service Form Information Return [RESTRICTED]"
+      solr_doc[Solrizer.solr_name("accessrestrict", :displayable)].first.should match /^This item .* is available.$/
     end       
 
   end

@@ -41,7 +41,6 @@ class Indexer
   # Creates a new instance of SolrEad::Indexer and connects to your solr server
   # using the url supplied in your config/solr.yml file.
   def initialize(opts={})
-    Solrizer.default_field_mapper = EadMapper.new
     if ENV['SOLR_URL']
       url = ENV['SOLR_URL']
     elsif defined?(Rails.root)
@@ -71,7 +70,7 @@ class Indexer
   def update(file)
     doc = om_document(File.new(file))
     solr_doc = doc.to_solr
-    solr.delete_by_query( 'ead_id:"' + solr_doc["id"] + '"' )
+    solr.delete_by_query( Solrizer.solr_name("ead", :simple)+':"' + solr_doc["id"] + '"' )
     solr.add solr_doc
     add_components(file) unless options[:simple]
     solr.commit
@@ -80,7 +79,7 @@ class Indexer
   # Deletes the ead document and any component documents from your solr index and
   # commits the results.
   def delete(id)
-    solr.delete_by_query( 'ead_id:"' + id + '"')
+    solr.delete_by_query( Solrizer.solr_name("ead", :simple)+':"' + id + '"')
     solr.commit
   end
 
@@ -121,7 +120,7 @@ class Indexer
     counter = 1
     components(file).each do |node|
       solr_doc = om_component_from_node(node).to_solr(additional_component_fields(node))
-      solr_doc.merge!({"sort_i" => counter.to_s})
+      solr_doc.merge!({Solrizer.solr_name("sort", :type => :integer) => counter.to_s})
       solr.add solr_doc
       counter = counter + 1
     end

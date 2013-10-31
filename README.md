@@ -1,5 +1,7 @@
 # SolrEad
 
+[![Build Status](https://travis-ci.org/awead/solr_ead.png?branch=master)](https://travis-ci.org/awead/solr_ead)
+
 SolrEad is a gem that indexes your ead documents into Solr.  From there, you can use other
 Solr-based applications to search and display your finding aids.  It originated as some
 code that I used to index ead into Blacklight, but this gem does not require you to use

@@ -1,6 +1,6 @@
 development:
-  url: http://127.0.0.1:8985/solr/blacklight-dev
+  url: http://127.0.0.1:8983/solr/hydra-dev
 test: &test
-  url: http://127.0.0.1:8985/solr/blacklight-dev
+  url: http://127.0.0.1:8983/solr/hydra-dev
 production:
-  url: http://127.0.0.1:8985/solr/blacklight-dev
+  url: http://127.0.0.1:8983/solr/hydra-dev

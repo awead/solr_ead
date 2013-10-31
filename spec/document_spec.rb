@@ -3,7 +3,6 @@ require "spec_helper"
 describe SolrEad::Document do
 
   before(:all) do
-    Solrizer.default_field_mapper = EadMapper.new
     @ex1 = SolrEad::Document.from_xml(fixture "ARC-0005.xml")
     @ex2 = SolrEad::Document.from_xml(fixture "pp002010.xml")
     @ex3 = SolrEad::Document.from_xml(fixture "ARC-0161.xml")
@@ -56,23 +55,22 @@ describe SolrEad::Document do
   describe ".to_solr" do
 
     it "should have the appropriate id fields" do
-      @solr_ex1["ead_id"].should  == "ARC-0005"
-      @solr_ex1["id"].should      == "ARC-0005"
-      @solr_ex2["ead_id"].should  == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
       @solr_ex2["id"].should      == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
-
+      @solr_ex1["id"].should      == "ARC-0005"
+      @solr_ex2[Solrizer.solr_name("ead", :simple)].should  == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
+      @solr_ex1[Solrizer.solr_name("ead", :simple)].should  == "ARC-0005"
     end
 
     it "should have faceted terms created from subject headings" do
-      @solr_ex1["persname_facet"].should include "Cochran, Eddie, 1938-1960"
-      @solr_ex1["genreform_facet"].should include "Newspapers"
-      @solr_ex1["subject_facet"].should include "Rockabilly music"
-      @solr_ex2["corpname_facet"].should include "Tuskegee Normal and Industrial Institute--1880-1940."
-      @solr_ex2["genreform_facet"].should include "Group portraits--1880-1940."
-      @solr_ex2["geogname_facet"].should include "Washington, D.C."
-      @solr_ex2["name_facet"].should include "Bell, J.S., Portland, OR"
-      @solr_ex2["persname_facet"].should include "Johnston, Frances Benjamin, 1864-1952, photographer."
-      @solr_ex2["subject_facet"].should include "Buildings--1880-1940."
+      @solr_ex1[Solrizer.solr_name("persname", :facetable)].should include "Cochran, Eddie, 1938-1960"
+      @solr_ex1[Solrizer.solr_name("genreform", :facetable)].should include "Newspapers"
+      @solr_ex1[Solrizer.solr_name("subject", :facetable)].should include "Rockabilly music"
+      @solr_ex2[Solrizer.solr_name("corpname", :facetable)].should include "Tuskegee Normal and Industrial Institute--1880-1940."
+      @solr_ex2[Solrizer.solr_name("genreform", :facetable)].should include "Group portraits--1880-1940."
+      @solr_ex2[Solrizer.solr_name("geogname", :facetable)].should include "Washington, D.C."
+      @solr_ex2[Solrizer.solr_name("name", :facetable)].should include "Bell, J.S., Portland, OR"
+      @solr_ex2[Solrizer.solr_name("persname", :facetable)].should include "Johnston, Frances Benjamin, 1864-1952, photographer."
+      @solr_ex2[Solrizer.solr_name("subject", :facetable)].should include "Buildings--1880-1940."
     end
 
   end
