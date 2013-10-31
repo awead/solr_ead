@@ -39,27 +39,14 @@ class Indexer
   attr_accessor :solr, :options
 
   # Creates a new instance of SolrEad::Indexer and connects to your solr server
-  # using the url supplied in your config/solr.yml file.
-  def initialize(opts={})
-    if ENV['SOLR_URL']
-      url = ENV['SOLR_URL']
-    elsif defined?(Rails.root)
-      url = YAML.load(ERB.new(File.read(File.join(Rails.root,"config","solr.yml"))).result)[Rails.env]['url']
-    elsif ENV['RAILS_ENV']
-      url = YAML.load(ERB.new(File.read("config/solr.yml")).result)[ENV['RAILS_ENV']]['url']
-    else
-      url = YAML.load(ERB.new(File.read("config/solr.yml")).result)['development']['url']
-    end
-    self.solr = RSolr.connect :url => url
+  def initialize opts={}
+    self.solr = solr_connection
     self.options = opts
   end
   
-  # Indexes your ead and additional component documents with the supplied file, then
-  # commits the results to your solr server.
-  def create(file)
-    doc = om_document(File.new(file))
-    solr_doc = doc.to_solr
-    solr.add solr_doc
+  # Indexes ead xml and commits the results to your solr server.
+  def create file
+    solr.add om_document(File.new(file)).to_solr
     add_components(file) unless options[:simple]
     solr.commit
   end
@@ -67,10 +54,9 @@ class Indexer
   # Updates your ead from a given file by first deleting the existing ead document and
   # any component documents, then creating a new index from the supplied file.
   # This method will also commit the results to your solr server when complete.
-  def update(file)
-    doc = om_document(File.new(file))
-    solr_doc = doc.to_solr
-    solr.delete_by_query( Solrizer.solr_name("ead", :simple)+':"' + solr_doc["id"] + '"' )
+  def update file
+    solr_doc = om_document(File.new(file)).to_solr
+    delete solr_doc["id"]
     solr.add solr_doc
     add_components(file) unless options[:simple]
     solr.commit
@@ -78,19 +64,19 @@ class Indexer
 
   # Deletes the ead document and any component documents from your solr index and
   # commits the results.
-  def delete(id)
-    solr.delete_by_query( Solrizer.solr_name("ead", :simple)+':"' + id + '"')
+  def delete id
+    solr.delete_by_query( Solrizer.solr_name("ead", :stored_sortable)+':"' + id + '"')
     solr.commit
   end
 
-  protected
+  private
 
   # Returns an OM document from a given file.
   #
   # Determines if you have specified a custom definition for your ead document.
   # If you've defined a class CustomDocument, and have passed it as an option
   # to your indexer, then SolrEad will use that class instead of SolrEad::Document.
-  def om_document(file)
+  def om_document file
     options[:document] ? options[:document].from_xml(File.new(file)) : SolrEad::Document.from_xml(File.new(file))
   end
 
@@ -99,7 +85,7 @@ class Indexer
   # Determines if you have specified a custom definition for your ead component.
   # If you've defined a class CustomComponent, and have passed it as an option
   # to your indexer, then SolrEad will use that class instead of SolrEad::Component.
-  def om_component_from_node(node)
+  def om_component_from_node node
     options[:component] ? options[:component].from_xml(prep(node)) : SolrEad::Component.from_xml(prep(node))
   end
 
@@ -116,13 +102,32 @@ class Indexer
   # A sorting field *sort_i* is added to the document using the index values from the array
   # of <c> nodes.  This allows us to preserve the order of <c> nodes as they appear
   # in the original ead document.
-  def add_components(file)
-    counter = 1
+  def add_components file, counter = 1
     components(file).each do |node|
       solr_doc = om_component_from_node(node).to_solr(additional_component_fields(node))
-      solr_doc.merge!({Solrizer.solr_name("sort", :type => :integer) => counter.to_s})
+      solr_doc.merge!({Solrizer.solr_name("sort", :sortable, :type => :integer) => counter.to_s})
       solr.add solr_doc
       counter = counter + 1
+    end
+  end
+
+  # Returns a connection to solr using Rsolr
+  def solr_connection
+    if ENV['SOLR_URL']
+      RSolr.connect :url => ENV['SOLR_URL']
+    else
+      RSolr.connect :url => solr_url
+    end
+  end
+
+  # Determines the url to our solr service by consulting yaml files
+  def solr_url
+    if defined?(Rails.root)
+      YAML.load(ERB.new(File.read(File.join(Rails.root,"config","solr.yml"))).result)[Rails.env]['url']
+    elsif ENV['RAILS_ENV']
+      YAML.load(ERB.new(File.read("config/solr.yml")).result)[ENV['RAILS_ENV']]['url']
+    else
+      YAML.load(ERB.new(File.read("config/solr.yml")).result)['development']['url']
     end
   end
 

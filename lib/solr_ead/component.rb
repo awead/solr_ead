@@ -87,7 +87,7 @@ class SolrEad::Component
     Solrizer.insert_field(solr_doc, "format", "Archival Item", :facetable)
     heading = get_heading solr_doc[Solrizer.solr_name("parent_unittitles", :displayable)]
     Solrizer.insert_field(solr_doc, "heading", heading, :displayable) unless heading.nil?
-    Solrizer.insert_field(solr_doc, "ref", self.ref.first.strip, :simple)
+    Solrizer.insert_field(solr_doc, "ref", self.ref.first.strip, :stored_sortable)
   end
 
   protected

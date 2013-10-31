@@ -14,8 +14,8 @@ describe SolrEad::Component do
       before :each do
         additional_fields = {
           "id" => "TEST-0001ref010",
-          Solrizer.solr_name("ead", :simple)                          => "TEST-0001",
-          Solrizer.solr_name("parent", :simple)                       => "ref001",
+          Solrizer.solr_name("ead", :stored_sortable)                          => "TEST-0001",
+          Solrizer.solr_name("parent", :stored_sortable)                       => "ref001",
           Solrizer.solr_name("parent", :displayable)                  => ["ref001", "ref002", "ref003"],
           Solrizer.solr_name("parent_unittitles", :displayable)       => ["Series I", "Subseries A", "Subseries 1"],
           Solrizer.solr_name("component_children", :type => :boolean) => FALSE
@@ -31,7 +31,7 @@ describe SolrEad::Component do
       end
 
       it "should create fields using type" do
-        @solr_doc[Solrizer.solr_name("ref", :simple)].should == "ref215"
+        @solr_doc[Solrizer.solr_name("ref", :stored_sortable)].should == "ref215"
       end
 
     end
@@ -39,8 +39,8 @@ describe SolrEad::Component do
     it "should format heading_display with only one element" do
       additional_fields = {
         "id"                        => "TEST-0001ref010",
-        Solrizer.solr_name("ead", :simple)                          => "TEST-0001",
-        Solrizer.solr_name("parent", :simple)                       => "ref001",
+        Solrizer.solr_name("ead", :stored_sortable)                          => "TEST-0001",
+        Solrizer.solr_name("parent", :stored_sortable)                       => "ref001",
         Solrizer.solr_name("parent", :displayable)                  => ["ref001", "ref002", "ref003"],
         Solrizer.solr_name("parent_unittitles", :displayable)       => [],
         Solrizer.solr_name("component_children", :type => :boolean) => FALSE
