@@ -1,6 +1,7 @@
 # SolrEad
 
 [![Build Status](https://travis-ci.org/awead/solr_ead.png?branch=master)](https://travis-ci.org/awead/solr_ead)
+[![Gem Version](https://badge.fury.io/rb/solr_ead.png)](http://badge.fury.io/rb/solr_ead)
 
 SolrEad is a gem that indexes your ead documents into Solr.  From there, you can use other
 Solr-based applications to search and display your finding aids.  It originated as some
@@ -49,32 +50,10 @@ You can also do this via the command line:
     > indexer = SolrEad::Indexer.new
     > indexer.create(File.new("path/to/your/ead.xml))
 
-### Usage with Blacklight
-
-This code originated in a Blacklight application and some of its default solr fields
-reflect a Blacklight-style solr implementation.  For example, certain facet fields such as
-subject_topic_facet and title_display will appear in your solr index by default.  If you
-are trying out the gem within a default Blacklight installation, you will need to make
-the following changes to your schema.xml file:
-
-    <dynamicField name="*_id" type="string" indexed="true" stored="true" multiValued="false" />
-    <dynamicField name="*_s"  type="string" indexed="true" stored="true" multiValued="true"  />
-
-Fields ending in "_id" are used for identifying components within finding aids as well as
-the finding aid itself, which may not always be the same as the default "id" field for
-the solr document.  "_s" fields are not multivalued by default in Blacklight, so you'll
-need to edit the existing entry for this dyamic field to reflect the change.
-
-Other than that, your solr configuration should require no futher modifications;
-however,  the only fields that will appear in your search results will be format
-and title.  In order to make this into working solution, you'll need to modify
-both the definitions of documents and components within SolrEad and configure
-Blacklight's own display and facet fields accordingly.
-
 ## Applications
 
 SolrEad is intended to work at the indexing layer of an application, but it can also work
-at the display/presentation layer as well.  You can use the solr fields defined in your OM
+at the display and presentation layer as well.  You can use the solr fields defined in your OM
 terminology for display; however, formatting information such as italics and boldface is
 not preserved from the original EAD xml.
 
@@ -87,9 +66,9 @@ pages created using XSLT, or create the html when the page is requested.  If you
 the latter, you can store the ead xml in a solr field.  To do this, add a new solr field
 under the to_solr method of your OM terminology for the ead document:
 
-    solr_doc.merge!({"xml_display" => self.to_xml})
+    Solrizer.insert_field(solr_doc, "xml", self.to_xml, :displayable)
 
-This will create the solr field "xml_display" containing the complete ead xml. Then you
+This will create the solr field "xml_ssm" containing the complete ead xml. Then you
 will be able to apply any xslt processing you wish.  Other solutions are possible using
 xml from the document as well as the component, depending on the needs of your
 application.
@@ -106,6 +85,15 @@ following content:
 
     class CustomDocument < SolrEad::Document
 
+      # Use the existing terminology
+      use_terminology SolrEad::Document
+
+      # And extend it with terms of your own
+      extend_terminology do |t|
+        ...
+      end
+
+      # Or, just define your own from scratch
       set_terminology do |t|
         t.root(:path="ead", :index_as = [:not_searchable])
         t.eadid
@@ -169,31 +157,50 @@ Then, include your module in your own custom document and call the method during
 
       include MyEadBehaviors
 
-      # terminology goes here...
+      use_terminology SolrEad::Document
 
       def to_solr(solr_doc = Hash.new)
         super(solr_doc)
-        solr_doc.merge!({"solr_field" => special_process(self.field_name)})
+        Solrizer.insert_field(solr_doc, "field", special_process(self.field), :displayable)
       end
 
     end
 
-Your solr document will now include the field "solr_field" that has taken the term
-"field_name" and processed it with the special_process method.
+Your solr document will now include the field "field_ssm" that has taken the term
+"field" and processed it with the special_process method.
 
 ### Solr schema configurations
 
-SolrEad is designed to work with the solr jetty application that comes with Blacklight.
-However, this doesn't prevent you from using your own solr application.  You can alter the
-way SolrEad creates its solr fields by creating your own mapper.  See the ead_mapper.rb
-file for more info and the solrizer gem for more information on configuring how SolrEad
-creates solr fields.
+SolrEad uses Solrizer's default field descriptors to create the names of solr fields.  A complete
+listing of these fields is found under 
+[Solrizer::DefaultDescriptors](https://github.com/projecthydra/solrizer/blob/master/lib/solrizer/default_descriptors.rb)
+but the options that are used here are specifically:
 
-By default, SolrEad will display series and subseries component documents.  You may,
-however, want to surpress this from search results.  To do this, add the following line to
-your solrconfig.xml file, under the "search" request handler:
+    :displayable
+    :stored_sortable
+    :type => :integer
+    :type => :boolean
+    :facetable
+    :sortable, :type => :integer
+    :searchable
 
-    <lst name="appends"><str name="fq">-component_children_b:[TRUE TO *]</str></lst>
+These result in a specific set of dynamic field names that will need to be present in your schema.xml file in
+solr.  In order to have these fields index correctly, include the following in your schema.xml file:
+
+    <dynamicField name="*_teim"  type="text_en"   stored="false" indexed="true"  multiValued="true"  />
+    <dynamicField name="*_si"    type="string"    stored="false" indexed="true"  multiValued="false" />
+    <dynamicField name="*_sim"   type="string"    stored="false" indexed="true"  multiValued="true"  />
+    <dynamicField name="*_ssm"   type="string"    stored="true"  indexed="false" multiValued="true"  />
+    <dynamicField name="*_ssi"   type="string"    stored="true"  indexed="true"  multiValued="false" />
+    <dynamicField name="*_ssim"  type="string"    stored="true"  indexed="true"  multiValued="true"  />
+    <dynamicField name="*_dtsi"  type="date"      stored="true"  indexed="true"  multiValued="false" />
+    <dynamicField name="*_dtsim" type="date"      stored="true"  indexed="true"  multiValued="true"  />
+    <dynamicField name="*_bsi"   type="boolean"   stored="true"  indexed="true"  multiValued="false" />
+    <dynamicField name="*_isim"  type="int"       stored="true"  indexed="true"  multiValued="true"  />
+    <dynamicField name="*_ii"    type="int"       stored="false" indexed="true"  multiValued="false" />
+
+Note that the type "text_en" is dependent on your particular solr application, but the others should be
+included in the default installation.
 
 ## Issues
 
@@ -201,13 +208,22 @@ your solrconfig.xml file, under the "search" request handler:
 
 solr_ead uses the <eadid> node to create unique ids for documents.  Consequently, if you're using
 a rails app, this id will be a part of the url.  If your eadid has .xml or some other combination
-of characters preceeded by a period, this will cause Rails to interpret these characters as a 
+of characters preceded by a period, this will cause Rails to interpret these characters as a 
 format, which you don't want.  You may need to edit your eadid nodes if this is the case.
 
 ## Contributing
 
-If you have questions or have specific needs, let me know. If you have other ideas or
-solutions, please contribute code!
+### Testing with Jettywrapper
+
+SolrEad uses jettywrapper to download a solr application for testing.  To get setup for developing
+additional features for SolrEad:
+
+    git clone https://github.com/awead/solr_ead
+    bundle install
+    rake ci
+
+This will download jetty, start it up and run the spec tests. If you have questions or have specific needs, let me know. 
+If you have other ideas or solutions, please contribute code!
 
 1. Fork SolrEad
 2. Create your feature branch (`git checkout -b my-new-feature`)
