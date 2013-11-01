@@ -57,8 +57,8 @@ describe SolrEad::Document do
     it "should have the appropriate id fields" do
       @solr_ex2["id"].should      == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
       @solr_ex1["id"].should      == "ARC-0005"
-      @solr_ex2[Solrizer.solr_name("ead", :simple)].should  == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
-      @solr_ex1[Solrizer.solr_name("ead", :simple)].should  == "ARC-0005"
+      @solr_ex2[Solrizer.solr_name("ead", :stored_sortable)].should  == "http://hdl.loc.gov/loc.pnp/eadpnp.pp002010"
+      @solr_ex1[Solrizer.solr_name("ead", :stored_sortable)].should  == "ARC-0005"
     end
 
     it "should have faceted terms created from subject headings" do

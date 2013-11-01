@@ -79,7 +79,7 @@ class SolrEad::Document
     super(solr_doc)
     solr_doc.merge!({"id"              => self.eadid.first.strip})
     Solrizer.insert_field(solr_doc, "format", "Archival Collection", :facetable)
-    Solrizer.insert_field(solr_doc, "ead", self.eadid.first.strip, :simple)
+    Solrizer.insert_field(solr_doc, "ead", self.eadid.first.strip, :stored_sortable)
     unless self.title_num.empty?
       heading = "Guide to the " + self.title.first + " (" + self.title_num.first + ")"
       Solrizer.insert_field(solr_doc, "heading", heading, :displayable)

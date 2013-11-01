@@ -1,18 +1,21 @@
-require "nokogiri"
-require "solrizer"
-require "om"
-require "rsolr"
+require 'nokogiri'
+require 'solrizer'
+require 'om'
+require 'rsolr'
+require 'active_support'
 
 module SolrEad
+  extend ActiveSupport::Autoload
+
+  autoload :Behaviors
+  autoload :OmBehaviors
+  autoload :Indexer
+  autoload :Document
+  autoload :Component
+  autoload :Railtie if defined?(Rails)
+
+
   def self.version
     SolrEad::VERSION
   end
 end
-
-require "solr_ead/behaviors"
-require "solr_ead/om_behaviors"
-require "solr_ead/indexer"
-require "solr_ead/document"
-require "solr_ead/component"
-
-require 'solr_ead/railtie' if defined?(Rails)
