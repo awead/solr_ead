@@ -47,13 +47,14 @@ module SolrEad::Behaviors
   # The solr fields returned by this method are:
   #
   # id:: Unique identifier using the id attribute and the <eadid>
-  # ead_id:: The <eadid> node of the ead. This is so we know which ead this component belongs to.
-  # parent_id:: The id attribute of the parent <c> node
-  # parent_id_s:: Array of all the parent component ids for a given component.
-  # parent_unittitles_display:: Array of title fields for all the parent components of a given component.
-  # component_level_i:: numeric level of the component
-  # component_children_b:: Boolean field indicating whether or not the component has any child <c> nodes attached to it
-  # collection_facet:: Title field of the ead document so we can facet on all components in a collection
+  # ead_ssi:: The <eadid> node of the ead. This is so we know which ead this component belongs to.
+  # parent_ssi:: The id attribute of the parent <c> node
+  # parent_ssm:: Array of all the parent component ids for a given component.
+  # parent_unittitles_ssm:: Array of title fields for all the parent components of a given component.
+  # parent_unittitles_teim:: Same as above but indexed
+  # component_level_ii:: numeric level of the component
+  # component_children_bsi:: Boolean field indicating whether or not the component has any child <c> nodes attached to it
+  # collection_sim:: Title field of the ead document so we can facet on all components in a collection
   #
   # These fields are used so that we may reconstruct placement of a single component
   # within the hierarchy of the original ead.
@@ -63,6 +64,7 @@ module SolrEad::Behaviors
     addl_fields[Solrizer.solr_name("parent", :stored_sortable)]              = node.parent.attr("id") unless node.parent.attr("id").nil?
     addl_fields[Solrizer.solr_name("parent", :displayable)]                  = parent_id_list(node)
     addl_fields[Solrizer.solr_name("parent_unittitles", :displayable)]       = parent_unittitle_list(node)
+    addl_fields[Solrizer.solr_name("parent_unittitles", :searchable)]        = parent_unittitle_list(node)
     addl_fields[Solrizer.solr_name("component_level", :type => :integer)]    = parent_id_list(node).length + 1
     addl_fields[Solrizer.solr_name("component_children", :type => :boolean)] = component_children?(node)
     addl_fields[Solrizer.solr_name("collection", :facetable)]                = node.xpath("//archdesc/did/unittitle").text

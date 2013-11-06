@@ -8,7 +8,6 @@ class SolrEad::Component
     t.root(:path=>"c")
     t.ref_(:path=>"/c/@id")
     t.level(:path=>"/c/@level", :index_as=>[:facetable])
-
     t.title(:path=>"unittitle", :attributes=>{ :type => :none }, :index_as=>[:displayable])
     t.unitdate(:index_as=>[:displayable])
 
@@ -20,12 +19,6 @@ class SolrEad::Component
     t.name(:index_as=>[:facetable])
     t.persname(:index_as=>[:facetable])
     t.subject(:index_as=>[:facetable])
-
-    # These terms are proxied to match with Blacklight's default facets, but otherwise
-    # you can remove them or rename the above facet terms to match with your solr
-    # implementation.
-    t.subject_geo(:proxy=>[:geogname])
-    t.subject_topic(:proxy=>[:subject])
 
     # Item
     t.container {
@@ -73,32 +66,11 @@ class SolrEad::Component
     t.scopecontent_heading(:path=>"scopecontent/head")
     t.userestrict(:path=>"userestrict/p", :index_as=>[:displayable])
     t.userestrict_heading(:path=>"userestrict/head")
-
-    # <odd> nodes
-    # These guys depend on what's in <head> so we do some xpathy stuff...
-    t.note(:path=>'odd[./head="General note"]/p', :index_as=>[:displayable])
-    t.accession(:path=>'odd[./head[starts-with(.,"Museum Accession")]]/p', :index_as=>[:displayable])
-    t.print_run(:path=>'odd[./head[starts-with(.,"Limited")]]/p', :index_as=>[:displayable])
-
   end
 
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
-    Solrizer.insert_field(solr_doc, "format", "Archival Item", :facetable)
-    heading = get_heading solr_doc[Solrizer.solr_name("parent_unittitles", :displayable)]
-    Solrizer.insert_field(solr_doc, "heading", heading, :displayable) unless heading.nil?
     Solrizer.insert_field(solr_doc, "ref", self.ref.first.strip, :stored_sortable)
-  end
-
-  protected
-
-  def get_heading parent_titles = Array.new
-    return nil if parent_titles.nil?
-    if parent_titles.length > 0
-      [parent_titles, self.title.first].join(" >> ")
-    else
-      self.title.first
-    end
   end
 
 end

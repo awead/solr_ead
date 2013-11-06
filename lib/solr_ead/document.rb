@@ -7,22 +7,7 @@ class SolrEad::Document
   # Define each term in your ead that you want put into the solr document
   set_terminology do |t|
     t.root(:path=>"ead")
-
     t.eadid
-    t.corpname(:index_as=>[:facetable])
-    t.famname(:index_as=>[:facetable])
-    t.genreform(:index_as=>[:facetable])
-    t.geogname(:index_as=>[:facetable])
-    t.name(:index_as=>[:facetable])
-    t.persname(:index_as=>[:facetable])
-    t.subject(:index_as=>[:facetable])
-
-    # These terms are proxied to match with Blacklight's default facets, but otherwise
-    # you can remove them or rename the above facet terms to match with your solr
-    # implementation.
-    t.subject_geo(:proxy=>[:geogname])
-    t.subject_topic(:proxy=>[:subject])
-
     t.title(:path=>"archdesc/did/unittitle", :index_as=>[:searchable, :displayable])
     t.title_filing(:path=>"titleproper", :attributes=>{ :type => "filing" }, :index_as=>[:sortable])
     t.title_num(:path=>"archdesc/did/unitid")
@@ -34,8 +19,15 @@ class SolrEad::Document
     t.langcode(:path=>"did/langmaterial/language/@langcode")
     t.abstract(:path=>"archdesc/did/abstract", :index_as=>[:searchable])
 
+    # Facets
+    t.corpname(:index_as=>[:facetable])
+    t.famname(:index_as=>[:facetable])
+    t.genreform(:index_as=>[:facetable])
+    t.geogname(:index_as=>[:facetable])
+    t.name(:index_as=>[:facetable])
+    t.persname(:index_as=>[:facetable])
+    t.subject(:index_as=>[:facetable])
     t.collection(:proxy=>[:title], :index_as=>[:facetable])
-
 
     # General field available within archdesc
     t.accessrestrict(:path=>"archdesc/accessrestrict/p", :index_as=>[:searchable])
@@ -77,13 +69,8 @@ class SolrEad::Document
 
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
-    solr_doc.merge!({"id"              => self.eadid.first.strip})
-    Solrizer.insert_field(solr_doc, "format", "Archival Collection", :facetable)
+    solr_doc.merge!({"id" => self.eadid.first.strip})
     Solrizer.insert_field(solr_doc, "ead", self.eadid.first.strip, :stored_sortable)
-    unless self.title_num.empty?
-      heading = "Guide to the " + self.title.first + " (" + self.title_num.first + ")"
-      Solrizer.insert_field(solr_doc, "heading", heading, :displayable)
-    end
     return solr_doc
   end
 
