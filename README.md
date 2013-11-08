@@ -73,6 +73,21 @@ will be able to apply any xslt processing you wish.  Other solutions are possibl
 xml from the document as well as the component, depending on the needs of your
 application.
 
+### EAD Formatting
+
+EAD xml may contain formatted text such as:
+
+    <title render="italic">this is italicized</title>
+
+When OM processes any node that contains formatted text, the formatted nodes will be ignored
+and the text will appear without any of the `<title>` tags denoting format.  If you wish
+to have the formatting preserved as converted HTML, you may add the formatted string
+to your solr document:
+
+    Solrizer.set_field(solr_doc, "title", self.term_to_html("title"), :displayable)
+
+See the section on customization for more information.
+
 ## Customization
 
 Chances are the default definitions are not sufficient for your needs.  If you want to
@@ -201,6 +216,28 @@ solr.  In order to have these fields index correctly, include the following in y
 
 Note that the type "text_en" is dependent on your particular solr application, but the others should be
 included in the default installation.
+
+### Displaying HTML
+
+For converting formatted ead nodes to HTML, override the term's contents in the `to_solr` method:
+
+    class CustomDocument < SolrEad::Document
+
+      use_terminology SolrEad::Document
+
+      def to_solr(solr_doc = Hash.new)
+        super(solr_doc)
+        Solrizer.set_field(solr_doc, "title", self.term_to_html("title"), :displayable)
+      end
+
+    end
+
+The above example takes the title term as it is defined in `SolrEad::Document` and changes the contents
+of its solr display field.  In this case, the contents of the xml node for the "title" OM term are
+processed by the `term_to_html` method which converts the ead xml to html and stores it in the solr
+field given by the `set_field` method.
+
+The details of conversion from ead xml to html are specified in `SolrEad::Formatting`.
 
 ## Issues
 

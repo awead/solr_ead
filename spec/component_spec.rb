@@ -2,12 +2,12 @@ require "spec_helper"
 
 describe SolrEad::Component do
 
-  before(:all) do
-    file = "component_template.xml"
-    @doc = SolrEad::Component.from_xml(fixture file)
-  end
-
   describe "the solr document" do
+
+    before :all do
+      file = "component_template.xml"
+      @doc = SolrEad::Component.from_xml(fixture file)
+    end
 
     describe "for item-level components" do
 
@@ -49,6 +49,19 @@ describe SolrEad::Component do
       solr_doc[Solrizer.solr_name("level", :facetable)].should include "item"
       solr_doc[Solrizer.solr_name("accessrestrict", :displayable)].first.should match /^This item .* is available.$/
     end       
+
+  end
+
+  describe "formatting fields as html" do
+
+    before :all do
+      file = "html_component.xml"
+      @sample = SolrEad::Component.from_xml(fixture file)
+    end
+
+    it "should format as term as html" do
+      @sample.term_to_html("scopecontent").should include "<em>OPAL</em> "
+    end
 
   end
 

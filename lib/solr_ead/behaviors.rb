@@ -2,6 +2,8 @@ require "sanitize"
 
 module SolrEad::Behaviors
 
+  include SolrEad::Formatting
+
   # Takes a file as its input and returns a Nokogiri::XML::NodeSet of component <c> nodes
   #
   # It'll make an attempt at substituting numbered component levels for non-numbered
@@ -102,21 +104,12 @@ module SolrEad::Behaviors
     title = xml.at("/c/did/unittitle")
     date  = xml.at("/c/did/unitdate")
     if !title.nil? and !title.content.empty?
-      return ead_clean_xml(title.content)
+      return ead_to_html(title.content)
     elsif !date.nil? and !date.content.empty?
-      return ead_clean_xml(date.content)
+      return ead_to_html(date.content)
     else
       return "[No title available]"
     end
-  end
-
-  # Converts formatting elements in the ead into html tags
-  def ead_clean_xml(string)
-    string.gsub!(/<title/,"<span")
-    string.gsub!(/<\/title/,"</span")
-    string.gsub!(/render=/,"class=")
-    sanitize = Sanitize.clean(string, :elements => ['span'], :attributes => {'span' => ['class']})
-    sanitize.gsub("\n",'').gsub(/\s+/, ' ').strip
   end
 
   # Returns true or false for a component with attached <c> child nodes.

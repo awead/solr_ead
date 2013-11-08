@@ -7,13 +7,13 @@ require 'active_support'
 module SolrEad
   extend ActiveSupport::Autoload
 
+  autoload :Formatting
   autoload :Behaviors
   autoload :OmBehaviors
   autoload :Indexer
   autoload :Document
   autoload :Component
   autoload :Railtie if defined?(Rails)
-
 
   def self.version
     SolrEad::VERSION
