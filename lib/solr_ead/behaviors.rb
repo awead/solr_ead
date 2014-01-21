@@ -57,6 +57,7 @@ module SolrEad::Behaviors
   # component_level_ii:: numeric level of the component
   # component_children_bsi:: Boolean field indicating whether or not the component has any child <c> nodes attached to it
   # collection_sim:: Title field of the ead document so we can facet on all components in a collection
+  # collection_ssm:: Displayable collection field
   #
   # These fields are used so that we may reconstruct placement of a single component
   # within the hierarchy of the original ead.
@@ -70,6 +71,7 @@ module SolrEad::Behaviors
     addl_fields[Solrizer.solr_name("component_level", :type => :integer)]    = parent_id_list(node).length + 1
     addl_fields[Solrizer.solr_name("component_children", :type => :boolean)] = component_children?(node)
     addl_fields[Solrizer.solr_name("collection", :facetable)]                = node.xpath("//archdesc/did/unittitle").text
+    addl_fields[Solrizer.solr_name("collection", :displayable)]              = node.xpath("//archdesc/did/unittitle").text
     return addl_fields
   end
 

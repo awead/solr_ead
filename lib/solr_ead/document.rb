@@ -16,19 +16,19 @@ class SolrEad::Document
     t.unitdate(:path=>"archdesc/did/unitdate[not(@type)]", :index_as=>[:searchable])
     t.unitdate_bulk(:path=>"archdesc/did/unitdate[@type='bulk']", :index_as=>[:searchable])
     t.unitdate_inclusive(:path=>"archdesc/did/unitdate[@type='inclusive']", :index_as=>[:searchable])
-    t.language(:path=>"archdesc/did/langmaterial", :index_as=>[:displayable])
+    t.language(:path=>"archdesc/did/langmaterial", :index_as=>[:displayable, :facetable])
     t.langcode(:path=>"did/langmaterial/language/@langcode")
     t.abstract(:path=>"archdesc/did/abstract", :index_as=>[:searchable])
 
     # Facets
-    t.corpname(:index_as=>[:facetable])
-    t.famname(:index_as=>[:facetable])
-    t.genreform(:index_as=>[:facetable])
-    t.geogname(:index_as=>[:facetable])
-    t.name(:index_as=>[:facetable])
-    t.persname(:index_as=>[:facetable])
-    t.subject(:index_as=>[:facetable])
-    t.collection(:proxy=>[:title], :index_as=>[:facetable])
+    t.corpname(:index_as=>[:facetable, :displayable])
+    t.famname(:index_as=>[:facetable, :displayable])
+    t.genreform(:index_as=>[:facetable, :displayable])
+    t.geogname(:index_as=>[:facetable, :displayable])
+    t.name(:index_as=>[:facetable, :displayable])
+    t.persname(:index_as=>[:facetable, :displayable])
+    t.subject(:index_as=>[:facetable, :displayable])
+    t.collection(:proxy=>[:title], :index_as=>[:facetable, :displayable])
 
     # General field available within archdesc
     t.accessrestrict(:path=>"archdesc/accessrestrict/p", :index_as=>[:searchable])

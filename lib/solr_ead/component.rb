@@ -9,17 +9,17 @@ class SolrEad::Component
     t.root(:path=>"c")
     t.ref_(:path=>"/c/@id")
     t.level(:path=>"/c/@level", :index_as=>[:facetable])
-    t.title(:path=>"unittitle", :attributes=>{ :type => :none }, :index_as=>[:displayable])
+    t.title(:path=>"unittitle", :attributes=>{ :type => :none }, :index_as=>[:displayable, :sortable])
     t.unitdate(:index_as=>[:displayable])
 
     # Facets
-    t.corpname(:index_as=>[:facetable])
-    t.famname(:index_as=>[:facetable])
-    t.genreform(:index_as=>[:facetable])
-    t.geogname(:index_as=>[:facetable])
-    t.name(:index_as=>[:facetable])
-    t.persname(:index_as=>[:facetable])
-    t.subject(:index_as=>[:facetable])
+    t.corpname(:index_as=>[:facetable, :displayable])
+    t.famname(:index_as=>[:facetable, :displayable])
+    t.genreform(:index_as=>[:facetable, :displayable])
+    t.geogname(:index_as=>[:facetable, :displayable])
+    t.name(:index_as=>[:facetable, :displayable])
+    t.persname(:index_as=>[:facetable, :displayable])
+    t.subject(:index_as=>[:facetable, :displayable])
 
     # Item
     t.container {
@@ -30,11 +30,11 @@ class SolrEad::Component
     t.container_label(:proxy=>[:container, :label])
     t.container_type(:proxy=>[:container, :type])
     t.container_id(:proxy=>[:container, :id])
-    t.material(:proxy=>[:container, :label], :index_as=>[:facetable])
+    t.material(:proxy=>[:container, :label], :index_as=>[:facetable, :displayable])
     t.physdesc(:path=>"did/physdesc[not(dimensions)]", :index_as=>[:displayable])
     t.dimensions(:path=>"did/physdesc/dimensions", :index_as=>[:displayable])
     t.langcode(:path=>"did/langmaterial/language/@langcode")
-    t.language(:path=>"did/langmaterial", :index_as=>[:displayable])
+    t.language(:path=>"did/langmaterial", :index_as=>[:facetable, :displayable])
 
     # Description
     t.accessrestrict(:path=>"accessrestrict/p", :index_as=>[:displayable])
