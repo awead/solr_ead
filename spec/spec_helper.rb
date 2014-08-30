@@ -1,6 +1,6 @@
 # :nodoc
 require "solr_ead"
-require "debugger"
+require "byebug" unless ENV['TRAVIS']
 
 RSpec.configure do |config|
 

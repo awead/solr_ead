@@ -3,6 +3,10 @@ require 'solrizer'
 require 'om'
 require 'rsolr'
 require 'active_support'
+require 'yaml'
+
+# Load these rake tasks when the gem is included in a Rails application
+Dir[File.expand_path(File.join(File.dirname(__FILE__),"../tasks/*.rake"))].each { |ext| load ext } if defined?(Rake)
 
 module SolrEad
   extend ActiveSupport::Autoload
@@ -13,7 +17,6 @@ module SolrEad
   autoload :Indexer
   autoload :Document
   autoload :Component
-  autoload :Railtie if defined?(Rails)
 
   def self.version
     SolrEad::VERSION

@@ -123,11 +123,11 @@ class Indexer
   # Determines the url to our solr service by consulting yaml files
   def solr_url
     if defined?(Rails.root)
-      YAML.load(ERB.new(File.read(File.join(Rails.root,"config","solr.yml"))).result)[Rails.env]['url']
+      ::YAML.load(ERB.new(File.read(File.join(Rails.root,"config","solr.yml"))).result)[Rails.env]['url']
     elsif ENV['RAILS_ENV']
-      YAML.load(ERB.new(File.read("config/solr.yml")).result)[ENV['RAILS_ENV']]['url']
+      ::YAML.load(ERB.new(File.read("config/solr.yml")).result)[ENV['RAILS_ENV']]['url']
     else
-      YAML.load(ERB.new(File.read("config/solr.yml")).result)['development']['url']
+      ::YAML.load(ERB.new(File.read("config/solr.yml")).result)['development']['url']
     end
   end
 
