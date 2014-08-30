@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.test_files    = gem.files.grep(%r{^(spec)/})
   gem.name          = "solr_ead"
   gem.require_paths = ["lib"]
   gem.version       = SolrEad::VERSION
@@ -26,7 +26,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'redcarpet'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
-  gem.add_development_dependency 'debugger'
+  gem.add_development_dependency 'byebug'
   gem.add_development_dependency 'rdoc'
   gem.add_development_dependency 'jettywrapper'
 end

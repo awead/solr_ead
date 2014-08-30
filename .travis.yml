@@ -1,7 +1,13 @@
 language: ruby
 rvm:
-  - 1.9.3
-  - 2.0.0
-branches:
-  only:
-    - master
+  - 2.0
+  - 2.1
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+notifications:
+  email:
+    recipients:
+      - "amsterdamos@gmail.com"
+    on_success: "change"
+    on_failure: "always"

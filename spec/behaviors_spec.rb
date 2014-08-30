@@ -2,51 +2,42 @@ require "spec_helper"
 
 describe SolrEad::Behaviors do
 
-  before :all do
-    @not_numbered = fixture "ARC-0005.xml"
-    @numbered     = fixture "pp002010.xml"
-    @messy        = fixture "ead_messy_format.xml"
-    class TestClass
-      include SolrEad::Behaviors
-    end
-    @test = TestClass.new
+  class TestClass
+    include SolrEad::Behaviors
   end
 
   describe "#components" do
 
-    before :all do
-      @non_numbered_nodeset = @test.components(@not_numbered)
-      @numbered_nodeset     = @test.components(@numbered)
-      @messy_nodeset        = @test.components(@messy)
-    end
+    let(:non_numbered_nodeset)  { TestClass.new.components(fixture("ARC-0005.xml")) }
+    let(:numbered_nodeset)      { TestClass.new.components(fixture("pp002010.xml")) }
+    let(:messy_nodeset)         { TestClass.new.components(fixture("ead_messy_format.xml")) }
 
     it "should return a nodeset" do
-      @non_numbered_nodeset.should be_a_kind_of(Nokogiri::XML::NodeSet)
-      @non_numbered_nodeset.first.should be_a_kind_of(Nokogiri::XML::Element)
+      expect(non_numbered_nodeset).to be_a_kind_of(Nokogiri::XML::NodeSet)
+      expect(non_numbered_nodeset.first).to be_a_kind_of(Nokogiri::XML::Element)
     end
 
     it "should be able to handle both numbered and non-numbered <c> nodes" do
-      @non_numbered_nodeset.count.should == 135
-      @numbered_nodeset.count.should == 83
+      expect(non_numbered_nodeset.count).to eq(135)
+      expect(numbered_nodeset.count).to eq(83)
     end
     
     it "should find some components even if ead is messily formatted" do
-      @messy_nodeset.count.should > 0
+      expect(messy_nodeset.count).to be > 0
     end
     
   end
 
   describe "#prep" do
+    let(:subject) { TestClass.new.prep(fixture("pp002010.xml")) }
     it "should return a single component document" do
-      part = @test.prep(@numbered_nodeset)
-      part.should be_a_kind_of(Nokogiri::XML::Document)
+      expect(subject).to be_a_kind_of(Nokogiri::XML::Document)
     end
   end
 
   describe "#component_children?" do
-
-    before :all do
-      @true = '
+    let(:true_node) do
+      Nokogiri::XML('
         <c id="ref167" level="file">
           <did>
             <unittitle>Zines</unittitle>
@@ -68,25 +59,25 @@ describe SolrEad::Behaviors do
             </did>
           </c>
         </c>
-      '
-      @false = '
+      ')
+    end
+
+    let(:false_node) do
+      Nokogiri::XML('
         <c id="ref167" level="file">
           <did>
             <unittitle>Zines</unittitle>
           </did>
         </c>
-      '
+      ')
     end
 
-
     it "should return true for components that have c nodes below them" do
-      node = Nokogiri::XML(@true)
-      @test.component_children?(node.elements.first).should be_true
+      expect(TestClass.new.component_children?(true_node.elements.first)).to be true
     end
 
     it "should return false for components that do not have c nodes below them" do
-      node = Nokogiri::XML(@false)
-      @test.component_children?(node.elements.first).should be_false
+      expect(TestClass.new.component_children?(false_node.elements.first)).to be false
     end
 
   end
