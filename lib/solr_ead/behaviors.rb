@@ -9,7 +9,8 @@ module SolrEad::Behaviors
   # It'll make an attempt at substituting numbered component levels for non-numbered
   # ones.
   def components(file)
-    raw = File.read(file).gsub!(/xmlns="(.*?)"/, '')
+    raw = File.read(file)
+    raw.gsub!(/xmlns="(.*?)"/, '')
     raw.gsub!(/c[0-9]{2,2}/,"c")
     xml = Nokogiri::XML(raw)
     return xml.xpath("//c")
