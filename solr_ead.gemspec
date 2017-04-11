@@ -17,8 +17,8 @@ Gem::Specification.new do |gem|
   gem.license       = "Apache 2"
 
   # Dependencies
-  gem.add_dependency 'om', '~> 3.0.0'
-  gem.add_dependency 'solrizer', '~> 3.1.0'
+  gem.add_dependency 'om', '>= 3.0.0', '< 4'
+  gem.add_dependency 'solrizer', '>= 3.1.0', '< 4'
   gem.add_dependency 'rsolr'
   gem.add_dependency 'sanitize'
 
