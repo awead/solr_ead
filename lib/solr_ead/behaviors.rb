@@ -73,6 +73,8 @@ module SolrEad::Behaviors
     addl_fields[Solrizer.solr_name("component_children", :type => :boolean)] = component_children?(node)
     addl_fields[Solrizer.solr_name("collection", :facetable)]                = node.xpath("//archdesc/did/unittitle").text
     addl_fields[Solrizer.solr_name("collection", :displayable)]              = node.xpath("//archdesc/did/unittitle").text
+    addl_fields[Solrizer.solr_name("repository", :facetable)]                = node.xpath("//archdesc/did/repository").text.strip
+    addl_fields[Solrizer.solr_name("repository", :displayable)]              = node.xpath("//archdesc/did/repository").text.strip
     return addl_fields
   end
 
