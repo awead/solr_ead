@@ -120,7 +120,7 @@ module SolrEad::Behaviors
   # Returns true or false for a component with attached <c> child nodes.
   def component_children?(node, t = Array.new)
     node.children.each { |n| t << n.name }
-    t.include?("c") ? TRUE : FALSE
+    t.include?("c")
   end
 
 end
