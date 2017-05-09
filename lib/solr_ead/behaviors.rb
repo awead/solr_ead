@@ -9,11 +9,14 @@ module SolrEad::Behaviors
   # It'll make an attempt at substituting numbered component levels for non-numbered
   # ones.
   def components(file)
-    raw = File.read(file)
-    raw.gsub!(/xmlns="(.*?)"/, '')
-    raw.gsub!(/c[0-9]{2,2}/,"c")
-    xml = Nokogiri::XML(raw)
-    return xml.xpath("//c")
+    doc = Nokogiri::XML(File.read(file))
+    doc.remove_namespaces!
+    (1..12).each do |i| # EAD spec provides 12 levels of components
+      doc.xpath("//c#{'%02d' % i}").each do |node|
+        node.name = 'c'
+      end
+    end
+    doc.xpath('//c')
   end
 
   # Used in conjunction with #components, this takes a single Nokogiri::XML::Element
@@ -33,9 +36,9 @@ module SolrEad::Behaviors
   #     <scopecontent>etc</scopecontent>
   #   </c>
   def prep(node)
-    part = Nokogiri::XML(node.to_s)
-    part.xpath("/*/c").each { |e| e.remove }
-    return part
+    deep_copy = node.clone
+    deep_copy.children.select {|child| child.name == 'c' }.map(&:remove)
+    Nokogiri::XML(deep_copy.to_xml)
   end
 
   # Because the solr documents created from individual components have been removed from
@@ -119,8 +122,9 @@ module SolrEad::Behaviors
 
   # Returns true or false for a component with attached <c> child nodes.
   def component_children?(node, t = Array.new)
-    node.children.each { |n| t << n.name }
-    t.include?("c")
+    node.children.each do |child|
+      return true if child.name == 'c'
+    end
+    false
   end
-
 end
