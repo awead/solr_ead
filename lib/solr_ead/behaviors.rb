@@ -121,10 +121,10 @@ module SolrEad::Behaviors
     end
   end
 
-  # Returns true or false for a component with attached <c> child nodes.
-  def component_children?(node, t = Array.new)
-    node.children.each { |n| t << n.name }
-    t.include?("c")
+  # @param [Nokogiri::XML::Node] `node`
+  # @return true or false for a component with attached <c> child nodes.
+  def component_children?(node)
+    node.children.any? { |n| n.name == 'c' }
   end
 
 end
