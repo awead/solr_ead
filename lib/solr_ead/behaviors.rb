@@ -37,9 +37,9 @@ module SolrEad::Behaviors
   #     <scopecontent>etc</scopecontent>
   #   </c>
   def prep(node)
-    part = Nokogiri::XML(node.to_s)
-    part.xpath("/*/c").each { |e| e.remove }
-    return part
+    deep_copy = node.clone
+    deep_copy.children.select {|child| child.name == 'c' }.map(&:remove)
+    Nokogiri::XML(deep_copy.to_xml)
   end
 
   # Because the solr documents created from individual components have been removed from
@@ -123,8 +123,9 @@ module SolrEad::Behaviors
 
   # Returns true or false for a component with attached <c> child nodes.
   def component_children?(node, t = Array.new)
-    node.children.each { |n| t << n.name }
-    t.include?("c")
+    node.children.each do |child|
+      return true if child.name == 'c'
+    end
+    false
   end
-
 end

@@ -71,7 +71,7 @@ class SolrEad::Component
 
   def to_solr(solr_doc = Hash.new)
     super(solr_doc)
-    Solrizer.insert_field(solr_doc, "ref", self.ref.first.strip, :stored_sortable)
+    Solrizer.insert_field(solr_doc, "ref", self.ref.first.strip, :stored_sortable) if self.ref
   end
 
 end
