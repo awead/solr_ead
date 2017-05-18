@@ -21,17 +21,29 @@ describe SolrEad::Behaviors do
       expect(non_numbered_nodeset.count).to eq(135)
       expect(numbered_nodeset.count).to eq(83)
     end
-    
+
     it "should find some components even if ead is messily formatted" do
       expect(messy_nodeset.count).to be > 0
     end
-    
+
   end
 
   describe "#prep" do
     let(:subject) { TestClass.new.prep(fixture("pp002010.xml")) }
     it "should return a single component document" do
       expect(subject).to be_a_kind_of(Nokogiri::XML::Document)
+    end
+  end
+
+  describe '#to_solr_name' do
+    subject(:test_obj) { TestClass.new }
+    it 'caches the value of Solrizer.solr_name' do
+      expect(Solrizer).to receive(:solr_name).and_call_original
+      expect(test_obj.to_solr_name('my_test', :facetable)).to eq 'my_test_sim'
+
+      # second time should be cached
+      expect(Solrizer).not_to receive(:solr_name)
+      expect(test_obj.to_solr_name('my_test', :facetable)).to eq 'my_test_sim'
     end
   end
 

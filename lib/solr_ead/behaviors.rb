@@ -68,18 +68,27 @@ module SolrEad::Behaviors
   # within the hierarchy of the original ead.
   def additional_component_fields(node, addl_fields = Hash.new)
     addl_fields["id"]                                                        = [node.xpath("//eadid").text, node.attr("id")].join
-    addl_fields[Solrizer.solr_name("ead", :stored_sortable)]                 = node.xpath("//eadid").text
-    addl_fields[Solrizer.solr_name("parent", :stored_sortable)]              = node.parent.attr("id") unless node.parent.attr("id").nil?
-    addl_fields[Solrizer.solr_name("parent", :displayable)]                  = parent_id_list(node)
-    addl_fields[Solrizer.solr_name("parent_unittitles", :displayable)]       = parent_unittitle_list(node)
-    addl_fields[Solrizer.solr_name("parent_unittitles", :searchable)]        = parent_unittitle_list(node)
-    addl_fields[Solrizer.solr_name("component_level", :type => :integer)]    = parent_id_list(node).length + 1
-    addl_fields[Solrizer.solr_name("component_children", :type => :boolean)] = component_children?(node)
-    addl_fields[Solrizer.solr_name("collection", :facetable)]                = node.xpath("//archdesc/did/unittitle").text
-    addl_fields[Solrizer.solr_name("collection", :displayable)]              = node.xpath("//archdesc/did/unittitle").text
-    addl_fields[Solrizer.solr_name("repository", :facetable)]                = node.xpath("//archdesc/did/repository").text.strip
-    addl_fields[Solrizer.solr_name("repository", :displayable)]              = node.xpath("//archdesc/did/repository").text.strip
+    addl_fields[to_solr_name("ead", :stored_sortable)]                 = node.xpath("//eadid").text
+    addl_fields[to_solr_name("parent", :stored_sortable)]              = node.parent.attr("id") unless node.parent.attr("id").nil?
+    addl_fields[to_solr_name("parent", :displayable)]                  = parent_id_list(node)
+    addl_fields[to_solr_name("parent_unittitles", :displayable)]       = parent_unittitle_list(node)
+    addl_fields[to_solr_name("parent_unittitles", :searchable)]        = parent_unittitle_list(node)
+    addl_fields[to_solr_name("component_level", :type => :integer)]    = parent_id_list(node).length + 1
+    addl_fields[to_solr_name("component_children", :type => :boolean)] = component_children?(node)
+    addl_fields[to_solr_name("collection", :facetable)]                = node.xpath("//archdesc/did/unittitle").text
+    addl_fields[to_solr_name("collection", :displayable)]              = node.xpath("//archdesc/did/unittitle").text
+    addl_fields[to_solr_name("repository", :facetable)]                = node.xpath("//archdesc/did/repository").text.strip
+    addl_fields[to_solr_name("repository", :displayable)]              = node.xpath("//archdesc/did/repository").text.strip
     return addl_fields
+  end
+
+  # @param `args` same as `Solrizer.solr_name`
+  # @return [String] value from `Solrizer.solr_name` but caches results
+  def to_solr_name(*args)
+    @solr_name_cache = {} unless @solr_name_cache
+    cache_key = [*args].to_s
+    return @solr_name_cache[cache_key] if @solr_name_cache[cache_key]
+    @solr_name_cache[cache_key] = Solrizer.solr_name(*args)
   end
 
   # Array of all id attributes from the component's parent <c> nodes, sorted in descending order

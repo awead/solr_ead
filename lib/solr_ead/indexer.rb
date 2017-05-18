@@ -43,7 +43,7 @@ class Indexer
     self.solr = solr_connection
     self.options = opts
   end
-  
+
   # Indexes ead xml and commits the results to your solr server.
   def create file
     solr.add om_document(File.new(file)).to_solr
@@ -65,7 +65,8 @@ class Indexer
   # Deletes the ead document and any component documents from your solr index and
   # commits the results.
   def delete id
-    solr.delete_by_query( Solrizer.solr_name("ead", :stored_sortable)+':"' + id + '"')
+    @ead_field_name ||= Solrizer.solr_name("ead", :stored_sortable)
+    solr.delete_by_query(@ead_field_name+':"' + id + '"')
     solr.commit
   end
 
@@ -103,9 +104,10 @@ class Indexer
   # of <c> nodes.  This allows us to preserve the order of <c> nodes as they appear
   # in the original ead document.
   def add_components file, counter = 1
+    @sort_field_name ||= Solrizer.solr_name("sort", :sortable, :type => :integer)
     components(file).each do |node|
       solr_doc = om_component_from_node(node).to_solr(additional_component_fields(node))
-      solr_doc.merge!({Solrizer.solr_name("sort", :sortable, :type => :integer) => counter.to_s})
+      solr_doc.merge!({@sort_field_name => counter.to_s})
       solr.add solr_doc
       counter = counter + 1
     end
