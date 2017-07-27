@@ -67,19 +67,39 @@ module SolrEad::Behaviors
   # These fields are used so that we may reconstruct placement of a single component
   # within the hierarchy of the original ead.
   def additional_component_fields(node, addl_fields = Hash.new)
-    addl_fields["id"]                                                        = [node.xpath("//eadid").text, node.attr("id")].join
-    addl_fields[Solrizer.solr_name("ead", :stored_sortable)]                 = node.xpath("//eadid").text
+
+    # Clear or create the cache
+    @cache = {}
+
+    p_ids        = parent_id_list(node)
+    p_unittitles = parent_unittitle_list(node)
+
+    addl_fields["id"]                                                        = [eadid(node), node.attr("id")].join
+    addl_fields[Solrizer.solr_name("ead", :stored_sortable)]                 = eadid(node)
     addl_fields[Solrizer.solr_name("parent", :stored_sortable)]              = node.parent.attr("id") unless node.parent.attr("id").nil?
-    addl_fields[Solrizer.solr_name("parent", :displayable)]                  = parent_id_list(node)
-    addl_fields[Solrizer.solr_name("parent_unittitles", :displayable)]       = parent_unittitle_list(node)
-    addl_fields[Solrizer.solr_name("parent_unittitles", :searchable)]        = parent_unittitle_list(node)
-    addl_fields[Solrizer.solr_name("component_level", :type => :integer)]    = parent_id_list(node).length + 1
+    addl_fields[Solrizer.solr_name("parent", :displayable)]                  = p_ids
+    addl_fields[Solrizer.solr_name("parent_unittitles", :displayable)]       = p_unittitles
+    addl_fields[Solrizer.solr_name("parent_unittitles", :searchable)]        = p_unittitles
+    addl_fields[Solrizer.solr_name("component_level", :type => :integer)]    = p_ids.length + 1
     addl_fields[Solrizer.solr_name("component_children", :type => :boolean)] = component_children?(node)
-    addl_fields[Solrizer.solr_name("collection", :facetable)]                = node.xpath("//archdesc/did/unittitle").text
-    addl_fields[Solrizer.solr_name("collection", :displayable)]              = node.xpath("//archdesc/did/unittitle").text
-    addl_fields[Solrizer.solr_name("repository", :facetable)]                = node.xpath("//archdesc/did/repository").text.strip
-    addl_fields[Solrizer.solr_name("repository", :displayable)]              = node.xpath("//archdesc/did/repository").text.strip
-    return addl_fields
+    addl_fields[Solrizer.solr_name("collection", :facetable)]                = collection(node)
+    addl_fields[Solrizer.solr_name("collection", :displayable)]              = collection(node)
+    addl_fields[Solrizer.solr_name("repository", :facetable)]                = repository(node)
+    addl_fields[Solrizer.solr_name("repository", :displayable)]              = repository(node)
+    addl_fields
+  end
+
+  # can these be made to use absolute xpaths?
+  def repository(node)
+    @cache[:repo] ||= node.xpath("/ead/archdesc/did/repository").text.strip
+  end
+
+  def collection(node)
+    @cache[:collection] ||= node.xpath("/ead/archdesc/did/unittitle").text
+  end
+
+  def eadid(node)
+    @cache[:eadid] ||= node.xpath("/ead/eadheader/eadid").text
   end
 
   # Array of all id attributes from the component's parent <c> nodes, sorted in descending order
@@ -99,19 +119,23 @@ module SolrEad::Behaviors
   # the correct order, ex:
   #   ["Series I", "Subseries a", "Sub-subseries 1"]
   # From there, you can assemble and display as you like.
-  def parent_unittitle_list(node, results = Array.new)
+  def parent_unittitle_list(node, results = ::Array.new)
     while node.parent.name == "c"
       parent = node.parent
-      part = Nokogiri::XML(parent.to_xml)
-      results << get_title(part)
+      results << get_title(parent)
       node = parent
     end
-    return results.reverse
+    results.reverse
   end
 
-  def get_title(xml)
-    title = xml.at("/c/did/unittitle")
-    date  = xml.at("/c/did/unitdate")
+  def get_title(node)
+    @memtitle ||= Hash.new {|h, node| h[node.object_id] = _get_title(node)}
+    @memtitle[node]
+  end
+
+  def _get_title(node)
+    title = node.at_xpath("./did/unittitle")
+    date  = node.at_xpath("./did/unitdate")
     if !title.nil? and !title.content.empty?
       return ead_to_html(title.content)
     elsif !date.nil? and !date.content.empty?
