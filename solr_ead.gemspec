@@ -4,8 +4,8 @@ require File.expand_path('../lib/solr_ead/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Adam Wead"]
   gem.email         = ["amsterdamos@gmail.com"]
-  gem.description   = %q{A gem for indexing ead into solr using OM. Define your own OM terminology to create the solr fields you want from your ead, then use solr-based applications like Blacklight to search and display the results.}
-  gem.summary       = %q{A gem for indexing ead into solr using OM}
+  gem.description   = %q{A gem for indexing EAD into solr using OM. Define your own OM terminology to create the solr fields you want from your ead, then use Solr-based applications like Blacklight to search and display the results.}
+  gem.summary       = %q{A gem for indexing EAD into solr using OM}
   gem.homepage      = "http://github.com/awead/solr_ead"
 
   gem.files         = `git ls-files`.split($\)
@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.name          = "solr_ead"
   gem.require_paths = ["lib"]
   gem.version       = SolrEad::VERSION
-  gem.license       = "Apache 2"
+  gem.license       = "Apache-2.0"
 
   # Dependencies
   gem.add_dependency 'om', '>= 3.0.0', '< 4'
