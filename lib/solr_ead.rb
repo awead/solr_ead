@@ -2,6 +2,7 @@ require 'solr_ead/railtie' if defined?(Rails)
 require 'nokogiri'
 require 'solrizer'
 require 'om'
+require 'rake'
 require 'rsolr'
 require 'active_support'
 require 'yaml'
